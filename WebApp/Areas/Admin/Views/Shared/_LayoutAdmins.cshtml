@@ -1,0 +1,110 @@
+﻿@*@using Microsoft.AspNetCore.Http;
+    @inject IHttpContextAccessor HttpContextAccessor*@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Shop game</title>
+    <!--<link rel="icon" href="/Admin/favicon.ico" type="image/x-icon">--> <!-- Favicon-->
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="/Admin/Content/plugins/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="/Admin/Content/dist/css/adminlte.min.css">
+    <link href="/Admin/Content/toastr.min.css" rel="stylesheet" />
+    <!-- Google Font: Source Sans Pro -->
+    @*<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">*@
+    <link href="/Admin/Content/admins-style.css" rel="stylesheet" />
+    <link href="/Admin/Content/admins-pagination.css" rel="stylesheet" />
+    <script src="/Admin/Content/plugins/jquery/jquery.min.js"></script>
+    <script src="/Admin/Content/ckeditor/ckeditor.js"></script>
+</head>
+<body class="hold-transition sidebar-mini">
+
+    @*@{
+            var user = HttpContextAccessor.HttpContext.Session.GetString("User");
+            if (user == null)
+            {
+
+                <script>
+                    window.location = "/Admin/Admin/Login";
+                </script>
+            }
+        }*@
+    <div class="wrapper">
+
+        <!-- Navbar -->
+        <partial name="_navBar" />
+        <!-- /.navbar -->
+        <!-- Main Sidebar Container -->
+        @await Html.PartialAsync("_asideBar")
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid pt-2 pb-2 pl-3 pr-3">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0 text-dark">@ViewBag.Title</h1>
+                        </div><!-- /.col -->
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item">
+                                    <a href="/Admin"><i class="fas fa-home"></i></a>
+                                </li>
+                                <li class="breadcrumb-item active">
+                                    <a href="@ViewBag.url_back">@ViewBag.Title_back</a>
+                                </li>
+                            </ol>
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
+                </div><!-- /.container-fluid -->
+            </div>
+            <!-- /.content-header -->
+            <!-- Main content -->
+            <div class="content">
+                @RenderBody()
+            </div>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+        <!-- Control Sidebar -->
+        @await Html.PartialAsync("_asideBarUser")
+        <!-- /.control-sidebar -->
+        <!-- Main Footer -->
+        @await Html.PartialAsync("_mainFooter")
+    </div>
+    <!-- ./wrapper -->
+    <!-- REQUIRED SCRIPTS -->
+    <!-- jQuery -->
+    <script src="/Admin/Content/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="/Admin/Content/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="/Admin/Content/dist/js/adminlte.min.js"></script>
+    <script src="/Admin/Scripts/sweetalert.min.js"></script>
+    <script src="/Admin/Scripts/toastr.js"></script>
+    <script src="/Admin/Content/js/AdminCommon.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('nav .nav-item a').each(function () {
+                $(this).removeClass('active');
+                if (this.href.trim() == window.location) {
+                    $(this).parent().parent().parent('li').addClass('menu-open');
+                    $(this).parent('li').addClass('menu-open');
+                    $(this).addClass('active');
+                } else {
+                    $(this).parent('li').removeClass('menu-open');
+                }
+            });
+        });
+    </script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

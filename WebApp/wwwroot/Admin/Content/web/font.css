@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'UTM Avo';
+    src: url('../../fonts/utm-avo-02/UTMAvo.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'UTM AvoBold';
+    src: url('../../fonts/utm-avo-02/UTMAvoBold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'UTM AvoBold_Italic';
+    src: url('../../fonts/utm-avo/UTM AvoBold_Italic.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'UTM AvoItalic';
+    src: url('../../fonts/utm-avo/UTM AvoItalic.ttf') format('truetype');
+}

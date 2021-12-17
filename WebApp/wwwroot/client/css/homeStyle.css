@@ -1,0 +1,232 @@
+﻿.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    background-color: #32c5d2;
+}
+
+
+/*pagination*/
+.pagination-container .pagination li a {
+    padding: 6px;
+}
+
+.pagination li:hover {
+    cursor: pointer;
+}
+
+.pagination-container .pagination li.active a {
+    background-color: #26a69a !important;
+    color: #fff;
+}
+
+ul li {
+    list-style: none;
+}
+/*table.cke_dialog tr td{
+    width : auto !important;
+}
+*/
+.btn-tools {
+    color: #fff;
+    padding: 0.2em 0.6em;
+    border: none;
+    opacity: .9;
+    font-size: .9rem;
+    outline: none;
+    margin: .095rem .2rem .015rem .2rem;
+}
+
+    .btn-tools:focus {
+        outline: none;
+    }
+
+    .btn-tools i {
+        font-size: .85rem;
+    }
+
+.btn-green {
+    background: #26a69a;
+}
+
+.btn-yellow {
+    background: #c49f47;
+}
+
+.btn-red {
+    background: #cb5a5e;
+}
+
+.d-relative {
+    position: relative;
+    width: 100%;
+}
+
+    .d-relative .table-event {
+        position: absolute;
+        top: 0;
+        right: 0;
+        visibility: visible;
+        background: #f4f6f9;
+    }
+
+    .d-relative:hover .table-event {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 1s linear;
+    }
+
+.d-scroll {
+    width: 100%;
+    overflow: scroll;
+    border-left: 1px solid #e0e4e7;
+    border-right: 1px solid #e0e4e7;
+}
+
+
+.list-data .table, .table-event .table {
+    margin-bottom: 0;
+}
+
+.list-data table td, .list-data table th {
+    white-space: nowrap;
+}
+
+.list-data table tr td:first-child, .list-data table tr th:first-child, .list-data table tr td:nth-child(2) {
+    width: 2rem;
+    padding: 0.1em 0.5em;
+    text-align: center;
+}
+
+.list-data table td input[type="checkbox"] {
+    margin-top: 0.3em;
+}
+/* width */
+.d-scroll::-webkit-scrollbar {
+    height: 1em;
+}
+
+/* Track */
+.d-scroll::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 4px #d1d1d1;
+}
+
+/* Handle */
+.d-scroll::-webkit-scrollbar-thumb {
+    background: #b0b0b0;
+}
+
+    /* Handle on hover */
+    .d-scroll::-webkit-scrollbar-thumb:hover {
+        background: #999999;
+    }
+
+
+
+.table-event .table tr td:last-child {
+    text-align: right;
+    padding-right: 0.3em;
+}
+
+.list-data table thead .fix-thead {
+    position: fixed;
+    top: 0;
+}
+
+.content-header {
+    padding: 10px .5rem !important;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #eddfdf21;
+}
+
+.table-hover tbody tr:hover {
+    color: #212529;
+    background-color: rgba(0,0,0,.075);
+    cursor: pointer !important;
+}
+
+table thead th {
+    cursor: pointer;
+}
+
+    table thead th i {
+        margin-right: 8px;
+    }
+
+.backgound-hover {
+    background-color: rgba(0,0,0,.075) !important;
+}
+
+.da-xoa {
+    background: #cb5a5e !important;
+    color: rgba(255, 255, 255, 0.76) !important;
+}
+
+.trang-thai {
+    color: #cb5a5e !important;
+}
+/*nút bấm*/
+#add-an-object .btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    font-size: .95rem;
+    line-height: 1.2;
+    border-radius: 0rem !important;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+    #add-an-object .btn i {
+        font-size: .8rem;
+        margin-right: .25rem;
+        color: #ddd;
+    }
+
+table button:focus {
+    outline: none;
+}
+/*--nút bấm*/
+.pagination ul {
+    display: flex;
+}
+
+    .pagination ul li {
+        width: 2em;
+        padding: .2em;
+        font-size: 1em;
+        border: 1px solid #e1e1e1;
+        border-left: 0;
+        color: #31466f;
+        text-align: center;
+        transition: .2s;
+        cursor: pointer;
+    }
+
+        .pagination ul li:first-child {
+            border-left: 1px solid #e1e1e1;
+        }
+
+
+        .pagination ul li i {
+            font-size: .8em;
+        }
+
+        .pagination ul li.active, .pagination ul li:hover {
+            background: #2a2a2a;
+            border: 1px solid #2a2a2a;
+            color: #fff;
+        }
+
+/*chỉnh sửa*/
+
+#atmModalLabel .modal-dialog {
+    z-index: 999;
+}
+
+#skin-list .box-product-list-image {
+    height: 350px;
+}
+
+
+section#deposit-history table {
+    font-size: 0.9rem;
+}

@@ -1,0 +1,75 @@
+﻿@model ShopGame.Service.Model.UserModel
+@{
+    ViewData["Title"] = "THÔNG TIN TÀI KHOẢN";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section id="profile" class="py-4">
+    <div class="container bg-container pb-3">
+        <div class="text-center text-light py-3">
+            <h3>ID: @Model.Id</h3>
+            <h3>@Model.UserName</h3>
+            <h4>Thành viên</h4>
+            <h4 class="text-danger">@Model.Balance.ToString(" 000,0") <sup>đ</sup></h4>
+        </div>
+    </div>
+</section>
+<section id="profile-details" class="pt-2 pb-5">
+    <div class="container bg-container pb-3">
+        <div class="row">
+            <partial name="_Menuleft" />
+            <div class="col-lg-9">
+                <div class="text-light ">
+                    <h2 class="pb-3 mt-4">THÔNG TIN TÀI KHOẢN</h2>
+                    <div class="c-line-left c-theme-bg"></div>
+                </div>
+                <table class="table table-striped table-dark">
+                    <thead>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ID của bạn:</td>
+                            <td>@Model.Id</td>
+                        </tr>
+                        <tr>
+                            <td>Tên tài khoản:</td>
+                            <td>@Model.UserName</td>
+                        </tr>
+                        <tr>
+                            <td>Email:</td>
+                            <td>@Model.Email</td>
+                        </tr>
+                        <tr>
+                            <td>Số dư tài khoản:</td>
+                            <td>@Model.Balance.ToString(" 000,0") <sup>đ</sup></td>
+                        </tr>
+                        <tr>
+                            <td>Số điện thoại:</td>
+                            @if (Model.Phone != null && !String.IsNullOrEmpty(Model.Phone))
+                            {
+                                <td>@Model.Phone</td>
+                            }
+                            else
+                            {
+                                <td><a href="#">Thêm số điện thoại</a></td>
+                            }
+                        </tr>
+                        <tr>
+                            <td>Nhóm tài khoản:</td>
+                            <td>Thành viên</td>
+                        </tr>
+                        <tr>
+                            <td>Ngày tham gia:</td>
+                            <td>@Model.CreatedDate.ToString("dd/MM/yyy")</td>
+                        </tr>
+                        <tr>
+                            <td>Mật khẩu:</td>
+                            <td><a href="/user/ChangePassword">****** (Đổi mật khẩu)</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</section>

@@ -1,0 +1,198 @@
+﻿@model ShopGame.Service.Model.ShopGameResultModel<ShopGame.Service.Model.ProductTransactionViewModel>
+@{
+    var data = Model.Results;
+    var pageSize = Model.PageSize;
+    var pageNumber = Model.PageNumber;
+    var pageCount = Model.PageCount;
+
+}
+
+@{
+    ViewData["Title"] = "Lịch sử giao dịch";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Scripts{
+    <script>
+
+        function ChangePageNumber() {
+            $('.pagination li a').on('click', function (e) {
+                let val = $(this).attr('data-index') ?? "";
+                let search = $("#search-TranLog").val();
+                submitData.pageNumber = val;
+                location.href = "/TranLog?pageNumber=" + val + "&search=" + search;
+            })
+        }
+        ChangePageNumber();
+
+
+        function Search() {
+            let search = $("#search-TranLog").val();
+            let val = $(this).attr('data-index') ?? "";
+            location.href = "/TranLog?pageNumber=" + val + "&search=" + search;
+        }
+        $("#search-TranLog").on('keypress', function (e) {
+            if (e.which == 13) {
+                Search();
+            }
+        });
+    </script>
+
+}
+<section id="tran-log" class="pt-2 pb-5">
+    <div class="container bg-container pb-3">
+        <div class="row">
+            <partial name="_Menuleft" />
+            <div class="col-lg-9">
+                <div class="text-light ">
+                    <h2 class="pb-3 mt-4">LỊCH SỬ GIAO DỊCH</h2>
+                    <div class="c-line-left c-theme-bg"></div>
+                </div>
+                <div class="select-input">
+                    <div class="box-input-select">
+                            <div class="form-group row">
+                                <div class="col-sm-6">
+                                    <input class="form-control" id="search-TranLog" value="@ViewBag.Search" type="search" placeholder="Nhập từ khóa..." aria-label="Search">
+                                </div>
+                                <div class="col-sm-6">
+                                    <button class="btn btn-primary  mr-sm-2" type="button" onclick="Search()">Tìm kiếm</button>
+                                    <a class="btn btn-danger" href="/TranLog">Tất cả</a>
+                                </div>
+                            </div>
+                    </div>
+                    @*<form class="needs-validation" novalidate>
+                            <div class="form-row">
+                                <div class="col-md-4 mb-3">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend">Giao dịch</span>
+                                        </div>
+                                        <select id="group_id" name="trade_type" class="form-control">
+                                            <option value="">-- Tất cả --</option>
+                                            <option value="1">Nạp thẻ tự động</option>
+                                            <option value="2">Nạp thẻ chậm</option>
+                                            <option value="3">Chuyển tiền</option>
+                                            <option value="4">Nhận tiền</option>
+                                            <option value="5">Rút tiền</option>
+                                            <option value="6">Cộng tiền</option>
+                                            <option value="7">Trừ tiền</option>
+                                            <option value="8">Tiền thưởng</option>
+                                            <option value="9">Thanh toán bán nick</option>
+                                            <option value="10">Đặt cọc (Trả góp)</option>
+                                            <option value="11">Hoàn tiền</option>
+                                            <option value="12">Thanh toán dịch vụ</option>
+                                            <option value="13">Hoàn tất dịch vụ</option>
+                                            <option value="14">Thanh toán mua thẻ</option>
+                                            <option value="15">Thanh toán mua phụ kiện</option>
+                                            <option value="101">Tăng số dư</option>
+                                            <option value="102">Giảm số dư</option>
+                                            <option value="103">Chuyển nhận tiền</option>
+                                            <option value="104">Cộng trừ tiền</option>
+                                            <option value="105">Mua tài khoản game</option>
+                                            <option value="106">Mua kim cương</option>
+                                            <option value="107">Vòng quay may mắn</option>
+                                            <option value="108">Vòng quay vật phẩm</option>
+                                            <option value="109">Lật hình vật phẩm</option>
+                                            <option value="110">Lật hình trúng nick</option>
+                                            <option value="111">Quay hình trúng vp</option>
+                                            <option value="112">Quay hình trúng nick</option>
+                                            <option value="113">Quay hình trúng tiền</option>
+                                            <option value="114">Vòng quay trúng tiền</option>
+                                            <option value="115">Lật hình trúng tiền</option>
+                                            <option value="116">Quay xèng trúng vp</option>
+                                            <option value="117">Quay xèng trúng nick</option>
+                                            <option value="118">Quay xèng trúng tiền</option>
+                                            <option value="119">Vòng quay trúng nick</option>
+                                        </select>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend">Từ ngày</span>
+                                        </div>
+                                        <input type="date" class="form-control" id="" placeholder="" value="">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend">Đến ngày</span>
+                                        </div>
+                                        <input type="date" class="form-control" id="" placeholder="" value="">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <button class="btn btn-info" type="submit">Tìm kiếm</button>
+                                    <button class="btn btn-danger" type="button">Tất cả</button>
+                                </div>
+                            </div>
+                        </form>*@
+
+                </div>
+                <table class="table table-striped table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">Thời gian</th>
+                            <th scope="col">Tên</th>
+                            <th scope="col">Giao dịch</th>
+                            <th scope="col">Số tiền </th>
+                            <th scope="col">Số dư cuối</th>
+                            <th scope="col">Nội dung</th>
+                            <th scope="col">Trạng thái</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @foreach (var item in data)
+                        {
+                            <tr>
+                                <td>@item.CreatedDate.ToString("dd/MM/yyy")</td>
+                                <td>@item.Name</td>
+                                @if (@item.ProductType == 0)
+                                {
+                                    <td>Mua Tài khoản</td>
+                                }@if (@item.ProductType == 1)
+                                {
+                                    <td>Mua Skin</td>
+                                }
+                            <td>@item.Price.ToString(" 000,0") <sup>đ</sup></td>
+
+                            <td>@item.EndBalance.ToString(" 000,0") <sup>đ</sup></td>
+
+                                <td>@item.Content</td>
+                                @if (@item.ProductType == 0)
+                                {
+                                    @if (@item.Status == 1)
+                                    {
+                                        <td>Thành công</td>
+
+                                    }@if (@item.Status == 2)
+                                    {
+                                        <td>Thất bại</td>
+                                    }
+                                }
+                                @if (@item.ProductType == 1)
+                                {
+                                    @if (@item.Status == 0)
+                                    {
+                                        <td>Đang chuyển</td>
+                                    }@if (@item.Status == 1)
+                                    {
+                                        <td>Thành công</td>
+                                    }
+                                    @if (@item.Status == 2)
+                                    {
+                                        <td>Thất Bại</td>
+                                    }
+                                }
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</section>

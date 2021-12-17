@@ -1,0 +1,229 @@
+﻿@{
+    var data = ViewBag.ListData;
+}
+@{
+    ViewData["Title"] = "THẺ CÀO ĐÃ NẠP";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Scripts{
+    <script>
+
+        function ChangePageNumber() {
+            $('.pagination li a').on('click', function (e) {
+                let val = $(this).attr('data-index') ?? "";
+                let search = $("#search-deposit-history").val();
+                submitData.pageNumber = val;
+                location.href = "/napthe/deposithistory?pageNumber=" + val + "&search=" + search;
+            })
+        }
+        ChangePageNumber();
+
+
+        function Search() {
+            let search = $("#search-deposit-history").val();
+            let val = $(this).attr('data-index') ?? "";
+            location.href = "/napthe/deposithistory?pageNumber=" + val + "&search=" + search;
+        }
+        $("#search-deposit-history").on('keypress', function (e) {
+            if (e.which == 13) {
+                Search();
+            }
+        });
+    </script>
+
+}
+<section id="deposit-history" class="pt-2 pb-5">
+    <div class="container bg-container pb-3">
+        <div class="row">
+            <partial name="_MenuLeft" />
+            <div class="col-lg-9">
+                <div class="text-light ">
+                    <h2 class="pb-3 mt-4">THẺ CÀO ĐÃ NẠP</h2>
+                    <div class="c-line-left c-theme-bg"></div>
+                </div>
+                <div class="select-input">
+                    <div class="box-input-select">
+                        <div class="form-group row">
+                            <div class="col-sm-6">
+                                <input class="form-control" id="search-deposit-history" value="@ViewBag.Search" type="search" placeholder="Nhập từ khóa..." aria-label="Search">
+                            </div>
+                            <div class="col-sm-6">
+                                <button class="btn btn-primary  mr-sm-2" type="button" onclick="Search()">Tìm kiếm</button>
+                                <a class="btn btn-danger" href="/napthe/deposithistory">Tất cả</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<form class="needs-validation" novalidate>
+                    <div class="form-row">
+                        <div class="col-md-4 mb-3">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroupPrepend">Thẻ cào</span>
+                                </div>
+                                <input type="text" class="form-control" id="" placeholder="Mã thẻ, Serial..."
+                                       value="">
+                            </div>
+                        </div>-->
+                    <!-- loại thẻ -->
+                    <!--<div class="col-md-4 mb-3">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroupPrepend">Loại thẻ</span>
+                            </div>
+                            <select id="" name="trade_type" class="form-control">
+                                <option value=""> Tất cả loại thẻ</option>
+                                <option value="BIT">
+                                    BIT
+                                </option>
+                                <option value="GARENA">
+                                    GARENA
+                                </option>
+                                <option value="GATE">
+                                    GATE
+                                </option>
+                                <option value="MOBIFONE">
+                                    MOBIFONE
+                                </option>
+                                <option value="SCOIN">
+                                    SCOIN
+                                </option>
+                                <option value="VCOIN">
+                                    VCOIN
+                                </option>
+                                <option value="VIETNAMMOBILE">
+                                    VIETNAMMOBILE
+                                </option>
+                                <option value="VIETTEL">
+                                    VIETTEL
+                                </option>
+                                <option value="VINAPHONE">
+                                    VINAPHONE
+                                </option>
+                                <option value="ZING">
+                                    ZING
+                                </option>
+                            </select>
+
+                        </div>
+                    </div>-->
+                    <!-- kiểu nạp -->
+                    <!--<div class="col-md-4 mb-3">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroupPrepend">Kiểu nạp</span>
+                            </div>
+                            <select id="type_charge" class="form-control">
+                                <option value="">Nạp tự động</option>
+                                <option value="">Nạp chậm</option>
+                            </select>
+                        </div>
+                    </div>-->
+                    <!-- trạng thái -->
+                    <!--<div class="col-md-4 mb-3">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="inputGroupPrepend">Trạng thái</span>
+                                    </div>
+                                    <select id="type_charge" class="form-control">
+                                        <option class="stt_all" value=""> Tất cả</option>
+                                        <option class="stt_0" value="1">
+                                            Thẻ đúng
+                                        </option>
+                                        <option class="stt_0" value="0">
+                                            Thẻ sai
+                                        </option>
+                                        <option class="stt_0" value="2">
+                                            Chờ xử lý
+                                        </option>
+                                        <option class="stt_0" value="3">
+                                            Sai mệnh giá
+                                        </option>
+                                        <option class="stt_0" value="999">
+                                            Lỗi nạp thẻ
+                                        </option>
+                                        <option class="stt_0" value="-999">
+                                            Lỗi nạp thẻ
+                                        </option>
+                                        <option class="stt_0" value="-1">
+                                            Phát sinh lỗi nạp thẻ
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="inputGroupPrepend">Từ ngày</span>
+                                    </div>
+                                    <input type="date" class="form-control" id="" placeholder="" value="">
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="inputGroupPrepend">Đến ngày</span>
+                                    </div>
+                                    <input type="date" class="form-control" id="" placeholder="" value="">
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <button class="btn btn-info" type="submit">Tìm kiếm</button>
+                                <button class="btn btn-danger" type="button">Tất cả</button>
+                            </div>
+                        </div>
+                    </form>-->
+
+                </div>
+                <table class="table table-striped table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">Thời gian</th>
+                            <th scope="col">Nhà mạng</th>
+                            <th scope="col">Mã thẻ</th>
+                            <th scope="col">Serial</th>
+                            @*<th scope="col">Kiểu nạp</th>*@
+                            <th scope="col">Mệnh giá</th>
+                            <th scope="col">Kết quả</th>
+                            <th scope="col">Thực nhận</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in data)
+                        {
+                            <tr>
+                                <td>@item.CreatedDate.ToString("dd/MM/yyy")</td>
+                                <td>@item.TenNCC</td>
+                                <td>@item.MaThe</td>
+                                <td>@item.Serial</td>
+                                @*<td>@item.KieuNap</td>*@
+                                <td>@item.Value.ToString(" 000,0") <sup>đ</sup></td>
+                                @if (@item.Status == 1)
+                                {
+                                    <td>Thành công</td>
+                                }@if (@item.Status == 100)
+                                {
+                                    <td>Thất bại</td>
+                                }@if (@item.Status == 99)
+                                {
+                                    <td>Đang chờ</td>
+                                }@if (@item.Status == 2)
+                                {
+                                    <td>Thành công sai mệnh giá</td>
+                                }@if (@item.Status == 3)
+                                {
+                                    <td>Thẻ lỗi</td>
+                                }@if (@item.Status == 4)
+                                {
+                                    <td>Hệ thống bảo trì</td>
+                                }
+                            <td>@item.ThucNhan.ToString(" 000,0") <sup>đ</sup></td>
+                            </tr>
+
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>

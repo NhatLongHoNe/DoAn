@@ -1,0 +1,312 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="NhatDevJr"/>
+    <title>@ViewData["Title"] </title>
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">
+    <script src="~/client/js/fontawesome-free.js"></script>
+    <!-- bootstrap 4 -->
+    <link rel="stylesheet" href="~/client/css/bootstrap.min.css">
+    <!-- slick -->
+    <link rel="stylesheet" type="text/css" href="~/client/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="~/client/slick/slick-theme.css">
+    <link rel="stylesheet" href="~/client/css/styleSlick.css">
+    <!-- wow -->
+    <link rel="stylesheet" href="~/client/css/libs/animate.css">
+    <link rel="stylesheet" href="~/client/css/site.css">
+    <!-- css -->
+    <link rel="stylesheet" href="~/client/css/styleLayout.css">
+    <link rel="stylesheet" href="~/client/css/homeStyle.css">
+    <!-- toatr css -->
+    <link href="~/client/toastr/toastr.css" rel="stylesheet" />
+    <link href="~/client/images/logo.png"  rel="icon" />
+</head>
+<body>
+    <section id="menu">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <button class="sa-btn-nav navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand sa-logo" href="/">
+                    <img class="nLogo" src="" alt="">
+                </a>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <ul class="navbar-nav sa-menu mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Trang chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/napthe">Nạp thẻ cào</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="cursor:pointer" onclick="showAtmModal()">Nạp ATM - ví Điện Tử</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/changeinformation">Đổi thông tin</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/buycard">Mua thẻ cào</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/blog">Tin tức</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class=" pb-2" id="">
+                <div class=" d-flex justify-content-end">
+                    <div class="sa-login check-user-false">
+                        <a class="n-button mr-2" href="/login" title="Đăng Nhập">Đăng nhập</a>
+                    </div>
+                    <div class="sa-rigister check-user-false">
+                        <a class="n-button" href="/register" title="Đăng Ký">Đăng ký</a>
+                    </div>
+                </div>
+                <div class=" d-flex justify-content-end">
+                    <div class="sa-profile check-user-true d-none">
+                        <a class="n-button mr-2" href="/user/profile" title="User"></a>
+                    </div>
+                    <div class="sa-logout check-user-true d-none">
+                        <a style="cursor:pointer; color:#35d4dc;" class="n-button" onclick="LogoutClient()" title="Đăng Xuất">Đăng xuất</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    @RenderBody()
+    <!-- footer -->
+    <section id="footer" class="pt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 ">
+                    <div class="content-footer">
+                        <div class="text-center">
+                            <img class="nLogo" src="" style="height:120px; width:227px" alt="">
+                        </div>
+                        <div>
+                            <p>
+                                <strong>
+                                    <span style="color:#f1c40f">
+                                        <span style="font-size:16px">
+                                            Chào Mừng
+                                            Bạ
+                                        </span>
+                                    </span>
+                                </strong><strong>
+                                    <span style="color:#f1c40f">
+                                        <span style="font-size:16px">n Đến Với Shopskinre.vn</span>
+                                    </span><br>
+                                    <span style="        color: #ffc2aa
+">
+                                        <span style="font-size:14px">
+                                            * Shop Có Những Danh
+                                            Mục
+                                            Game Đang Hot Trên Thị Trường Hiện Nay<br>
+                                            * Cùng Ôn Lại Kỷ Niệm Thơ Ấu Với Những Màn Chơi Zombie Kịch
+                                            Tính<br>
+                                            * Hay Những Mục Thử May Đầy Hồi&nbsp;Hộp Và Hấp
+                                            Dẫn
+                                        </span>
+                                    </span>
+                                </strong><br>
+                                <span style="color:#ffffff">
+                                    <span style="font-size:14px">
+                                        <strong>
+                                            Thời Gian Làm
+                                            Việc:
+                                        </strong>
+                                    </span>
+                                </span><span style="color:#ffc2aa">
+                                    <span style="font-size:14px"><strong> </strong></span>
+                                </span><span style="        color: #ffc2aa
+">
+                                    <span style="font-size:14px"><strong>8h-12h</strong></span>
+                                </span><span style="color:#ffc2aa">
+                                    <span style="font-size:14px">
+                                        <strong>
+                                        </strong>
+                                    </span>
+                                </span><span style="color:#ffffff">
+                                    <span style="font-size:14px"><strong>&amp;</strong></span>
+                                </span><span style="color:#ffc2aa">
+                                    <span style="font-size:14px">
+                                        <strong>
+                                        </strong>
+                                    </span>
+                                </span><span style="color:#ffc2aa">
+                                    <span style="font-size:14px"><strong>13h30-22h</strong></span>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="footer-middle-top">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="d-flex justify-content-between">
+                                    <img class="h-100" src="~/client/images/icons/gif.png" alt="">
+                                    <p style="text-align:center">
+                                        <span style="color:#f1c40f">
+                                            <span style="font-size:0.9rem"><strong>1 năm</strong></span>
+                                        </span><br>
+                                        <span style="color:#ffc2aa">
+                                            <span style="font-size:0.9rem">
+                                                <strong>
+                                                    Thành
+                                                    Viên
+                                                </strong>
+                                            </span>
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex justify-content-between">
+                                    <img class="h-100" src="~/client/images/member.png" alt="">
+                                    <p style="text-align:center">
+                                        <span style="color:#f1c40f">
+                                            <span style="font-size:0.9rem"><strong>23.880&nbsp;&nbsp;&nbsp;</strong></span>
+                                        </span><br>
+                                        <span style="color:#ffc2aa">
+                                            <span style="font-size:0.9rem">
+                                                <strong>
+                                                    Thành
+                                                    Viên
+                                                </strong>
+                                            </span>&nbsp;&nbsp;
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex justify-content-between">
+                                    <img class="h-100" src="~/client/images/sale.png" alt="">
+                                    <p style="text-align:center">
+                                        <span style="color:#f1c40f">
+                                            <span style="font-size:0.9rem"><strong>3.205</strong></span>
+                                        </span><br>
+                                        <span style="color:#ffc2aa">
+                                            <span style="font-size:0.9rem">
+                                                <strong>
+                                                    Nick Đã
+                                                    Bán
+                                                </strong>
+                                            </span>
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex justify-content-between">
+                                    <img class="h-100" src="~/client/images/icon-footer3.png" alt="">
+                                    <p style="text-align:center">
+                                        <span style="color:#f1c40f">
+                                            <span style="font-size:0.9rem"><strong>36.020</strong></span>
+                                        </span><br>
+                                        <span style="color:#ffc2aa">
+                                            <span style="font-size:0.9rem">
+                                                <strong>
+                                                    Lượt Vào Shop
+                                                </strong>
+                                            </span>
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-middle-bottom mt-4">
+                        <div class="fb-page" data-href="https://www.facebook.com/Shop-Tốc-Chiến-Giá-Rẻ-108734941541385/"
+                             data-width="380" data-hide-cover="false" data-show-facepile="false"></div>
+                    </div>
+                </div>
+                <div class="col-md-3 colRight">
+                    <p>
+                        <span style="font-size:14px">
+                            <strong>
+                                <span style="color:#f1c40f">
+                                    AE Cần Bán Nick Thì Liên Hệ
+                                    Trực
+                                    Tiếp&nbsp;FANPAGE:
+                                </span><span style="color:#c0392b"><strong> </strong></span><a href="https://www.facebook.com/Shop-Tốc-Chiến-Giá-Rẻ-108734941541385/" target="_blank">
+                                    <span style="color:#ffc2aa">HỖ TRỢ SHOPSKINRE</span>
+                                </a>
+                            </strong>
+                        </span>
+                    </p>
+
+                    <p>
+                        <span style="font-size:14px">
+                            <strong>
+                                <span style="color:#e67e22">
+                                    Tham Gia Group Mua Bán Trao
+                                    Đổi:
+                                </span><span style="color:#3498db">&nbsp;</span><a href="https://www.facebook.com/Shop-Tốc-Chiến-Giá-Rẻ-108734941541385/" target="_blank">
+                                    <span style="color:#ffc2aa">Cộng Đồng TỐC CHIẾN Việt Nam</span>
+                                </a>
+                            </strong>
+                        </span>
+                    </p>
+
+                    <p>
+                        <span style="font-size:14px">
+                            <strong>
+                                <span style="color:#ffc2aa">
+                                    Liên hệ
+                                    Hotline:&nbsp;
+                                </span><a href="tel:" target="_blank">
+                                    <span class="nPhoneNumber" style="color:#ffc2aa"></span>
+                                </a>
+                            </strong>
+                        </span>
+                    </p>
+
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="c-layout-go2top" style="display: none;">
+        <i class="far fa-arrow-alt-circle-up"></i>
+    </div>
+    <!-- Atm view-->
+    <div class="demo-html">
+        @*<partial name="../Atm/_AtmView" />*@
+
+    </div>
+
+    <!-- message view-->
+    <div id="MessageFacebook">
+
+    </div>
+    <!-- bootstrap -->
+    <script src="~/client/js/jquery.min.js"></script>
+    <script src="~/client/js/popper.min.js"></script>
+    <script src="~/client/js/bootstrap.min.js"></script>
+    <!-- slick -->
+    <script src="~/client/slick/slick.min.js" type="text/javascript" charset="utf-8"></script>
+    <!-- wow -->
+    <!-- toatr js -->
+    <script src="~/client/toastr/toastr.js"></script>
+    <script src="~/client/dist/wow.js"></script>
+    <!-- js -->
+    <script src="~/client/js/scriptLayout.js"></script>
+    <script src="~/client/js/homeLayout.js"></script>
+    <script src="~/Admin/Content/js/AdminCommon.js"></script>
+
+  
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

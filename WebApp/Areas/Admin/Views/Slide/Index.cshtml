@@ -1,0 +1,91 @@
+﻿@{
+    ViewBag.Title = "Trang danh mục slide";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmins.cshtml";
+}
+<div class="show-table">
+    <div class="container-fluid">
+        <div class="showModal">
+            <!--Show dialog image server-->
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Xem chi tiết -->
+            <div class="modal fade" id="Detail" role="dialog">
+                <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="tableView">
+                    <div class="row p-2">
+                        <div class="utilities-top col-md-12  p-0 mb-2 justify-content-between d-flex">
+                            <div>
+                                <select class="form-control pageSize" name="display">
+                                    <option value="1">1</option>
+                                    <option value="5" selected>5</option>
+                                    <option value="15">15</option>
+                                    <option value="30">30</option>
+                                    <option value="50">50</option>
+                                    <option value="100">100</option>
+                                </select>
+                            </div>
+                            <div class="search d-flex">
+                                <input type="text" placeholder="Nhập tiêu đề tìm kiếm -> Nhấn Enter" class="searchInput form-control" style="width:250px" title="Nhập tiêu đề tìm kiếm -> Nhấn Enter" onchange="Search(this)">
+                                <button class="btn-green btn-tools text-nowrap btnAdd" onclick="RefreshForm()">
+                                    <i class="fa fa-plus"></i> Thêm mới
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-12 p-0">
+                            <div class="table-responsive">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 p-2 add-form">
+                @await Html.PartialAsync("_AddOrEdit", new ShopGame.Service.Model.SlideModel()
+                                                               {
+                                                                   Id = 0,
+                                                                    DisplayOrder = 0,
+                                                                     Description = "",
+                                                                     Image = "",
+                                                                     Status = true,
+                                                                      Link = ""
+                                                               })
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script>
+        urlGetData = '/Admin/Slide/GetListData';
+        GetDataToTable(urlGetData)
+    </script>
+}

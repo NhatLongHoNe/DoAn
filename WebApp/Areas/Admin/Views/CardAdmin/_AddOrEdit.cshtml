@@ -1,0 +1,48 @@
+﻿@model ShopGame.Service.Model.CardAdminModel
+<div class="collapse border show objInfor">
+    <form class="form-input">
+        <div class="alert-danger mb-3 admins-h2 btn-red">
+            THÔNG TIN CARD ADMIN
+        </div>
+        <div class="form-group mb-3" hidden>
+            <input type="number" name="Id" class="form-control" id="Id" value="@Model.Id">
+        </div>
+
+        <div class="form-group mb-3">
+            <label class="font-weight-bold mb-1">Tên ngân hàng hoặc tên loại ví</label>
+            <input type="text" name="BankName" class="form-control validation" id="name" value="@Model.BankName">
+            <div class="text-danger"></div>
+        </div>
+
+        <div class="form-group mb-3">
+            <label class="font-weight-bold mb-1">Số thẻ hoặc tên thẻ</label>
+            <input type="text" name="CardNumber" class="form-control validation" id="name" value="@Model.CardNumber">
+            <div class="text-danger"></div>
+        </div>
+
+        <div class="form-group mb-3">
+            <label class="font-weight-bold mb-1">Loại thẻ (1: Thẻ ATM, 2:Ví điện tử)</label>
+            <input type="text" name="CardType" class="form-control validation" id="name" value="@Model.CardType">
+            <div class="text-danger"></div>
+        </div>
+
+        <div class="form-group mb-3">
+            <label class="font-weight-bold mb-1">Chủ thẻ</label>
+            <input type="text" name="CardHolder" class="form-control validation" id="name" value="@Model.CardHolder">
+            <div class="text-danger"></div>
+        </div>
+
+        <div class="form-group mb-3">
+            <label class="font-weight-bold mb-1">Chi Nhánh</label>
+            <input type="text" name="CardBranch" class="form-control validation" id="name" value="@Model.CardBranch">
+            <div class="text-danger"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 text-right mr-0 pr-0 mt-1 mb-0 modal-footer">
+                <button type="button" class="btn btn btn-red btnCancel" onclick="RefreshForm()"><i class="fas fa-reply-all"></i> Nhập lại</button>
+                <button type="button" class="btn btn-green btnSave" data-id="0" onclick="AddOrUpdate('/Admin/CardAdmin/AddOrUpdate')"> <i class="far fa-save"></i> Ghi lại</button>
+            </div>
+        </div>
+    </form>
+</div>

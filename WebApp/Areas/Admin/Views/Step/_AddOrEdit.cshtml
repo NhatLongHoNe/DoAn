@@ -1,0 +1,35 @@
+﻿@model ShopGame.Service.Model.StepModel
+<div class="collapse border show objInfor">
+    <form class="form-input">
+        <div class="alert-danger mb-3 admins-h2 btn-red">
+            HƯỚNG DẪN MUA SKIN VÀ TƯỚNG
+        </div>
+        <div class="form-group mb-3" hidden>
+            <input type="number" name="Id" class="form-control" id="Id" value="@Model.Id">
+        </div>
+
+        <div class="form-group mb-3">
+            <label class="font-weight-bold mb-1">Nội dung</label>
+            <textarea name="Content" id="Content" class="ckeditor">@Html.Raw(Model.Content)</textarea>
+            <div class="text-danger"></div>
+        </div>
+
+
+        <div class="form-group">
+            <label class="font-weight-bold mr-2">Trạng thái </label>
+            <input type="radio" name="Status" value="true" id="s1" @if (Model.Status == true) { <text> checked</text> } /><label class="ml-2 mr-5" for="s1">Hiển thị</label>
+            <input type="radio" name="Status" value="false" id="s2" @if (Model.Status != true) { <text> checked</text> } /><label class="ml-2" for="s2">Ẩn</label>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 text-right mr-0 pr-0 mt-1 mb-0 modal-footer">
+                <button type="button" class="btn btn btn-red btnCancel" onclick="RefreshForm()"><i class="fas fa-reply-all"></i> Nhập lại</button>
+                <button type="button" class="btn btn-green btnSave" data-id="0" onclick="AddOrUpdate('/Admin/step/AddOrUpdate')"> <i class="far fa-save"></i> Ghi lại</button>
+            </div>
+        </div>
+    </form>
+</div>
+<script type="text/javascript">
+    console.log("test")
+    CKEDITOR.replace('Content');
+</script>

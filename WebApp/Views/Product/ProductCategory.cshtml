@@ -1,0 +1,191 @@
+﻿@model ShopGame.Service.Model.ShopGameResultModel<ShopGame.Service.Model.ViewModel.ProductViewModel>
+@{
+    var data = Model.Results;
+    var pageSize = Model.PageSize;
+    var pageNumber = Model.PageNumber;
+    var pageCount = Model.PageCount;
+    var productCategory = ViewBag.ProductCategory;
+
+}
+@{
+    ViewData["Title"] = "ProductCategory";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Scripts{
+    <script>
+
+        function ChangePageNumber() {
+            $('.pagination li a').on('click', function (e) {
+                let val = $(this).attr('data-index') ?? "";
+                let search = $("#search-product").val();
+                let productcategoryId = $("#productId").val();
+                submitData.pageNumber = val;
+                location.href = "/product/ProductCategory?ProductCategoryId=" +productcategoryId+"&pageNumber=" + val + "&search=" + search;
+            })
+        }
+        ChangePageNumber();
+
+
+        function Search() {
+            let search = $("#search-product").val();
+            let val = $(this).attr('data-index') ?? "";
+            let productcategoryId = $("#productId").val();
+            location.href = "/product/ProductCategory?ProductCategoryId=" + productcategoryId + "&pageNumber=" + val + "&search=" + search;
+        }
+        $("#search-product").on('keypress', function (e) {
+            if (e.which == 13) {
+                Search();
+            }
+        });
+    </script>
+
+}
+<!-- product-list -->
+<section id="product-list" class="py-5">
+    <div class="container bg-container p-3">
+        <div class="">
+            <div class="">
+                <h3 class="n-blue-color">@productCategory.Name</h3>
+            </div>
+            <p class="n-blue-color">
+                @productCategory.Description
+            </p>
+        </div>
+        <div class="box-product-list-select">
+                <div class="form-group row">
+                    <div class="col-sm-5">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Tìm Kiếm</span>
+                            </div>
+                            <input type="text" class="form-control" id="search-product" placeholder="Search ..." aria-label=""
+                                   aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <a class="btn btn-primary text-white mr-sm-2" onclick="Search()">Tìm kiếm</a>
+                        <a class="btn btn-danger" href="/product/ProductCategory?ProductCategoryId=@productCategory.Id">Tất cả</a>
+                    </div>
+                </div>
+        </div>
+        <div class="row">
+            @foreach (var item in data)
+            {
+                @if (item.Status == true)
+                {
+                    <div class="col-sm-6 col-md-3">
+                        <div class="box-product-list">
+                            <div class="box-product-list-image">
+                                <img class="w-100" src="@item.Image" alt="">
+                                <div class="box-product-list-image-id">
+                                    <span>MS: @item.Id</span>
+                                </div>
+                            </div>
+                            <div class="box-product-list-content text-center">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <p>Rank : @item.Rank </p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p>Loại TK: @item.LoaiTaiKhoan </p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p>Số Tướng: @item.SoTuong</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p>Số skin: @item.SoTrangPhuc</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-product-list-bottom d-flex justify-content-around">
+                                <div>
+                                    <span class="btn btn-outline-danger"> @item.Price.ToString(" 000,0") <sup>đ</sup></span>
+
+                                </div>
+                                <div>
+                                    <a href="/product/detail?productId=@item.Id" class="btn btn-danger">CHI TIẾT</a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                }
+
+            }
+        </div>
+        <div class="pagination-container">
+            <ul class="pagination">
+                @if (pageCount <= 4)
+                {
+                    for (int index = 1; index <= pageCount; index++)
+                    {
+                        if (index == pageNumber)
+                        {
+                            <li class="active"><a data-index="@index">@index</a></li>
+                        }
+                        else
+                        {
+                            <li><a data-index="@index">@index</a></li>
+                        }
+                    }
+                }
+                else
+                {
+                    if (pageNumber <= 2)
+                    {
+                        for (int index = 1; index <= 4; index++)
+                        {
+                            if (index == pageNumber)
+                            {
+                                <li class="active"><a data-index="@index">@index</a></li>
+                            }
+                            else
+                            {
+                                <li><a data-index="@index">@index</a></li>
+                            }
+                        }
+                        <li><a class="nextPage" data-index="@pageCount"><i class="fas fa-chevron-right"></i></a></li>
+                    }
+                    else if (pageNumber >= pageCount - 2)
+                    {
+                        <li><a class="prevPage" data-index="1"><i class="fas fa-chevron-left"></i></a></li>
+
+                        for (int index = pageCount - 3; index <= pageCount; index++)
+                        {
+                            if (index == pageNumber)
+                            {
+                                <li class="active"><a data-index="@index">@index</a></li>
+                            }
+                            else
+                            {
+                                <li><a data-index="@index">@index</a></li>
+                            }
+                        }
+                    }
+                    else
+                    {
+                        <li><a class="prevPage" data-index="1"><i class="fas fa-chevron-left"></i></a></li>
+                        for (int index = pageNumber - 1; index <= pageNumber + 2; index++)
+                        {
+                            if (index == pageNumber)
+                            {
+                                <li class="active"><a data-index="@index">@index</a></li>
+                            }
+                            else
+                            {
+                                <li><a data-index="@index">@index</a></li>
+                            }
+                        }
+                        <li><a class="nextPage" data-index="@pageCount"><i class="fas fa-chevron-right"></i></a></li>
+                    }
+                }
+
+            </ul>
+        </div>
+
+    </div>
+</section>
+<div class="hidden">
+    <input id="productId" type="text" name="name" value="@productCategory.Id" hidden/>
+</div>

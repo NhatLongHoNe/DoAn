@@ -1,0 +1,24 @@
+﻿@model ShopGame.Service.Model.BlogTypeModel
+<div class="collapse border show objInfor">
+    <form class="form-input">
+        <div class="alert-danger mb-3 admins-h2 btn-red">
+            THÔNG TIN DANH MỤC SẢN PHẨM
+        </div>
+        <div class="form-group mb-3" hidden>
+            <input type="number" name="Id" class="form-control" id="Id" value="@Model.Id">
+        </div>
+
+        <div class="form-group mb-3">
+            <label class="font-weight-bold mb-1">Tên danh mục</label>
+            <input type="text" name="Name" class="form-control validation" id="name" value="@Model.Name">
+            <div class="text-danger"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 text-right mr-0 pr-0 mt-1 mb-0 modal-footer">
+                <button type="button" class="btn btn btn-red btnCancel" onclick="RefreshForm()"><i class="fas fa-reply-all"></i> Nhập lại</button>
+                <button type="button" class="btn btn-green btnSave" data-id="0" onclick="AddOrUpdate('/Admin/BlogType/AddOrUpdate')"> <i class="far fa-save"></i> Ghi lại</button>
+            </div>
+        </div>
+    </form>
+</div>

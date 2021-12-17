@@ -1,0 +1,110 @@
+﻿@*@model ShopGame.Service.Model.ShopGameResultModel<>*@
+@{
+    ViewData["Title"] = "Trang chủ";
+}
+@{
+    var slides = ViewBag.Slides;
+    var notification = ViewBag.Notification;
+    var listProductCategory = ViewBag.listProductCategory;
+    var listSkinCategory = ViewBag.listSkinCategory;
+}
+@section Scripts{
+    <script src="~/client/js/NaptheScript.js"></script>
+}
+<!-- slider -->
+<partial name="../Slider/_GetSliders" model="slides" />
+
+<!--  dịch vụ nổi bật -->
+<!--<section id="hot-service" class="pt-4">
+    <div class="container bg-container pb-3">
+        <div class="content-header pt-3">
+            <h3>DỊCH VỤ NỔI BẬT</h3>
+            <div class="n-line-center"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <img class="w-100 mt-2" src="~/client/images/hot-service.jpg" alt="">
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <img class="w-100 mt-2" src="~/client/images/hot-service.jpg" alt="">
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <img class="w-100 mt-2" src="~/client/images/hot-service.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</section>-->
+<!--  list-service -->
+<section id="list-service" class="pt-5">
+    <div class="container bg-container pb-3">
+        <div class="content-header py-3">
+            <h3>DANH MỤC DỊCH VỤ</h3>
+            <div class="n-line-center"></div>
+        </div>
+        <div class="row">
+
+            @foreach (var item in listSkinCategory)
+            {
+                <div class="col-md-3 col-sm-6">
+                    <div class="box-content">
+                        <div class="box-header text-center py-2">
+                            <a class=" text-danger" href="#">@item.Name</a>
+                        </div>
+                        <div class="box-body">
+                            <img class="w-100" src="@item.Image" alt="">
+                            <div class="box-body-content">
+                                <p>
+                                    Số lượng: <span class="text-danger">@item.Count</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="box-footer text-center">
+                            <a class="n-button-1" href="/Skin/SkinCategory?skinCategoryId=@item.Id">Xem tất cả</a>
+                        </div>
+                    </div>
+                </div>
+
+            }
+        </div>
+    </div>
+</section>
+<!-- danh mục game -->
+<section id="list-game" class="py-5">
+    <div class="container bg-container pb-3">
+        @*<div class="text-center py-3">
+            <img class="" src="~/client/images/title-menu-game.png" alt="">
+        </div>*@
+        <div class="content-header py-3">
+            <h3>DANH MỤC GAME</h3>
+            <div class="n-line-center"></div>
+        </div>
+        <div class="row">
+            @foreach (var item in listProductCategory)
+            {
+                <div class="col-md-3 col-sm-6">
+                    <div class="box-content">
+                        <div class="box-header text-center py-2">
+                            <a class=" text-danger" href="/Product/ProductCategory?ProductCategoryId=@item.Id">@item.Name</a>
+                        </div>
+                        <div class="box-body">
+                            <a class=" text-danger" href="/Product/ProductCategory?ProductCategoryId=@item.Id">
+                                <img class="w-100" src="@item.Image" alt="@item.Name">
+                            </a>
+                            <div class="box-body-content">
+                                <p>
+                                    Đã bán: <span class="text-danger">@item.Count</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="box-footer text-center">
+                            <a class="n-button-1" href="/Product/ProductCategory?ProductCategoryId=@item.Id">Xem tất cả</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<!--  thông báo -->
+<partial name="../Notification/_NotificationView" model="notification" />
