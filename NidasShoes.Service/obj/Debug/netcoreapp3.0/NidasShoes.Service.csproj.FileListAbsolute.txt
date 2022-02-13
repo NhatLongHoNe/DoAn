@@ -1,0 +1,13 @@
+C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes.Service\obj\Debug\netcoreapp3.0\NidasShoes.Service.csproj.AssemblyReference.cache
+C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes.Service\obj\Debug\netcoreapp3.0\NidasShoes.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes.Service\obj\Debug\netcoreapp3.0\NidasShoes.Service.AssemblyInfoInputs.cache
+C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes.Service\obj\Debug\netcoreapp3.0\NidasShoes.Service.AssemblyInfo.cs
+C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes.Service\obj\Debug\netcoreapp3.0\NidasShoes.Service.csproj.CoreCompileInputs.cache
+C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes.Service\bin\Debug\netcoreapp3.0\NidasShoes.Service.deps.json
+C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes.Service\bin\Debug\netcoreapp3.0\NidasShoes.Service.dll
+C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes.Service\bin\Debug\netcoreapp3.0\NidasShoes.Service.pdb
+C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes.Service\bin\Debug\netcoreapp3.0\NidasShoes.Repository.dll
+C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes.Service\bin\Debug\netcoreapp3.0\NidasShoes.Repository.pdb
+C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes.Service\obj\Debug\netcoreapp3.0\NidasShoes.Service.csproj.CopyComplete
+C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes.Service\obj\Debug\netcoreapp3.0\NidasShoes.Service.dll
+C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes.Service\obj\Debug\netcoreapp3.0\NidasShoes.Service.pdb

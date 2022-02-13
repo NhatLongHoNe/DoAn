@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    font-family: 'Open Sans'
+}
+
+/* common */
+.circle {
+    background: white;
+    padding: 6px;
+    border-radius: 50%;
+}
+
+.circle-facebook {
+    padding: 6px 9px !important;
+}
+
+.no-gutter {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+/* input search */
+
+.search {
+    position: relative;
+    color: #fff;
+    font-size: 16px;
+}
+
+.search input {
+    width: 250px;
+    height: 32px;
+    background: #283653;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    /* box-shadow: 0 0 3px #ccc, 0 10px 15px #ebebeb inset; */
+}
+
+.search input::placeholder {
+    font-size: 0.8rem;
+}
+
+.search input {
+    text-indent: 32px;
+    color: #fff;
+}
+
+.search .fa-search {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+}
+
+/* reset col */
+.no-gutter>[class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+}
+/* slick */
+.slick-next {
+    left: 90%;
+}
+
+.slick-prev {
+    left: 20px;
+    z-index: 9;
+}
+
+/* header */
+#header {}
+
+#header .top-header {
+    background-color: #283653;
+}
+
+.bottom-header {
+    background-color: #f0f0f0;
+}
+
+.bottom-header .bottom-header__content img {
+    border-radius: 50%;
+}
+
+/* menu */
+#menu nav {
+    background-color: white;
+    height: 80px;
+    width: 100%;
+}
+
+#menu label.logo {
+    color: #000;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+#menu nav ul {
+}
+
+#menu nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+#menu nav ul li a {
+    color: #000;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    padding: 7px 13px;
+}
+
+#menu a.active,
+#menu a:hover {
+    color: white;
+    background: #275390;
+    transition: .5s;
+    text-decoration: none;
+}
+
+#menu .checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#menu #check {
+    display: none;
+}
+
+#menu ul.nav-menu {
+    text-align: justify;
+}
+
+/* banner */
+
+.banner-regular {
+    margin: 0 auto;
+}
+
+#latest-news {
+    background-color: #f6f6f6;
+}
+
+#education {
+    background-color: #ebebeb;
+}
+
+#category {
+    position: relative;
+    height: 400px;
+    width: 100%;
+}
+
+#category img.category__background {
+    opacity: 0.5;
+}
+
+#category .box-img {
+    height: 400px;
+    background-color: #275199;
+}
+
+#category .category__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1092px;
+
+}
+
+
+#category .category__content .box-content img {
+    filter: brightness(0) invert(1);
+}
+
+
+.box-item {
+    width: 400px;
+    height: 420px;
+}
+
+.box-image {
+    height: 50%;
+}
+
+.box-item .box-image img {
+    border-radius: 50%;
+    border: 0.5px solid white;
+}
+@media (min-width: 576px) { 
+
+ }
+
+
+@media (min-width: 768px) {
+    #menu nav {
+        height: 160px;
+    }
+    .slick-next {
+        left: 90%;
+    }
+    
+    .slick-prev {
+        left: 60px;
+        z-index: 9;
+    }
+  }
+@media (min-width: 992px) { 
+    .slick-next {
+        left: 95%;
+    }
+    
+    .slick-prev {
+        left: 60px;
+        z-index: 9;
+    }
+}
+@media (min-width: 1200px) {
+    .width-1092-center {
+        width: 1092px;
+        margin: 0 auto;
+    }
+    #menu nav {
+        height: 80px;
+    }
+}
+
+
+
+
+/* desktop */
+@media (max-width: 952px) {}
+
+@media (max-width: 575.98px) {}
+
+@media (max-width: 767.98px) {
+    #menu{
+        background-color: red;
+    }
+    #menu nav {
+        background-color: #1b9bff;
+
+    }
+
+    #menu .checkbtn {
+        display: block;
+      
+    }
+
+    #menu ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+
+    #menu nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    #menu nav ul li a {
+        color: #fff;
+        font-size: 16px;
+    }
+
+    #menu a:hover,
+    #menu a.active {
+        background: none;
+        color: #0082e6;
+    }
+
+    #check:checked~ul {
+        left: 0;
+        z-index: 10;
+    }
+}
+@media (max-width: 991.98px) {
+    #menu nav ul li a {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 1199.98px) {}
