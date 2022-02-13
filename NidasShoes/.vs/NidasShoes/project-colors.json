@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "78fa86f6-774a-4ba7-a141-37b5fb969889": {
+      "ProjectGuid": "78fa86f6-774a-4ba7-a141-37b5fb969889",
+      "DisplayName": "NidasShoes.Repository",
+      "ColorIndex": 0
+    },
+    "7c852bc4-e99b-4f31-a095-2bfe2b5da83b": {
+      "ProjectGuid": "7c852bc4-e99b-4f31-a095-2bfe2b5da83b",
+      "DisplayName": "NidasShoes.Service",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "2216cb95-5a24-4cf7-bfb9-5e654373f673": {
+      "ProjectGuid": "2216cb95-5a24-4cf7-bfb9-5e654373f673",
+      "DisplayName": "NidasShoes",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}
