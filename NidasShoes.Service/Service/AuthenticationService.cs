@@ -20,7 +20,7 @@ namespace NidasShoes.Service.Service
 
         public async Task<string> Login(AccountModel account)
         {
-            var accountEntity = JsonConvert.DeserializeObject<AccountEntity>(JsonConvert.SerializeObject(account));
+            var accountEntity = JsonConvert.DeserializeObject<UserEntity>(JsonConvert.SerializeObject(account));
             var res = await _authenticationRepository.Login(accountEntity);
             return JsonConvert.SerializeObject(res);
         }
@@ -33,7 +33,7 @@ namespace NidasShoes.Service.Service
 
         public async Task<string> AddOrUpdate(AccountModel account)
         {
-            var accountEntity = JsonConvert.DeserializeObject<AccountEntity>(JsonConvert.SerializeObject(account));
+            var accountEntity = JsonConvert.DeserializeObject<UserEntity>(JsonConvert.SerializeObject(account));
             var res = await _authenticationRepository.AddOrUpdate(accountEntity);
             return JsonConvert.SerializeObject(res);
         }

@@ -19,10 +19,9 @@ namespace NidasShoes.Repository.Repository
         public async Task<NidasShoesResultEntity<bool>> AddOrUpdate(ProductCategoryEntity account)
         {
             var param = new DynamicParameters();
-            param.Add("@Id", account.Id);
+            param.Add("@Id", account.ID);
             param.Add("@Name", account.Name);
             param.Add("@Description", account.Description);
-            param.Add("@Image", account.Image);
             var result = await _commonRepository.ListProcedureAsync<bool>("NidasShoes_create_productcategory", param);
             return result;
         }
@@ -85,31 +84,31 @@ namespace NidasShoes.Repository.Repository
             return result;
         }
 
-        public async Task<NidasShoesResultEntity<bool>> AddOrUpdateProduct(ProductEntity product, List<ProductImageEntity> productImages)
+        public async Task<NidasShoesResultEntity<bool>> AddOrUpdateProduct(ProductEntity product, List<ImagesEntity> productImages)
         {
             var param = new DynamicParameters();
-            param.Add("@Id", product.Id);
+            param.Add("@Id", product.ID);
             param.Add("@Code", product.Code);
             param.Add("@Name", product.Name);
-            param.Add("@Image", product.Image);
-            param.Add("@Description", product.Description);
-            param.Add("@Detail", product.Detail);
-            param.Add("@CategoryId", product.CategoryId);
-            param.Add("@OrderNo", product.OrderNo);
-            param.Add("@Rank", product.Rank);
-            param.Add("@SoTuong", product.SoTuong);
-            param.Add("@SoTrangPhuc", product.SoTrangPhuc);
-            param.Add("@LoaiTaiKhoan", product.LoaiTaiKhoan);
-            param.Add("@NoiBat", product.NoiBat);
-            param.Add("@DangKy", product.DangKy);
-            param.Add("@VIP", product.VIP);
-            param.Add("@Top", product.Top);
-            param.Add("@AccUserName", product.AccUserName);
-            param.Add("@AccPassword", product.AccPassword);
-            param.Add("@MetaTitle", product.MetaTitle);
-            param.Add("@MetaDescription", product.MetaDescription);
-            param.Add("@Status", product.Status);
-            param.Add("@Price", product.Price);
+            //param.Add("@Image", product.);
+            //param.Add("@Description", product.Description);
+            //param.Add("@Detail", product.Detail);
+            //param.Add("@CategoryId", product.CategoryId);
+            //param.Add("@OrderNo", product.OrderNo);
+            //param.Add("@Rank", product.Rank);
+            //param.Add("@SoTuong", product.SoTuong);
+            //param.Add("@SoTrangPhuc", product.SoTrangPhuc);
+            //param.Add("@LoaiTaiKhoan", product.LoaiTaiKhoan);
+            //param.Add("@NoiBat", product.NoiBat);
+            //param.Add("@DangKy", product.DangKy);
+            //param.Add("@VIP", product.VIP);
+            //param.Add("@Top", product.Top);
+            //param.Add("@AccUserName", product.AccUserName);
+            //param.Add("@AccPassword", product.AccPassword);
+            //param.Add("@MetaTitle", product.MetaTitle);
+            //param.Add("@MetaDescription", product.MetaDescription);
+            //param.Add("@Status", product.Status);
+            //param.Add("@Price", product.Price);
             param.Add("@ProductImage", productImages.ConvertListToDataTable(), System.Data.DbType.Object);
             var result = await _commonRepository.ListProcedureAsync<bool>("NidasShoes_create_product", param);
             return result;
@@ -123,11 +122,11 @@ namespace NidasShoes.Repository.Repository
             return result;
         }
 
-        public async Task<NidasShoesResultEntity<ProductImageEntity>> GetProductImage(int Id)
+        public async Task<NidasShoesResultEntity<ImagesEntity>> GetProductImage(int Id)
         {
             var param = new DynamicParameters();
             param.Add("@Id", Id);
-            var result = await _commonRepository.ListProcedureAsync<ProductImageEntity>("NidasShoes_get_productImage", param);
+            var result = await _commonRepository.ListProcedureAsync<ImagesEntity>("NidasShoes_get_productImage", param);
             return result;
         }
 

@@ -16,14 +16,14 @@ namespace NidasShoes.Repository.Repository
         {
             _commonRepository = commonRepository;
         }
-        public async Task<NidasShoesResultEntity<ClientSlideEntity>> GetListDataSlide(BaseParamEntity baseParam)
+        public async Task<NidasShoesResultEntity<SlideEntity>> GetListDataSlide(BaseParamEntity baseParam)
         {
             int Totals = 0, PageCount = 0;
             var param = new DynamicParameters();
             param.Add("@BaseParam", baseParam.ConvertObjectToDataTable(), System.Data.DbType.Object);
             param.Add("@Totals", Totals, System.Data.DbType.Int32, System.Data.ParameterDirection.InputOutput);
             param.Add("@PageCount", PageCount, System.Data.DbType.Int32, System.Data.ParameterDirection.InputOutput);
-            var res = await _commonRepository.ListProcedureAsync<ClientSlideEntity>("NidasShoes_get_banner", param);
+            var res = await _commonRepository.ListProcedureAsync<SlideEntity>("NidasShoes_get_banner", param);
             res.TotalRecords = param.Get<int>("@Totals");
             res.PageCount = param.Get<int>("@PageCount");
             res.PageSize = baseParam.PageSize;

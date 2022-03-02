@@ -17,10 +17,10 @@ namespace NidasShoes.Repository.IRepository
         // product
 
         Task<NidasShoesResultEntity<ProductEntity>> GetListDataProduct(BaseParamEntity baseParam);
-        Task<NidasShoesResultEntity<Boolean>> AddOrUpdateProduct(ProductEntity product,List<ProductImageEntity> productImages);
+        Task<NidasShoesResultEntity<Boolean>> AddOrUpdateProduct(ProductEntity product,List<ImagesEntity> productImages);
         Task<NidasShoesResultEntity<ProductEntity>> GetProductById(int Id);
         Task<NidasShoesResultEntity<Boolean>> DeleteProductById(int Id);
-        Task<NidasShoesResultEntity<ProductImageEntity>> GetProductImage(int Id);
+        Task<NidasShoesResultEntity<ImagesEntity>> GetProductImage(int Id);
 
         //client
         Task<NidasShoesResultEntity<ProductEntity>> GetListDataProductByProductCategoryId(int productCategoryId, BaseParamEntity baseParam);

@@ -8,10 +8,11 @@ namespace NidasShoes.Repository.IRepository
 {
     public interface IAuthenticationRepository
     {
-        Task<NidasShoesResultEntity<AccountEntity>> Login(AccountEntity account);
-        Task<NidasShoesResultEntity<AccountEntity>> GetListData(BaseParamEntity baseParam);
-        Task<NidasShoesResultEntity<Boolean>> AddOrUpdate(AccountEntity account);
-        Task<NidasShoesResultEntity<AccountEntity>> GetById(int Id);
+        Task<NidasShoesResultEntity<UserEntity>> Login(UserEntity account);
+        Task<NidasShoesResultEntity<UserEntity>> GetListData(BaseParamEntity baseParam);
+        Task<NidasShoesResultEntity<Boolean>> AddOrUpdate(UserEntity account);
+        Task<NidasShoesResultEntity<UserEntity>> GetById(int Id);
         Task<NidasShoesResultEntity<Boolean>> DeleteById(int Id);
+        Task<NidasShoesResultEntity<int>> ForgotPass(string Email, string Hashed);
     }
 }

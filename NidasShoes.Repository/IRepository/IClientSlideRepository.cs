@@ -8,6 +8,6 @@ namespace NidasShoes.Repository.IRepository
 {
     public interface IClientSlideRepository
     {
-        Task<NidasShoesResultEntity<ClientSlideEntity>> GetListDataSlide(BaseParamEntity baseParam);
+        Task<NidasShoesResultEntity<SlideEntity>> GetListDataSlide(BaseParamEntity baseParam);
     }
 }

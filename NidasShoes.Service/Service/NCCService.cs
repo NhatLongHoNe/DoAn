@@ -12,8 +12,8 @@ namespace NidasShoes.Service.Service
 {
     public class NCCService : INCCService
     {
-        INCCRepository _nCCRepository;
-        public NCCService(INCCRepository nCCRepository)
+        ISupplyRepository _nCCRepository;
+        public NCCService(ISupplyRepository nCCRepository)
         {
             _nCCRepository = nCCRepository;
         }
