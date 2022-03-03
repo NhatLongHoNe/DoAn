@@ -1,0 +1,10 @@
+﻿
+.login_form, .registration_form {
+    position: relative !important;
+    top: 0;
+    width: 100%;
+}
+.logo-login{
+    display:flex;
+    justify-content:center;
+}

@@ -15,7 +15,7 @@ namespace NidasShoes.Service.IService
 
 
         Task<string> GetListDataProduct(BaseParamModel baseParam);
-        Task<string> AddOrUpdateProduct(ProductModel product,List<ProductImageModel> productImages);
+        Task<string> AddOrUpdateProduct(ProductModel product,List<ImagesModel> productImages);
         Task<string> GetByProductId(int Id);
         Task<string> DeleteProductById(int Id);
         Task<string> GetProductImage(int Id);

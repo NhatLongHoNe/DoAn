@@ -1,0 +1,1039 @@
+﻿.banner-index {
+    padding: 4em 0;
+    background: url("/Content/Upload/Images/index/banner.png") center no-repeat;
+    background-size: cover;
+}
+
+    .banner-index h2 {
+        font-family: 'UTM AvoBold';
+        font-size: 1rem;
+    }
+
+        .banner-index h2 span {
+            font-family: 'UTM AvoBold';
+            font-size: 2rem;
+        }
+
+.banner-slider .slick-next, .banner-slider .slick-prev {
+    display: none !important;
+    right: 0;
+}
+
+.banner-slider .slick-dots {
+    bottom: 1em;
+}
+
+.banner-slider.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+
+.banner .box-title strong {
+    color: #fff;
+}
+
+.advisory {
+    background: url("/Content/Upload/Images/index/banner-introduce.png") top no-repeat;
+    background-size: cover;
+    padding-bottom: 2em;
+}
+
+    .advisory .box input, .advisory .box button {
+        border: none;
+        height: 4em;
+        width: 100%;
+        padding: 0 1.5em;
+    }
+
+    .advisory .box button {
+        font-family: 'UTM AvoBold';
+    }
+
+    .advisory input::-webkit-input-placeholder {
+        color: #000;
+    }
+
+    .advisory .box .title strong {
+        font-family: 'UTM AvoBold';
+    }
+
+section .box-title {
+    font-size: 1rem;
+}
+
+    section .box-title h3 {
+        font-size: 1.5em;
+        position: relative;
+    }
+
+    section .box-title strong {
+        color: #00b3cb;
+        font-family: 'UTM AvoBold';
+    }
+
+    section .box-title h4 {
+        font-family: 'UTM AvoBold';
+        font-size: 1em;
+    }
+
+    section .box-title hr {
+        width: 100px;
+        border: 2px solid #00b3cb;
+    }
+
+.advisory .box-title {
+    margin-top: 2em;
+}
+
+.advisory .content p {
+    font-size: .9em;
+    color: #3e3e3e;
+}
+
+.advisory .box {
+    font-size: 1rem;
+    padding: 2em 4em;
+}
+
+.advisory .box-select {
+    height: 4em;
+    padding: 1.5em;
+}
+
+.educate {
+    background: url("/Content/Upload/Images/index/banner-educate.png") top no-repeat;
+    background-size: cover;
+    padding: 4em 0;
+    padding: 2em 0 0 0;
+}
+
+    .educate .box .content {
+        padding: 1.5em 1em 1em 1.2em;
+    }
+
+    .educate .box {
+        box-shadow: 0 0 4px #adadad;
+    }
+
+        .educate .box p {
+            font-size: .8em;
+        }
+
+        .educate .box .title {
+            font-size: 1em;
+            font-family: 'UTM AvoBold';
+        }
+
+        .educate .box a {
+            background: transparent;
+            color: #fff;
+            border: 1px solid #fff;
+            font-size: .8em;
+            font-weight: 600;
+        }
+
+.product {
+    background: url("/Content/Upload/Images/index/banner-product.png") top no-repeat;
+    background-size: cover;
+    padding: 2em 0;
+}
+
+    .product .box-title strong {
+        color: #000;
+    }
+
+    .product .content p {
+        font-size: .8em;
+        color: #636363;
+        font-weight: 600;
+    }
+
+    .product .box {
+        width: calc(100% - 2em);
+        height: calc(100% - 2em);
+        top: 1em;
+        left: 1em;
+        padding: 1em;
+        background: #ffffff66;
+    }
+
+        .product .box .content {
+            background: transparent;
+            padding: 1em;
+            height: 100%;
+            border: 1px dashed #fff;
+        }
+
+            .product .box .content h4 {
+                font-size: 1.3em;
+                font-family: 'UTM AvoBold';
+            }
+
+            .product .box .content a {
+                border: 1px solid #000;
+                font-family: 'UTM AvoBold';
+                font-size: .8em;
+            }
+
+    .product .btn-see-all {
+        border: 1px solid #000;
+        font-size: .9em;
+    }
+
+.news {
+    padding: 2em 0 0 0;
+}
+
+    .news .content {
+        padding: 1.5em 1em 1em 1em;
+        background: #f6f6f6;
+    }
+
+        .news .content hr {
+            border-color: #000;
+            margin: .8em 0;
+        }
+
+        .news .content .title {
+            font-family: 'UTM AvoBold';
+        }
+
+        .news .content .desc, .news span {
+            color: #797979;
+            font-size: .8em;
+            font-weight: 600;
+        }
+
+            .news span:first-child {
+                border-right: 1.5px solid #000;
+            }
+
+.partner {
+    font-size: 1rem;
+    padding: 2em 0 0 0;
+    background: url("/Content/Upload/Images/index/banner-partner.png") top no-repeat;
+    background-size: cover;
+}
+
+    .partner .img {
+        height: 110px;
+        overflow: hidden;
+    }
+
+    .partner .box-title i {
+        font-size: .9em;
+    }
+
+.list-partner, .teacher-page, .course {
+    padding: 2em 0 1em 0;
+    font-size: 1rem;
+    background: #f6f6f6;
+}
+
+section .page-title h3 {
+    padding: .2em 0;
+    border-bottom: 3px solid #00b3cb;
+    display: inline-block;
+    margin-bottom: 1em;
+}
+
+    section .page-title h3:before {
+        position: absolute;
+        content: "";
+        width: 8px;
+        height: 4px;
+        background: #f6f6f6;
+        top: calc(100% - 1px);
+        left: 1.5em;
+    }
+
+section .page-title p {
+    font-size: 1em;
+}
+
+.partner-group {
+    margin-top: 5em;
+}
+
+.partner-item .title {
+    padding: 1em;
+    background: #b4e4eb;
+    margin: 1em 0 3em 0;
+}
+
+.partner-item h4 {
+    position: absolute;
+    height: calc( 100% + 1em);
+    top: -.5em;
+    left: 0;
+    background: #00b3cb;
+    padding: 0 1.2em;
+    color: #fff;
+    font-family: 'UTM AvoBold';
+    font-size: 1.2em;
+}
+
+.partner-item .img {
+    height: 180px;
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 2px #8c8c8c;
+    margin-bottom: 2em;
+}
+
+.teacher-page .teacher .info {
+    background: #fff;
+    padding: .5em;
+}
+
+    .teacher-page .teacher .info p {
+        font-size: 10px;
+        font-weight: 600;
+        color: #4c4c4c;
+    }
+
+    .teacher-page .teacher .info .name {
+        font-family: 'UTM AvoBold';
+        font-size: 1em;
+        color: #000;
+    }
+
+    .teacher-page .teacher .info hr {
+        width: 4em;
+        height: 1px;
+        background: #00b3cb;
+        margin: auto;
+    }
+
+.teacher-page .teacher .img {
+    background: #fff;
+}
+
+.teacher-box {
+    margin-top: 2em;
+}
+
+    .teacher-box .row > div:nth-child(2n) .teacher {
+        flex-flow: row-reverse;
+    }
+
+.teacher-page .teacher .img img {
+    height: 100%;
+    width: 100%;
+}
+
+.course .item {
+    margin-bottom: 3em;
+}
+
+.course .page-title {
+    font-size: .8em;
+}
+
+.course .info {
+    padding: 1em 1em .8em 1em;
+    background: #fff;
+}
+
+.news-page.course .info {
+    padding: 1em;
+}
+
+.course .info .img {
+    height: 190px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .course .info .img img {
+        height: 100%;
+        width: 100%;
+    }
+
+.course.prize-page .img img {
+    height: auto;
+    width: auto;
+}
+
+.course .info p {
+    margin: 1em 0 0 0;
+    font-weight: 600;
+    font-size: .9em;
+    color: #000000;
+}
+
+.course .tools {
+    padding: .5em 1em;
+    background: #f0f0f0;
+    font-size: .9em;
+}
+
+    .course .tools a {
+        font-weight: 900;
+    }
+
+    .course .tools img {
+        margin: -.5em 0 0 .2em;
+    }
+
+    .course .tools span img {
+        height: 1.5em;
+    }
+
+.course .see-all {
+    display: inline-block;
+    padding: .8em .5em;
+    background: #00b3cb;
+    margin-top: 3em;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-bottom: 4px solid #007ea2;
+    min-width: 200px;
+}
+
+.introduce-page {
+    padding: 2em 0 0 0;
+    font-size: 1rem;
+    background: #f6f6f6;
+}
+
+    .introduce-page .content {
+        max-width: 720px;
+        font-size: .9em;
+        padding: 0 15px 15px 15px;
+    }
+
+    .introduce-page .bg {
+        width: 100%;
+        padding: 0;
+    }
+
+
+.vision {
+    padding: 0 0 2em 0;
+    background: #eeeeee;
+}
+
+    .vision .content, .mission .content {
+        font-size: .9em;
+    }
+
+    .vision .box {
+        background: #0aadc3;
+        position: relative;
+        padding: 0 2em;
+        height: 200px;
+    }
+
+        .vision .box h3 {
+            padding-bottom: .5em;
+            border-bottom: 3px solid #ffffff;
+            position: relative;
+            font-family: 'UTM AvoBold';
+        }
+
+            .vision .box h3:before {
+                position: absolute;
+                content: "";
+                width: 8px;
+                height: 4px;
+                background: #0aadc3;
+                top: calc(100% - 1px);
+                left: 1.5em;
+            }
+
+        .vision .box h3, .vision .box p {
+            font-size: 1.6em;
+            color: #fff;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .vision .box:before {
+            position: absolute;
+            content: "";
+            top: 100%;
+            left: 50%;
+            width: 40px;
+            height: 40px;
+            background: #0aadc3;
+            z-index: 1;
+            transform: rotate(45deg) translate(-85%, -10%);
+            display: none;
+        }
+
+.mission {
+    padding: 3em 0 0 0;
+}
+
+.prize-page .info .desc {
+    font-weight: 400;
+    font-size: .8em;
+}
+
+.course.prize-page .img {
+    height: auto;
+}
+
+    .course.prize-page .img img {
+        max-height: unset;
+    }
+
+.course-details img {
+    max-width: 100%;
+    margin: 1em 0;
+}
+
+.course-box .box {
+    display: none;
+}
+
+.course-box .row > div:nth-child(1) .box {
+    display: inline-block;
+}
+
+.course-box .row > div:nth-child(2) .box {
+    display: inline-block;
+}
+
+.course-box .row > div:nth-child(3) .box {
+    display: inline-block;
+}
+
+.course-box.show .row .box {
+    display: inline-block;
+}
+
+.course-box .text-collapse, .course-box.show .text-spread {
+    display: inline-block;
+}
+
+.course-box .text-spread, .course-box.show .text-collapse {
+    display: none;
+}
+
+
+ 
+
+.box-contact {
+    font-size: 1em;
+    padding: 1.5em .6em;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 2px 2px #b1b1b1;
+    margin-top: 2em;
+}
+
+    .box-contact button {
+        border: none;
+        padding: .8em;
+        text-align: center;
+        width: 100%;
+        margin-bottom: .5em;
+        color: #fff;
+        border-radius: 8px;
+        font-family: 'UTM AvoBold';
+        font-size: 1.1em;
+    }
+
+        .box-contact button:first-child {
+            background: #00b3cb;
+        }
+
+        .box-contact button:last-child {
+            background: #11967f;
+            text-transform: uppercase;
+        }
+
+        .box-contact button img {
+            width: 1.5em;
+            margin: 0 1em 0 0;
+        }
+
+.list-item p {
+    font-size: 12px;
+}
+
+.list-item .title {
+    font-size: .9em;
+    font-family: 'UTM AvoBold';
+}
+
+.list-item li img {
+    height: 2em;
+    margin: 6px 10px;
+}
+
+.list-item li .img {
+    width: 4em;
+}
+
+.list-item li .content {
+    width: calc(100% - 3em);
+}
+
+.box-contact ul {
+    margin-top: 1em;
+}
+
+    .box-contact ul li {
+        margin-bottom: .8em;
+    }
+
+.course-details .iframe {
+    position: relative;
+    height: 250px;
+}
+
+    .course-details .iframe .title {
+        position: absolute;
+        bottom: -.5px;
+        left: 0;
+        width: 100%;
+        padding: 1.2em 2em;
+        margin: 0;
+        background: #ffffffe6;
+        font-family: 'UTM AvoBold';
+        font-size: 1.2em;
+    }
+
+    .course-details .iframe iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+.course-details .desciption {
+    font-size: 14px;
+}
+
+    .course-details .desciption p {
+        margin-bottom: .9em;
+    }
+
+.course-details .box-teching .title {
+    font-family: 'UTM AvoBold';
+    padding: 0 2em;
+}
+
+.course-details .box-teching {
+    background: #fff;
+    padding: 2em 1em 0 1em;
+}
+
+    .course-details .box-teching:last-child {
+        background: #eaeaea;
+    }
+
+.role-teaching .list-item li .img {
+    width: 3.5em;
+    margin-top: -4px;
+}
+
+.role-teaching .list-item li img {
+    margin-left: 0;
+}
+
+.content-learning ul li {
+    margin-bottom: 1em;
+    box-shadow: 1px 1px 1px #ababab;
+    background: #fff;
+}
+
+.content-learning ul .term {
+    max-width: 100%;
+    padding: 1em .5em 1em 2em;
+    background: #fff;
+    position: relative;
+    margin: 0 0 0 2em;
+}
+
+    .content-learning ul .term .name {
+        color: #15b7ce;
+        font-family: 'UTM AvoBold';
+    }
+
+    .content-learning ul .term span {
+        font-size: .8em;
+    }
+
+.content-learning ul .term-details {
+    background: transparent;
+    padding: 1em .5em 1em 4em;
+}
+
+.content-learning ul .term .icon {
+    color: #15b7ce;
+    margin-left: 1em;
+    padding: 0;
+    border: none;
+    background: transparent;
+    font-size: .8em;
+}
+
+.content-learning ul .term img {
+    position: absolute;
+    top: 0;
+    margin: 0;
+    left: -2em;
+    height: 4em;
+}
+
+.img-class img {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.img-class {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: .5em;
+}
+
+    .img-class .img:first-child {
+        grid-column: 1/3;
+        grid-row: 1/3;
+    }
+
+@media only screen and (min-width: 576px) {
+    .educate .img {
+        width: 30%;
+    }
+
+    .educate .box .content {
+        width: 70%;
+    }
+
+    .news .img {
+        width: 40%;
+        background: #f6f6f6;
+    }
+
+    .news .content {
+        width: 60%;
+    }
+
+    .product .box {
+        width: calc(100% - 1em);
+        height: calc(100% - 1em);
+        top: .5em;
+        left: .5em;
+        padding: .5em;
+    }
+
+    .product .img {
+        height: 200px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    section .box-title h3 {
+        font-size: 2em;
+    }
+
+    .course .see-all {
+        padding: 1em .5em;
+    }
+
+    .course-box .row > div:last-child {
+        display: none;
+    }
+
+    .teacher-page .teacher .info {
+        padding: 1em;
+    }
+
+        .teacher-page .teacher .info p {
+            font-size: 12px;
+        }
+
+    .course.prize-page .img {
+        height: 220px;
+    }
+
+        .course.prize-page .img img {
+            max-height: 200px;
+        }
+
+    .course-box .row > div:nth-child(3) .box {
+        display: none;
+    }
+
+    .course-box.show .row > div:nth-child(3) .box {
+        display: inline-block;
+    }
+
+    .course-details .iframe {
+        height: 350px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .educate .box .title {
+        height: 40px;
+    }
+
+    .teacher-box {
+        margin-top: 3em;
+    }
+
+    .product .box {
+        width: calc(100% - 2em);
+        height: calc(100% - 2em);
+        top: 1em;
+        left: 1em;
+        padding: 1em;
+    }
+
+    .product .img {
+        height: 260px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .course.prize-page .img {
+        height: 240px;
+    }
+
+        .course.prize-page .img img {
+            max-height: 200px;
+        }
+
+    .course-details .iframe {
+        height: 450px;
+    }
+
+    .content-learning ul .term {
+        padding: 1em 1em 1em 6em;
+    }
+
+    .content-learning ul .term-details {
+        padding: 0 1em 1em 8em;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .banner-index {
+        padding: 8em 0;
+    }
+
+        .banner-index h2 {
+            font-size: 1.6rem;
+        }
+
+            .banner-index h2 span {
+                font-size: 3rem;
+            }
+
+    .advisory {
+        padding-bottom: 4em;
+    }
+
+        .advisory .box-title {
+            margin-top: 5em;
+        }
+
+    .educate, .product, .news, .partner {
+        padding: 4em 0;
+    }
+
+        .educate .box .img {
+            max-height: 220px;
+            overflow: hidden;
+        }
+
+    section .box-title h3 {
+        font-size: 2.3em;
+    }
+
+    section .box-title h4 {
+        font-size: 1.4em;
+    }
+
+    section .box-title hr {
+        width: 200px;
+    }
+
+    .educate .img {
+        width: auto;
+    }
+
+    .educate .box .content {
+        width: auto;
+    }
+
+    .news .img, .news .content {
+        width: auto;
+    }
+
+    .product .box {
+        width: calc(100% - 1em);
+        height: calc(100% - 1em);
+        top: .5em;
+        left: .5em;
+        padding: .5em;
+        font-size: .8rem;
+    }
+
+    .product .img {
+        height: 170px;
+    }
+
+    .list-partner, .teacher-page, .course {
+        padding: 4em 0 2em 0;
+        font-size: 1rem;
+        background: #f6f6f6;
+    }
+
+    .teacher-page {
+        padding: 4em 0 1em 0;
+    }
+
+    .course-box .row > div:last-child {
+        display: flex;
+    }
+
+    .teacher-page .teacher .img {
+        height: 200px;
+        overflow: hidden;
+    }
+
+    .teacher-box {
+        margin-top: 4em;
+    }
+
+        .teacher-box .row > div:nth-child(2n) .teacher {
+            flex-flow: row;
+        }
+
+        .teacher-box .row > div:nth-child(3) .teacher {
+            flex-flow: row-reverse;
+        }
+
+        .teacher-box .row > div:nth-child(4) .teacher {
+            flex-flow: row-reverse;
+        }
+
+    .introduce-page .content {
+        max-width: 480px;
+        padding: 0 30px;
+    }
+
+    .introduce-page .bg {
+        background: #0aadc3;
+        padding: 100px 200px 50px 0;
+    }
+
+        .introduce-page .bg .sub-bg {
+            margin-left: -.5em;
+            background: #5ad6e7;
+            padding: 0 0 1em 0;
+        }
+
+        .introduce-page .bg img {
+            margin-left: -1em;
+            margin-top: -1em;
+            border: 2px solid #efefef;
+            border-radius: 4px;
+            box-shadow: 0 0 3px #0000;
+        }
+
+    .vision .box {
+        height: 100%;
+    }
+
+        .vision .box:before {
+            display: block;
+        }
+
+    .mission {
+        padding: 3em 0;
+    }
+
+    .introduce-page {
+        padding: 2em 0;
+    }
+
+    .vision {
+        padding: 4em 0;
+    }
+
+    .course-box .row > div:nth-child(3) .box {
+        display: inline-block;
+    }
+
+    .role-teaching li .content p:last-child {
+        width: 70%;
+    }
+
+    .box-contact {
+        margin-top: 0;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .banner-index {
+        height: calc(100vh - 120px);
+    }
+
+    .educate .box .img {
+        max-height: 300px;
+        overflow: hidden;
+    }
+
+    .news .img {
+        height: 220px;
+        overflow: hidden;
+    }
+
+    .product .box {
+        width: calc(100% - 2em);
+        height: calc(100% - 2em);
+        top: 1em;
+        left: 1em;
+        padding: 1em;
+    }
+
+    .product .img {
+        height: 220px;
+    }
+
+    .teacher-page .teacher .img {
+        height: 240px;
+    }
+
+    .introduce-page .content {
+        max-width: 570px;
+    }
+
+    .teacher-box {
+        margin-top: 5em;
+    }
+
+    .course.prize-page .img {
+        height: 270px;
+    }
+
+        .course.prize-page .img img {
+            max-height: 230px;
+        }
+}
+
+.course-details h1 {
+    font-family: 'UTM AvoBold';
+    color: #fff;
+    font-size: 2rem;
+}
+
+@media only screen and (min-width: 1400px) {
+    .product .img {
+        height: 250px;
+    }
+}

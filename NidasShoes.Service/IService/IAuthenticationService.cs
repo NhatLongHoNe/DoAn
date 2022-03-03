@@ -8,10 +8,11 @@ namespace NidasShoes.Service.IService
 {
     public interface IAuthenticationService
     {
-        Task<string> Login(AccountModel account);
+        Task<string> Login(UserModel account);
         Task<string> GetListData(BaseParamModel baseParam);
-        Task<string> AddOrUpdate(AccountModel account);
+        Task<string> AddOrUpdate(UserModel account);
         Task<string> GetById(int Id);
         Task<string> DeleteById(int Id);
+        Task<string> ForgotPassword(string Email, string Hashed);
     }
 }

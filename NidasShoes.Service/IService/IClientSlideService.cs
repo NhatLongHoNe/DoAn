@@ -1,6 +1,5 @@
 ﻿using NidasShoes.Repository.Entity;
 using NidasShoes.Service.Model;
-using NidasShoes.Service.Model.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Text;

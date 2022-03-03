@@ -1,0 +1,27 @@
+﻿@*@if (Request.IsAuthenticated)
+{
+
+    <text>
+        <div class="clear"></div>
+        <div id="top-bar-login" class="top-bar1">
+            <div class="bar-left1">
+                <span>
+                    @DateTime.Now.ToString("dddd, dd/MM/yyyy")
+                </span>
+            </div>
+            <div class="bar-right1">
+                <span style="float: right;">
+                    @using (Html.BeginForm("LogOff", "Accounts", FormMethod.Post, new { id = "logoutForm" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        <a href="javascript:document.getElementById('logoutForm').submit()">Đăng xuất</a>
+                    }
+                </span>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+    </text>
+
+}*@
+

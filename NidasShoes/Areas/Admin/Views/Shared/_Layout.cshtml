@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title> | Đăng nhập </title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/Upload/Image/logo.png">
+
+    <!-- Bootstrap -->
+    <link href="/Admin/Content/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/Admin/Content/plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- NProgress -->
+    <!-- Animate.css -->
+    <!-- Theme style -->
+    <link rel="stylesheet" href="/Admin/Content/dist/css/animate.min.css">
+    <link href="/Admin/Content/pnotify/dist/pnotify.css" rel="stylesheet">
+    <link href="/Admin/Content/pnotify/dist/pnotify.buttons.css" rel="stylesheet">
+    <link href="/Admin/Content/pnotify/dist/pnotify.nonblock.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="/Admin/Content/custom.min.css" rel="stylesheet">
+    <link href="/Admin/Content/login-form.css" rel="stylesheet" />
+    <link href="/Admin/Content/dist/css/alerts.less" rel="stylesheet/less" />
+
+    <!-- Latest compiled and minified CSS & JS -->
+    <script src="/Admin/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="/Admin/Content/pnotify/dist/pnotify.js"></script>
+    <script src="/Admin/Content/pnotify/dist/pnotify.buttons.js"></script>
+    <script src="/Admin/Content/pnotify/dist/pnotify.nonblock.js"></script>
+</head>
+
+<body class="login">
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#loginform").submit(function () {
+                //debugger
+                var form_data = $("#loginform").serialize();
+                debugger
+                $.ajax({
+                    url: '/Admin/Authentication/Login',
+                    type: 'POST',
+                    dataType: 'text',
+                    data: form_data,
+                    beforeSend: function () {
+                        new PNotify({
+                            title: 'Thông báo',
+                            text: 'Bắt đầu xử lý',
+                            type: 'info',
+                            hide: false,
+                            styling: 'bootstrap3'
+                        });
+                    }
+                })
+                    .done(function (result) {
+                        PNotify.removeAll();
+                        if (result == "true") {
+                            new PNotify({
+                                title: 'Thông báo',
+                                text: "Đăng nhập thành công!",
+                                type: 'success',
+                                hide: false,
+                                styling: 'bootstrap3',
+                            });
+
+                            new PNotify({
+                                title: 'Thông báo',
+                                text: 'Đang chuyển hướng',
+                                type: 'info',
+                                hide: false,
+                                styling: 'bootstrap3',
+                            });
+
+                            setTimeout(function () {
+                                window.location.href = '/Admin/Home/Index';
+                            }, 1000);
+                        } else {
+                            let msg = "Đăng nhập thất bại";
+                            new PNotify({
+                                title: 'Thông báo',
+                                text: msg,
+                                type: 'error',
+                                hide: false,
+                                styling: 'bootstrap3'
+                            });
+                        }
+                    })
+                    .fail(function () {
+                        new PNotify({
+                            title: 'Thông báo',
+                            text: 'Lỗi xử lý đăng nhập',
+                            type: 'error',
+                            hide: false,
+                            styling: 'bootstrap3'
+                        });
+                    })
+                    .always(function () {
+                        console.log("complete");
+                    });
+                return false;
+            });
+
+        });
+    </script>
+    @RenderBody()
+</body>
+</html>

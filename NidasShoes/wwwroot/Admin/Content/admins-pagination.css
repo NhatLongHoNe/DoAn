@@ -1,0 +1,62 @@
+﻿/*  Css custom for Pagination */
+/* Start*/
+select.pageSize, select.pageSize option {
+    border: 1px solid #ddd;
+    padding: 0.3em 0;
+    width: 3em;
+    background: transparent;
+    margin: 0.2em 0;
+    font-size: 0.9rem;
+}
+
+
+.pagination ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+}
+
+    .pagination ul li {
+        width: 2em;
+        border: 1px solid #ddd;
+        border-left: none;
+        text-align: center;
+        padding: 0.2em 0.1em 0.1em 0.1em;
+        cursor: pointer;
+        font-size: 0.9em;
+        color: #23527c;
+    }
+
+        .pagination ul li i {
+            font-size: 0.65em;
+            opacity: 0.5;
+            color: #337ab7;
+        }
+
+        .pagination ul li:hover {
+            opacity: 1;
+        }
+
+            .pagination ul li:hover i {
+                opacity: 1;
+                color: #fff;
+            }
+
+        .pagination ul li:first-child {
+            border: 1px solid #ddd;
+        }
+
+        .pagination ul li.active, .pagination ul li:hover {
+            background: #337ab7;
+            border: 1px solid #337ab7;
+            color: #fff;
+        }
+
+.pagination span {
+    font-size: 0.85em;
+}
+
+    .pagination span.totalData {
+        /*color:#23527c;*/
+    }
+/* End */

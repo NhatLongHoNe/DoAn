@@ -1,0 +1,14 @@
+﻿
+.pagination ul li {
+    padding: .1em .6em;
+    border-left: 0;
+    font-size: .9rem;
+    transition: all .2s ease-out;
+    color: #000;
+    font-weight: 600;  
+    cursor: pointer; 
+}
+.pagination ul li.active, .pagination ul li:hover {
+   
+    color: #00b3cb;
+}

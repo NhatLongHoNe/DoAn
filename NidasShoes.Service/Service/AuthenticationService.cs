@@ -18,7 +18,7 @@ namespace NidasShoes.Service.Service
             _authenticationRepository = authenticationRepository;
         }
 
-        public async Task<string> Login(AccountModel account)
+        public async Task<string> Login(UserModel account)
         {
             var accountEntity = JsonConvert.DeserializeObject<UserEntity>(JsonConvert.SerializeObject(account));
             var res = await _authenticationRepository.Login(accountEntity);
@@ -31,7 +31,7 @@ namespace NidasShoes.Service.Service
             return JsonConvert.SerializeObject(res);
         }
 
-        public async Task<string> AddOrUpdate(AccountModel account)
+        public async Task<string> AddOrUpdate(UserModel account)
         {
             var accountEntity = JsonConvert.DeserializeObject<UserEntity>(JsonConvert.SerializeObject(account));
             var res = await _authenticationRepository.AddOrUpdate(accountEntity);
@@ -47,6 +47,12 @@ namespace NidasShoes.Service.Service
         public async Task<string> DeleteById(int Id)
         {
             var res = await _authenticationRepository.DeleteById(Id);
+            return JsonConvert.SerializeObject(res);
+        }
+
+        public async Task<string> ForgotPassword(string Email, string Hashed)
+        {
+            var res = await _authenticationRepository.ForgotPass(Email, Hashed);
             return JsonConvert.SerializeObject(res);
         }
     }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace NidasShoes.Repository.Entity
 {
-    public class ProductPrice
+    public class ProductPriceEntity
     {
         public int ID { get; set; }
         public int ProductDetailID { get; set; }

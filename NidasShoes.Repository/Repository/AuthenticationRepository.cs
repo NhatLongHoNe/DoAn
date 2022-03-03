@@ -20,8 +20,8 @@ namespace NidasShoes.Repository.Repository
         {
             var param = new DynamicParameters();
             param.Add("@UserName", account.UserName);
-            param.Add("@HashedPassword", account.HashedPassword);
-            return await _commonRepository.ListProcedureAsync<UserEntity>("NidasShoes_login", param);
+            param.Add("@HashPassword", account.HashedPassword);
+            return await _commonRepository.ListProcedureAsync<UserEntity>("NidasShoes_user_login", param);
         }
         public async Task<NidasShoesResultEntity<UserEntity>> GetListData(BaseParamEntity baseParam)
         {

@@ -3,10 +3,6 @@ using NidasShoes.Repository.Entity;
 using NidasShoes.Repository.IRepository;
 using NidasShoes.Service.IService;
 using NidasShoes.Service.Model;
-using NidasShoes.Service.Model.ViewModel;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace NidasShoes.Service.Service

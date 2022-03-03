@@ -12,4 +12,8 @@
     <ProjectReference Include="..\NidasShoes.Repository\NidasShoes.Repository.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Model\ViewModel\" />
+  </ItemGroup>
+
 </Project>
