@@ -2,87 +2,62 @@
     ViewBag.Title = "Trang quản trị";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmins.cshtml";
 }
-<div class="show-table">
-    <div class="container-fluid">
-        <div class="showModal">
-            <!--Show dialog image server-->
-            <div class="modal fade" id="myModal" role="dialog">
-                <div class="modal-dialog modal-xl">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        </div>
-                        <div class="modal-body">
 
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--Xem chi tiết -->
-            <div class="modal fade" id="Detail" role="dialog">
-                <div class="modal-dialog modal-xl">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        </div>
-                        <div class="modal-body">
-
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
+<div>
+    <div class="controller-fluid">
         <div class="row">
-            <div class="col-md-8">
-                <div class="tableView">
-                    <div class="row p-2">
-                        <div class="utilities-top col-md-12  p-0 mb-2 justify-content-between d-flex">
-                            <div>
-                                <select class="form-control pageSize" name="display">
-                                    <option value="1">1</option>
-                                    <option value="5" selected>5</option>
-                                    <option value="15">15</option>
-                                    <option value="30">30</option>
-                                    <option value="50">50</option>
-                                    <option value="100">100</option>
-                                </select>
-                            </div>
-                            <div class="search d-flex">
-                                <input type="text" placeholder="Nhập tiêu đề tìm kiếm -> Nhấn Enter" class="searchInput form-control" style="width:250px" title="Nhập tiêu đề tìm kiếm -> Nhấn Enter" onchange="Search(this)">
-                                <button class="btn-green btn-tools text-nowrap btnAdd" onclick="RefreshForm()">
-                                    <i class="fa fa-plus"></i> Thêm mới
-                                </button>
-                            </div>
-                        </div>
-                        <div class="col-md-12 p-0">
-                            <div class="table-responsive">
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 p-2 add-form" >
-                @await Html.PartialAsync("_AddOrEdit", new NidasShoes.Service.Model.UserModel()
-                                                               {
-                                                                   Id = 0,
-                                                                    UserName = "",
-                                                                     HashedPassword = ""
-                                                               })
+            <div class="col-12">
+                 <canvas id="myChart" class="chart-container" style="position: relative; height:40vh; width:80vw"></canvas>
             </div>
         </div>
     </div>
 </div>
+
 @section scripts{
+    @*<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>*@
+
     <script>
-        urlGetData = '/Admin/Home/GetListData';
-        GetDataToTable(urlGetData)
+        const labels = [
+            'January',
+            'February',
+            'March',
+            'April',
+            'May',
+            'June',
+            'July',
+            'August',
+            'September',
+            'October',
+            'November',
+            'December',
+        ];
+
+        const data = {
+            labels: labels,
+            datasets: [{
+                label: 'My First dataset',
+                backgroundColor: 'rgb(255, 99, 132)',
+                borderColor: 'rgb(255, 99, 132)',
+                data: [0, 50, 5, 2, 20, 30, 100],
+                borderWidth: 1,
+            }]
+        };
+
+        const config = {
+            type: 'bar',
+            data: data,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            },
+        };
+
+        const myChart = new Chart(
+            document.getElementById('myChart'),
+            config
+        );
     </script>
 }

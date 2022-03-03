@@ -462,3 +462,7 @@ C:\Users\manhnx\Desktop\DoAn\NidasShoes\bin\Debug\netcoreapp3.0\NidasShoes.Servi
 C:\Users\manhnx\Desktop\DoAn\NidasShoes\obj\Debug\netcoreapp3.0\NidasShoes.Views.pdb
 C:\Users\manhnx\Desktop\DoAn\NidasShoes\obj\Debug\netcoreapp3.0\NidasShoes.csproj.CopyComplete
 C:\Users\manhnx\Desktop\DoAn\NidasShoes\obj\Debug\netcoreapp3.0\NidasShoes.genruntimeconfig.cache
+C:\Users\manhnx\Desktop\DoAn\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\User\GetListData.cshtml.g.cs
+C:\Users\manhnx\Desktop\DoAn\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\User\Index.cshtml.g.cs
+C:\Users\manhnx\Desktop\DoAn\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\User\Login.cshtml.g.cs
+C:\Users\manhnx\Desktop\DoAn\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\User\_AddOrEdit.cshtml.g.cs

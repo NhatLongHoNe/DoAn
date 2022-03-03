@@ -46,7 +46,7 @@ namespace NidasShoes.Repository.Repository
             param.Add("@HashedPassword", user.HashedPassword);
             param.Add("@Name", user.Name);
             param.Add("@Email", user.Email);
-            param.Add("@Phone", user.Phone);
+            param.Add("@Phone", user.PhoneNumber);
             return await _commonRepository.ListProcedureAsync<int>("NidasShoes_create_or_update_client_login", param);
         }
 

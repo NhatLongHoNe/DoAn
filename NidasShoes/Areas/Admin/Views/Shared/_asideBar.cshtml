@@ -1,14 +1,14 @@
-﻿@*@using Microsoft.AspNetCore.Http;
+﻿@using Microsoft.AspNetCore.Http;
     @using Newtonsoft.Json;
     @inject IHttpContextAccessor HttpContextAccessor
     @{
         var session = HttpContextAccessor.HttpContext.Session.GetString("User");
-        var user = new InMinhPhat.Services.Models.EF.Account();
+        var user = new NidasShoes.Service.Model.UserModel();
         if (session != null)
         {
-            user = JsonConvert.DeserializeObject<InMinhPhat.Services.Models.EF.Account>(session);
+            user = JsonConvert.DeserializeObject<NidasShoes.Service.Model.UserModel>(session);
         }
-    }*@
+    }
 
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
@@ -27,7 +27,7 @@
                 <img src="/Admin/Content/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info   w-100  ">
-                @*@if (user != null)
+                @if (user != null)
                     {
                         <a href="#" class="d-block">@user.Name</a>
                     }
@@ -39,7 +39,7 @@
                             <span class="right badge badge-danger">Đăng xuất</span>
                         </a>
 
-                    }*@
+                    }
             </div>
 
         </div>
@@ -71,7 +71,7 @@
                 </li>
             }
         }*@
-                <li class="nav-item">
+                @*<li class="nav-item">
                     <a href="/Admin/ProductTransaction" class="nav-link">
                         <i class="nav-icon fa fa-history"></i>
                         <p>
@@ -151,7 +151,7 @@
                             Slide
                         </p>
                     </a>
-                </li>
+                </li>*@
                 @*<li class="nav-item">
             <a href="/Admin/Transactiontype" class="nav-link">
                 <i class="fas fa-bars nav-icon"></i>
@@ -168,7 +168,7 @@
                         </p>
                     </a>
                 </li>
-                <li class="nav-item">
+                @*<li class="nav-item">
                     <a href="/Admin/NCC" class="nav-link">
                         <i class="fas fa-bars nav-icon"></i>
                         <p>
@@ -191,7 +191,7 @@
                             Bước skin và tướng
                         </p>
                     </a>
-                </li>
+                </li>*@
                 <li class="nav-item">
                     <a href="/Admin/masterdata" class="nav-link">
                         <i class="fas fa-bars nav-icon"></i>

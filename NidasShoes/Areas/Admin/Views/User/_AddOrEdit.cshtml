@@ -1,0 +1,62 @@
+﻿@model NidasShoes.Service.Model.UserModel
+<div class="collapse border show objInfor">
+    <form class="form-input">
+        <div class="alert-danger mb-3 admins-h2 btn-red">
+            THÔNG TIN VỀ NGƯỜI DÙNG
+        </div>
+        <div class="form-group mb-3" hidden>
+            <input type="number" name="Id" class="form-control" id="Id" value="@Model.Id">
+        </div>
+
+        <div class="form-group mb-3">
+            <label class="font-weight-bold mb-1">Tên đăng nhập</label>
+            <input type="text" name="UserName" class="form-control validation" id="UserName" value="@Model.UserName">
+            <div class="text-danger"></div>
+        </div>
+
+        <div class="form-group mb-3">
+            <label class="font-weight-bold mb-1">Mật khẩu</label>
+            <input type="password" name="HashedPassword" class="form-control " value="">
+            <div class="text-danger"></div>
+        </div>
+        <div class="form-group mb-3">
+            <label class="font-weight-bold mb-1">Họ Tên</label>
+            <input type="text" name="Name" class="form-control validation" id="Name" value="@Model.Name">
+            <div class="text-danger"></div>
+        </div>
+        <div class="form-group mb-3">
+            <label class="font-weight-bold mb-1">Email</label>
+            <input type="text" name="Email" class="form-control validation" id="Email" value="@Model.Email">
+            <div class="text-danger"></div>
+        </div>
+
+        <div class="form-group mb-3">
+            <label class="font-weight-bold mb-1">Địa chỉ</label>
+            <input type="text" name="Address" class="form-control " id="Address" value="@Model.Address">
+            <div class="text-danger"></div>
+        </div>
+        <div class="form-group mb-3">
+            @*<label class="font-weight-bold mb-1">Quyền</label>
+        <input type="text" name="RuleID" class="form-control " id="RuleID" value="@Model.RuleID">
+        <div class="text-danger"></div>*@
+            <label class="font-weight-bold mb-1">Quyền</label>
+            <select class="form-control" name="RuleID">
+                <option value="1"  @(Model.RuleID == 1 ? "selected" : "")>Admin</option>
+                <option value="2" @(Model.RuleID == 2 ? "selected" : "")>Quản lý kho</option>
+                <option value="3" @(Model.RuleID == 3 ? "selected" : "")>Nhân viên bán hàng</option>
+                <option value="4" @(Model.RuleID == 4 ? "selected" : "")>Người dùng</option>
+            </select>
+        </div>
+        <div class="form-group mb-3">
+            <label class="font-weight-bold mb-1">Số điện thoại</label>
+            <input type="text" name="PhoneNumber" class="form-control validation" id="Phone" value="@Model.PhoneNumber">
+            <div class="text-danger"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-right mr-0 pr-0 mt-1 mb-0 modal-footer">
+                <button type="button" class="btn btn btn-red btnCancel" onclick="RefreshForm()"><i class="fas fa-reply-all"></i> Nhập lại</button>
+                <button type="button" class="btn btn-green btnSave" data-id="0" onclick="AddOrUpdate('/Admin/User/AddOrUpdate')"> <i class="far fa-save"></i> Ghi lại</button>
+            </div>
+        </div>
+    </form>
+</div>
