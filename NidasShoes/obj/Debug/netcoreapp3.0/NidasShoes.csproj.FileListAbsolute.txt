@@ -875,3 +875,9 @@ C:\Users\Admin\Desktop\doan\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Areas\Admin
 C:\Users\Admin\Desktop\doan\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\Discount\GetListData.cshtml.g.cs
 C:\Users\Admin\Desktop\doan\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\Discount\Index.cshtml.g.cs
 C:\Users\Admin\Desktop\doan\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\Discount\_AddOrEdit.cshtml.g.cs
+C:\Users\Admin\Desktop\doan\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\Slide\GetListData.cshtml.g.cs
+C:\Users\Admin\Desktop\doan\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\Slide\Index.cshtml.g.cs
+C:\Users\Admin\Desktop\doan\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\Slide\_AddOrEdit.cshtml.g.cs
+C:\Users\Admin\Desktop\doan\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\Shop\GetListData.cshtml.g.cs
+C:\Users\Admin\Desktop\doan\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\Shop\Index.cshtml.g.cs
+C:\Users\Admin\Desktop\doan\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\Shop\_AddOrEdit.cshtml.g.cs

@@ -7,7 +7,6 @@ namespace NidasShoes.Service.Model
     public class ShopModel
     {
         public int ID { get; set; }
-        public int UserID { get; set; }
         public string Name { get; set; }
         public string Logo { get; set; }
         public string Slogan { get; set; }

@@ -25,7 +25,7 @@ namespace NidasShoes.Repository.Repository
             param.Add("@Slogan", shopEntity.Slogan);
             param.Add("@Address", shopEntity.Address);
             param.Add("@PhoneNumber", shopEntity.PhoneNumber);
-            param.Add("@Email)", shopEntity.Email);
+            param.Add("@Email", shopEntity.Email);
             var result = await _commonRepository.ListProcedureAsync<bool>("NidasShoes_create_or_update_Shop", param);
             return result;
         }

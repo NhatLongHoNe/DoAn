@@ -30,5 +30,23 @@ namespace WebApp.Common
 
             }
         }
+        public static UserModel User
+        {
+            get
+            {
+                var byteArr = new Byte[0];
+                var check = httpContextAccessor.HttpContext.Session.TryGetValue("User", out byteArr);
+                if (check)
+                {
+                    var user = JsonConvert.DeserializeObject<UserModel>(Encoding.UTF8.GetString(byteArr));
+                    return user;
+                }
+                return null;
+            }
+            set
+            {
+
+            }
+        }
     }
 }

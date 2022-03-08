@@ -268,7 +268,7 @@ function GetObjectById(url, id) {
                         let type = el.prop('type');  // type of input
                         if (type == 'text' || type == 'number' || type == 'hidden' || type == 'email') {
                             el.val(value);
-                            if (key == "Image") {
+                            if (key == "Image"||key=="Logo") {
                                 el.siblings('img').attr('src', value)
                             }
                         }
@@ -373,7 +373,7 @@ function RefreshForm() {
     $('.form-input input').each(function () {
         if ($(this).attr('type') == 'text' || $(this).attr('type') == 'date' || $(this).attr('type') == 'password' || $(this).attr('type') == 'email' || $(this).attr('type') == 'file') {
             $(this).val("");
-            if ($(this).attr('name') == "Image") {
+            if ($(this).attr('name') == "Image" || $(this).attr('name') == "Logo") {
                 $(this).val('/Admin/Content/images/no-image-available-thumb(1349x760-crop).jpg');
                 $(this).siblings('img').attr('src', '/Admin/Content/images/no-image-available-thumb(1349x760-crop).jpg');
             }
@@ -511,6 +511,7 @@ function ChooseFile(el) {
     //$('input[name=Image]').val($(el).val());
     var tmppath = URL.createObjectURL(el.files[0]);
     $('#image').fadeIn("fast").attr('src', tmppath);
+    $('#Logo').fadeIn("fast").attr('src', tmppath);
 }
 
 function ChooseFileMultiple(el) {

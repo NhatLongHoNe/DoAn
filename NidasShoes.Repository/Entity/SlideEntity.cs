@@ -11,7 +11,7 @@ namespace NidasShoes.Repository.Entity
         public int DisplayOrder { get; set; }
         public string Link { get; set; }
         public string Title { get; set; }
-        public int Status { get; set; }
+        public bool Status { get; set; }
 
     }
 }

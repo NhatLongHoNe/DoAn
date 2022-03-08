@@ -1,0 +1,61 @@
+﻿@model NidasShoes.Service.Model.ShopModel
+<div class="collapse border show objInfor">
+    <form class="form-input">
+        <div class="alert-danger mb-3 admins-h2 btn-red">
+            THÔNG TIN SHOP NIDAS SHOES
+        </div>
+        <div class="form-group mb-3" hidden>
+            <input type="number" name="Id" class="form-control" id="Id" value="@Model.ID">
+        </div>
+
+        <div class="form-group mb-3">
+            <label class="font-weight-bold mb-1">Tên shop</label>
+            <input type="text" name="Name" class="form-control validation" id="name" value="@Model.Name">
+            <div class="text-danger"></div>
+        </div>
+
+        <div class="form-group mb-3">
+            <label class="font-weight-bold mb-1">Địa chỉ</label>
+            <input type="text" name="Address" class="form-control validation" value="@Model.Address">
+            <div class="text-danger"></div>
+        </div>
+
+        <div class="form-group mb-3">
+            <label class="font-weight-bold mb-1">Slogan</label>
+            <input type="text" name="Slogan" class="form-control validation" value="@Model.Slogan">
+            <div class="text-danger"></div>
+        </div>
+         <div class="form-group mb-3">
+            <label class="font-weight-bold mb-1">Số điện thoại</label>
+            <input type="text" name="PhoneNumber" class="form-control validation" value="@Model.PhoneNumber">
+            <div class="text-danger"></div>
+        </div>
+          <div class="form-group mb-3">
+            <label class="font-weight-bold mb-1">Email</label>
+            <input type="text" name="Email" class="form-control validation" value="@Model.Email">
+            <div class="text-danger"></div>
+        </div>
+        <div class="form-group mb-3">
+            <label class="font-weight-bold mb-1">Hình ảnh</label>
+            @if (String.IsNullOrEmpty(Model.Logo))
+            {
+                <img src="/Admin/Content/images/no-image-available-thumb(1349x760-crop).jpg" id="Logo" style="object-fit:contain;width:100%" alt="Alternate Text" onclick="OpenFile(this)" />
+            }
+            else
+            {
+                <img src="@Model.Logo" id="Logo" style="object-fit:contain;width:100%" alt="Alternate Text" onclick="OpenFile(this)" />
+            }
+            <input type="file" name="FileUpload" id="fileImage" class="form-control d-none" onchange="ChooseFile(this)">
+            <input type="text" name="Logo" class="form-control d-none" value="@Model.Logo">
+            <div class="text-danger"></div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-12 text-right mr-0 pr-0 mt-1 mb-0 modal-footer">
+                <button type="button" class="btn btn btn-red btnCancel" onclick="RefreshForm()"><i class="fas fa-reply-all"></i> Nhập lại</button>
+                <button type="button" class="btn btn-green btnSave" data-id="0" onclick="AddOrUpdateWithFile('/Admin/Shop/AddOrUpdate')"> <i class="far fa-save"></i> Ghi lại</button>
+            </div>
+        </div>
+    </form>
+</div>

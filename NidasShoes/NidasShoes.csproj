@@ -935,4 +935,8 @@
     <ProjectReference Include="..\NidasShoes.Service\NidasShoes.Service.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\Admin\Content\Upload\" />
+  </ItemGroup>
+
 </Project>
