@@ -22,26 +22,44 @@
         <tbody>
             @foreach (var item in data)
             {
-            <tr>
-                <td>@item.UserName</td>
-                <td>@item.Name</td>
-                <td>@item.Email</td>
-                <td>@item.Address</td>
-                <td>@item.RuleID</td>
-                <td>@item.PhoneNumber</td>
-                <td style="width:80px;text-align:right">
-                    <div class="d-flex justify-content-end w-100">
-                        @*<button class="btn-green btn-event btnDetail" data-id="@item.Id"><i class="fas fa-info-circle"></i> </button>*@
-                        <button class="btn-yellow btn-event btnEdit" data-id="@item.Id" onclick="GetFormAddOrEdit('/Admin/User/_AddOrEdit',@item.Id)"><i class="far fa-edit"></i> </button>
-                        <button class="btn-red btn-event btnDelete" role="button" data-id="@item.Id" onclick="DeleteById('/Admin/User/DeleteById',@item.Id)"><i class="far fa-trash-alt"></i> </button>
-                    </div>
-                </td>
-            </tr>
+                <tr>
+                    <td>@item.UserName</td>
+                    <td>@item.Name</td>
+                    <td>@item.Email</td>
+                    <td>@item.Address</td>
+                    <td>
+                        @switch (@item.RuleID)
+                        {
+                            case 1:
+                                <span>Admin</span>
+                                break;
+                            case 2:
+                                <span>Quản lý kho</span>
+                                break;
+                            case 3:
+                                <span>Nhân viên bán hàng</span>
+                                break;
+                            case 4:
+                                <span>Người đùng</span>
+                                break;
+                            default:
+                                <span>Chưa phân quyền</span>
+                                break;
+                        }
+                    </td>
+                    <td>@item.PhoneNumber</td>
+                    <td style="width:80px;text-align:right">
+                        <div class="d-flex justify-content-end w-100">
+                            @*<button class="btn-green btn-event btnDetail" data-id="@item.Id"><i class="fas fa-info-circle"></i> </button>*@
+                            <button class="btn-yellow btn-event btnEdit" data-id="@item.Id" onclick="GetFormAddOrEdit('/Admin/User/_AddOrEdit',@item.Id)"><i class="far fa-edit"></i> </button>
+                            <button class="btn-red btn-event btnDelete" role="button" data-id="@item.Id" onclick="DeleteById('/Admin/User/DeleteById',@item.Id)"><i class="far fa-trash-alt"></i> </button>
+                        </div>
+                    </td>
+                </tr>
             }
         </tbody>
 
         <tfoot>
-
         </tfoot>
     </table>
 

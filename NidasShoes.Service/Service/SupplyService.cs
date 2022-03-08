@@ -12,34 +12,34 @@ namespace NidasShoes.Service.Service
 {
     public class SupplyService : ISupplyService
     {
-        ISupplyRepository _nCCRepository;
-        public SupplyService(ISupplyRepository nCCRepository)
+        ISupplyRepository _supplyRepository;
+        public SupplyService(ISupplyRepository supplyRepository)
         {
-            _nCCRepository = nCCRepository;
+            _supplyRepository = supplyRepository;
         }
-        public async Task<string> AddOrUpdate(SupplyModel nCCModel)
+        public async Task<string> AddOrUpdate(SupplyModel supplyModel)
         {
-            var nCCEntity = JsonConvert.DeserializeObject<SupplyEntity>(JsonConvert.SerializeObject(nCCModel));
-            var res = await _nCCRepository.AddOrUpdate(nCCEntity);
+            var supplyEntity = JsonConvert.DeserializeObject<SupplyEntity>(JsonConvert.SerializeObject(supplyModel));
+            var res = await _supplyRepository.AddOrUpdate(supplyEntity);
             return JsonConvert.SerializeObject(res);
         }
 
         public async Task<string> DeleteById(int Id)
         {
-            var res = await _nCCRepository.DeleteById(Id);
+            var res = await _supplyRepository.DeleteById(Id);
             return JsonConvert.SerializeObject(res);
         }
 
         public async Task<string> GetById(int Id)
         {
-            var res = await _nCCRepository.GetById(Id);
+            var res = await _supplyRepository.GetById(Id);
             return JsonConvert.SerializeObject(res);
         }
 
         public async Task<string> GetListData(BaseParamModel baseParam)
         {
             var baseEntity = JsonConvert.DeserializeObject<BaseParamEntity>(JsonConvert.SerializeObject(baseParam));
-            var res = await _nCCRepository.GetListData(baseEntity);
+            var res = await _supplyRepository.GetListData(baseEntity);
             return JsonConvert.SerializeObject(res);
         }
     }

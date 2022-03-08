@@ -2153,23 +2153,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\manhnx\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\manhnx\\Desktop\\DoAn\\NidasShoes\\NidasShoes.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\doan\\NidasShoes\\NidasShoes.csproj",
       "projectName": "NidasShoes",
-      "projectPath": "C:\\Users\\manhnx\\Desktop\\DoAn\\NidasShoes\\NidasShoes.csproj",
-      "packagesPath": "C:\\Users\\manhnx\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\manhnx\\Desktop\\DoAn\\NidasShoes\\obj\\",
+      "projectPath": "C:\\Users\\Admin\\Desktop\\doan\\NidasShoes\\NidasShoes.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Admin\\Desktop\\doan\\NidasShoes\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\manhnx\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2183,11 +2179,11 @@
         "netcoreapp3.0": {
           "targetAlias": "netcoreapp3.0",
           "projectReferences": {
-            "C:\\Users\\manhnx\\Desktop\\DoAn\\NidasShoes.Repository\\NidasShoes.Repository.csproj": {
-              "projectPath": "C:\\Users\\manhnx\\Desktop\\DoAn\\NidasShoes.Repository\\NidasShoes.Repository.csproj"
+            "C:\\Users\\Admin\\Desktop\\doan\\NidasShoes.Repository\\NidasShoes.Repository.csproj": {
+              "projectPath": "C:\\Users\\Admin\\Desktop\\doan\\NidasShoes.Repository\\NidasShoes.Repository.csproj"
             },
-            "C:\\Users\\manhnx\\Desktop\\DoAn\\NidasShoes.Service\\NidasShoes.Service.csproj": {
-              "projectPath": "C:\\Users\\manhnx\\Desktop\\DoAn\\NidasShoes.Service\\NidasShoes.Service.csproj"
+            "C:\\Users\\Admin\\Desktop\\doan\\NidasShoes.Service\\NidasShoes.Service.csproj": {
+              "projectPath": "C:\\Users\\Admin\\Desktop\\doan\\NidasShoes.Service\\NidasShoes.Service.csproj"
             }
           }
         }
@@ -2263,7 +2259,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }
