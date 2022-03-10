@@ -48,6 +48,7 @@ namespace NidasShoes
             // repository
             services.AddTransient<ICommonRepository, CommonRepository>();
             services.AddTransient<IAuthenticationRepository, AuthenticationRepository>();
+            //services.AddTransient<IUserRepository, UserRepository>();
             services.AddTransient<IDiscountRepository, DiscountRepository>();
             services.AddTransient<ISupplyRepository, SupplyRepository>();
             services.AddTransient<IShopRepository, ShopRepository>();
@@ -58,6 +59,7 @@ namespace NidasShoes
 
             // service
             services.AddTransient<IAuthenticationService, AuthenticationService>();
+            //services.AddTransient<IUserService, UserRepository>();
             services.AddTransient<IDiscountService, DiscountService>();
             services.AddTransient<ISupplyService, SupplyService>();
             services.AddTransient<IShopService, ShopService>();

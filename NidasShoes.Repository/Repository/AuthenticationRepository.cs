@@ -66,9 +66,12 @@ namespace NidasShoes.Repository.Repository
             return await _commonRepository.ListProcedureAsync<bool>("NidasShoes_delete_user_login", param);
         }
 
-        public Task<NidasShoesResultEntity<int>> ForgotPass(string Email, string Hashed)
+        public async Task<NidasShoesResultEntity<int>> ForgotPass(string Email, string Hashed)
         {
-            throw new NotImplementedException();
+            var param = new DynamicParameters();
+            param.Add("@email", Email);
+            param.Add("@newPass", Hashed);
+            return await _commonRepository.ListProcedureAsync<int>("forgot_password", param);
         }
     }
 }

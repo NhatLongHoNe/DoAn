@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "d3TZ/CGnkrG67lTNBZ80CcBVNmeRbjqcgJIaI6y5ysaGnkd2TI4iQFAzfYsme+YWXIFL94m/MqNGDWyQjR0MTA==",
+  "dgSpecHash": "U4KkzM7RknxrkFKNmpKQa3Vzkp2AXYCCLOj0CNWX8AilUPC5YcpCBH6W3Fe4NvqCdn78dV7WVr+J9a+htzhi6w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Admin\\Desktop\\doan\\NidasShoes.Repository\\NidasShoes.Repository.csproj",
   "expectedPackageFiles": [
@@ -20,10 +20,7 @@
     "C:\\Users\\Admin\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.7.0\\system.runtime.compilerservices.unsafe.4.7.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\system.text.encoding.codepages\\4.7.0\\system.text.encoding.codepages.4.7.0.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.0.0\\microsoft.windowsdesktop.app.ref.3.0.0.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.netcore.app.ref\\3.0.0\\microsoft.netcore.app.ref.3.0.0.nupkg.sha512"
+    "C:\\Users\\Admin\\.nuget\\packages\\system.text.encoding.codepages\\4.7.0\\system.text.encoding.codepages.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }

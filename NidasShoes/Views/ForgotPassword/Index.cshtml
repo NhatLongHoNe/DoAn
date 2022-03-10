@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Quên mật khẩu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Scripts{
+    <script src="~/client/js/register.js"></script>
+}
+<section id="login-client" class="py-5">
+    <div class="container bg-container p-3">
+        <div class="box-login-client">
+            <div class="login-box-body">
+                <div class="login-box-body-header text-center pb-4">
+                    <h4>
+                        Quên Mật khẩu
+                    </h4>
+                </div>
+                <form id="form-forgot-password">
+
+                    <div class="form-group">
+                        <input class="form-control" name="email" type="email" placeholder="Email">
+                    </div>
+
+                    <div class="form-group">
+                        <button type="button" class="btn-forgot-password btn btn-primary btn-lg btn-block">Xác Nhận</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</section>
