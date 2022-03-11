@@ -108,7 +108,7 @@ namespace WebApp.Controllers
             {
                 MimeMessage message = new MimeMessage();
 
-                MailboxAddress from = new MailboxAddress("Shop game ShopBanGame",
+                MailboxAddress from = new MailboxAddress("NIDAS SHOES - Shop bán giày",
                 "nhatdevuser0002@gmail.com");
                 message.From.Add(from);
 
