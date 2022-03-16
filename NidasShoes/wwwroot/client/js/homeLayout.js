@@ -145,3 +145,17 @@ function loadpage() {
 
 }
 loadpage();
+
+
+
+function SearchProduct() {
+    let search = $("#search-product").val();
+    debugger
+    let val = $(this).attr('data-index') ?? "";
+    location.href = "/product?pageNumber=" + val + "&search=" + search;
+}
+$("#search-product").on('keypress', function (e) {
+    if (e.which == 13) {
+        Search();
+    }
+});

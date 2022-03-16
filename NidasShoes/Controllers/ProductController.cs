@@ -21,9 +21,21 @@ namespace NidasShoes.Controllers
             _productReviewService = productReviewService;
 
         }
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? pageSize, int? pageNumber, string? search)
         {
-            return View();
+            BaseParamModel baseParam = new BaseParamModel()
+            {
+                PageSize = pageSize ?? 10,
+                PageNumber = pageNumber ?? 1,
+                Search = search ?? ""
+            };
+            baseParam.PageSize = pageSize ?? 4;
+
+            var res = await _productService.GetListDataClientProduct(baseParam);
+            ViewBag.Search = search;
+            //ViewBag. = JsonConvert.DeserializeObject<NidasShoesResultModel<ProductModel>>(await _blogTypeService.GetListData(new BaseParamModel()));
+
+            return View(JsonConvert.DeserializeObject<NidasShoesResultModel<ProductModel>>(res));
         }
 
         public async Task<IActionResult> Detail(int ID, int sizeID, int colorID)

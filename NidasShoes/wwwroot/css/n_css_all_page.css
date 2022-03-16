@@ -17,3 +17,6 @@
 .colorlib-nav ul li.account{
     float:right;
 }
+.pagination{
+    justify-content:center;
+}
