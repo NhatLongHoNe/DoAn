@@ -53,12 +53,12 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-7 col-md-9">
-                            <div id="colorlib-logo"><a href="index.html"><img src="~/images/logo.png" alt=""></a></div>
+                            <div id="colorlib-logo"><a href="/"><img src="~/images/logo.png" alt=""></a></div>
                         </div>
                         <div class="col-sm-5 col-md-3">
                             <form action="#" class="search-wrap">
                                 <div class="form-group">
-                                    <input type="search" class="form-control search" placeholder="Search">
+                                    <input type="search" class="form-control search" placeholder="tìm kiếm">
                                     <button class="btn btn-primary submit-search text-center" type="submit"><i class="icon-search"></i></button>
                                 </div>
                             </form>
@@ -67,21 +67,28 @@
                     <div class="row">
                         <div class="col-sm-12 text-left menu-1">
                             <ul>
-                                <li class="active"><a href="index.html">Home</a></li>
+                                <li class="active"><a href="index.html">Trang chủ</a></li>
                                 <li class="has-dropdown">
-                                    <a href="men.html">Men</a>
+                                    <a href="men.html">Nam</a>
                                     <ul class="dropdown">
-                                        <li><a href="product-detail.html">Product Detail</a></li>
                                         <li><a href="cart.html">Shopping Cart</a></li>
                                         <li><a href="checkout.html">Checkout</a></li>
                                         <li><a href="order-complete.html">Order Complete</a></li>
                                         <li><a href="add-to-wishlist.html">Wishlist</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="women.html">Women</a></li>
-                                <li><a href="about.html">About</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="women.html">Nữ</a></li>
+                                <li><a href="about.html">Về chúng tôi</a></li>
+                                <li><a href="contact.html">Liên hệ</a></li>
+                              
                                 <li class="cart"><a href="cart.html"><i class="icon-shopping-cart"></i> Cart [0]</a></li>
+                                  <li class="account check-user-false">
+									<a href="/login">Đăng nhập</a>
+								</li>
+                                <li class="account check-user-true ">
+                                    <a class="sa-userName" href="/user/profile" title="User"></a>
+                                    <a style="cursor:pointer" class="" onclick="LogoutClient()" title="Đăng Xuất">Đăng xuất</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -95,12 +102,12 @@
                                 <div class="owl-carousel2">
                                     <div class="item">
                                         <div class="col">
-                                            <h3><a href="#">25% off (Almost) Everything! Use Code: Summer Sale</a></h3>
+                                            <h3><a href="#">Giảm 25% (Hầu như) Tất cả mọi thứ! Code: Summer Sale </a></h3>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="col">
-                                            <h3><a href="#">Our biggest sale yet 50% off all summer shoes</a></h3>
+                                            <h3><a href="#">Giảm giá mạnh 50% cho tất cả các đôi giày vào mùa hè</a></h3>
                                         </div>
                                     </div>
                                 </div>
@@ -116,7 +123,7 @@
             <div class="container">
                 <div class="row row-pb-md">
                     <div class="col footer-col colorlib-widget">
-                        <h4>About Footwear</h4>
+                        <h4>Về NIDAS SHOES</h4>
                         <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
                         <p>
                             <ul class="colorlib-social-icons">
@@ -174,21 +181,7 @@
                     </div>
                 </div>
             </div>
-            <div class="copy">
-                <div class="row">
-                    <div class="col-sm-12 text-center">
-                        <p>
-                            <span>
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                Copyright &copy;
-                                <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            </span>
-                            <span class="block">Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a> , <a href="http://pexels.com/" target="_blank">Pexels.com</a></span>
-                        </p>
-                    </div>
-                </div>
-            </div>
+      
         </footer>
     </div>
 
@@ -218,7 +211,6 @@
     <!-- Stellar Parallax -->
     <script src="~/js/jquery.stellar.min.js"></script>
     <!-- Main -->
-    <script src="~/js/main.js"></script>
 
     <!-- bootstrap -->
     @*<script src="~/client/js/jquery.min.js"></script>*@
@@ -231,6 +223,8 @@
     <script src="~/client/toastr/toastr.js"></script>
     <script src="~/client/dist/wow.js"></script>
     <!-- js -->
+    <script src="~/js/main.js"></script>
+
     <script src="~/client/js/scriptLayout.js"></script>
     <script src="~/client/js/homeLayout.js"></script>
     <script src="~/Admin/Content/js/AdminCommon.js"></script>

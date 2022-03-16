@@ -63,10 +63,11 @@ function LoginClient() {
         }
     })
         .done(function (result) {
+            loadpage();
             if (result == "true") {
                 toastr["success"]("Đăng nhập thành công!")
                 setTimeout(function () {
-                     window.history.back();
+                    window.location.href = '/';
                 }, 1000);
                 toastr["info"]("Đang chuyển hướng!");
             }
@@ -105,7 +106,7 @@ function LogoutClient() {
             if (res == "true") {
                 toastr["success"]("Đăng xuất thành công!");
                 setTimeout(function () {
-                    window.location.href = '/Home/Index';
+                    window.location.href = '/';
                 }, 1000);
             }
             else {
@@ -138,7 +139,7 @@ function loadpage() {
                 var objUser = JSON.parse(result);
                 $(".check-user-true").addClass("d-block").removeClass("d-none");
                 $(".check-user-false").addClass("d-none").removeClass("d-block");
-                $(".sa-profile a").text(objUser.userName + " - " + numberFormat.format(objUser.balance))
+                $(".sa-userName").text(objUser.userName)
             }
         })
 

@@ -1,3 +1,19 @@
 #colorlib-logo img {
     height:60px;
 }
+.block-26 ul li span{
+   
+}
+.block-26 ul li span {
+    cursor:pointer;
+    display: table-cell;
+    vertical-align: middle;
+    color: #fff;
+    padding: 0;
+}
+.block-26 ul li span:hover, .block-26 ul li span.active {
+    background: #616161;
+}
+.colorlib-nav ul li.account{
+    float:right;
+}

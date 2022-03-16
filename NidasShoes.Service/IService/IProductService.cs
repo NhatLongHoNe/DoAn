@@ -18,11 +18,17 @@ namespace NidasShoes.Service.IService
         Task<string> AddOrUpdateProduct(ProductModel product,List<ImagesModel> productImages);
         Task<string> GetByProductId(int Id);
         Task<string> DeleteProductById(int Id);
-        Task<string> GetProductImage(int Id);
+        Task<string> GetProductImageByProductID(int Id);
+        Task<string> GetProductSizeByProductID(int Id);
+        Task<string> GetProductColorByProductID(int Id);
 
         Task<string> GetListDataProductByProductCategoryId(int productCategoryId ,BaseParamModel baseParam);
 
-        Task<string> BuyAccount(int productId,int userId);
-        Task<string> BuySkin(int skinId,int userId,string Name);
+        Task<string> GetListDataClientProduct(BaseParamModel baseParam);
+        Task<string> GetListDataProductByParentID(int parentID, BaseParamModel baseParam);
+        Task<string> GetProductDetailClient(int productID, int sizeID, int colorID);
+
+        
+
     }
 }

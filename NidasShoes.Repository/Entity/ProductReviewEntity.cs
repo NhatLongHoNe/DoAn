@@ -11,5 +11,7 @@ namespace NidasShoes.Repository.Entity
         public int ProductID { get; set; }
         public double Star { get; set; }
         public int Favorite { get; set; }
+        public double Rating { get; set; }
+        public double Point { get; set; }
     }
 }

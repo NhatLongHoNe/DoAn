@@ -1238,3 +1238,5 @@ C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Views\Sha
 C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\Admin\Desktop\doan\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Views\Product\Detail.cshtml.g.cs
+C:\Users\Admin\Desktop\doan\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Views\Product\Index.cshtml.g.cs

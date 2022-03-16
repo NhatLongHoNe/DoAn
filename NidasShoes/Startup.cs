@@ -54,6 +54,10 @@ namespace NidasShoes
             services.AddTransient<IShopRepository, ShopRepository>();
             services.AddTransient<ISlideRepository, SlideRepository>();
             services.AddTransient<IFeedBackRepository, FeedBackRepository>();
+            services.AddTransient<IProductReviewRepository, ProductReviewRepository>();
+            services.AddTransient<IProductColorRepository, ProductColorRepository>();
+            services.AddTransient<IProductSizeRepository, ProductSizeRepository>();
+            services.AddTransient<IProductRepository, ProductRepository>();
 
 
 
@@ -65,6 +69,10 @@ namespace NidasShoes
             services.AddTransient<IShopService, ShopService>();
             services.AddTransient<ISlideService, SlideService>();
             services.AddTransient<IFeedBackService, FeedBackService>();
+            services.AddTransient<IProductReviewService, ProductReviewService>();
+            services.AddTransient<IProductColorService, ProductColorService>();
+            services.AddTransient<IProductSizeService, ProductSizeService>();
+            services.AddTransient<IProductService, ProductService>();
 
 
         }

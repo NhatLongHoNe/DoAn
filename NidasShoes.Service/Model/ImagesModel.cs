@@ -8,7 +8,6 @@ namespace NidasShoes.Service.Model
     {
         public int ID { get; set; }
         public int ProductID { get; set; }
-        public string Name { get; set; }
-        public string Url { get; set; }
+        public string Image { get; set; }
     }
 }
