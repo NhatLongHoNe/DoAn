@@ -1240,3 +1240,11 @@ C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Views\_Vi
 C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Views\_ViewStart.cshtml.g.cs
 C:\Users\Admin\Desktop\doan\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Views\Product\Detail.cshtml.g.cs
 C:\Users\Admin\Desktop\doan\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Views\Product\Index.cshtml.g.cs
+C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Views\Product\Detail.cshtml.g.cs
+C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Views\Product\Index.cshtml.g.cs
+C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\ProductCategory\GetListData.cshtml.g.cs
+C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\ProductCategory\Index.cshtml.g.cs
+C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\ProductCategory\_AddOrEdit.cshtml.g.cs
+C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\Product\Create.cshtml.g.cs
+C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\Product\GetListData.cshtml.g.cs
+C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\Product\Index.cshtml.g.cs

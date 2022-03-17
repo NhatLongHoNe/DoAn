@@ -56,10 +56,10 @@ namespace NidasShoes.Service.Service
             return JsonConvert.SerializeObject(response);
         }
 
-        public async Task<string> AddOrUpdateProduct(ProductModel product, List<ImagesModel> productImages)
+        public async Task<string> AddOrUpdateProduct(ProductModel product, List<ProductImageModel> productImages)
         {
             var productEntity = JsonConvert.DeserializeObject<ProductEntity>(JsonConvert.SerializeObject(product));
-            var productImagesEntity = JsonConvert.DeserializeObject<List<ImagesEntity>>(JsonConvert.SerializeObject(productImages));
+            var productImagesEntity = JsonConvert.DeserializeObject<List<ProductImageEntity>>(JsonConvert.SerializeObject(productImages));
             var response = await _productRepository.AddOrUpdateProduct(productEntity, productImagesEntity);
             return JsonConvert.SerializeObject(response);
         }

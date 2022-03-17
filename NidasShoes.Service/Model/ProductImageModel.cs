@@ -4,7 +4,7 @@ using System.Text;
 
 namespace NidasShoes.Service.Model
 {
-    public class ImagesModel
+    public class ProductImageModel
     {
         public int ID { get; set; }
         public int ProductID { get; set; }
