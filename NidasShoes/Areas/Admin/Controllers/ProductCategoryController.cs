@@ -46,8 +46,10 @@ namespace WebApp.Areas.Admin.Controllers
                 return PartialView(new ProductCategoryModel()
                 {
                     ID = 0,
+                    ParentID=0,
                     Name = "",
                     Description = "",
+                    Status=true
                 });
             }
             else
@@ -57,23 +59,12 @@ namespace WebApp.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddOrUpdate()
+        public async Task<IActionResult> AddOrUpdate(ProductCategoryModel obj)
         {
-            var request = HttpContext.Request.Form;
-            var files = request.Files.ToList();
-            List<string> images = await UploadFile.UploadFiles(files,_hostingEnvironment,CurrentUser.UserId);
-            var data = request.Where(x=>x.Key=="data").First().Value;
-            var categoryProduct = JsonConvert.DeserializeObject<ProductCategoryModel>(data);
-            //if (images.Count() > 0)
-            //{
-            //    categoryProduct. = images.FirstOrDefault();
-            //}
-            //else if(categoryProduct.Id == 0)
-            //{
-            //    categoryProduct.Image = "/Admin/Content/images/no-image-available-thumb(1349x760-crop).jpg";
-            //}
-            var response = await _productService.AddOrUpdate(categoryProduct);
-            return Json(response);
+
+            var response = await _productService.AddOrUpdate(obj);
+            var result = JsonConvert.DeserializeObject<NidasShoesResultModel<bool>>(response);
+            return Json(result.Results.FirstOrDefault());
         }
 
         [HttpPost]

@@ -68,51 +68,13 @@
             <input type="hidden" name="Id" value="@Model.ID" id="Id" />
             <div class="col-md-9 mb-1">
                 <div class="row">
-                    <div class="col-md-3">
-                        <h6 class="input-group-text">Ảnh đại diện</h6>
-                        <input type="hidden" name="Image" value="@Model.Image" id="Images" />
-                        <input type="file"  id="fileImage" class="d-none" onchange="ChooseFile(this)"/>
-                        <img src="@Model.Image" id="image" onclick="OpenFile(this)" class="img-size" alt="Cập nhật" style="object-fit:cover" />
-                        <div class="text-danger"></div>
-                    </div>
-
-                    <div class="col-md-9">
-                        @*<div class="mb-3">
-                            <div class="input-group ">
-                                <div class="input-group-prepend">
-                                    <label class="input-group-text">Mã sản phẩm</label>
-                                </div>
-                                <input type="text" name="Code" class="form-control validation" value="@Model.Code" id="Code" maxlength="20">
-                                <div class="text-danger"></div>
-                            </div>
-                        </div>*@
-
+                    <div class="col-md-12">
                         <div class="mb-3">
                             <div class="input-group ">
                                 <div class="input-group-prepend">
                                     <label class="input-group-text">Tên sản phẩm</label>
                                 </div>
                                 <input type="text" name="Name" class="form-control validation" id="Name" value="@Model.Name" maxlength="250">
-                                <div class="text-danger"></div>
-                            </div>
-                        </div>
-
-                 @*       <div class="mb-3">
-                            <div class="input-group ">
-                                <div class="input-group-prepend">
-                                    <label class="input-group-text">Giá sản phẩm</label>
-                                </div>
-                                <input type="number" name="Price" class="form-control validation" id="Price" value="@Model.Price" maxlength="250">
-                                <div class="text-danger"></div>
-                            </div>
-                        </div>*@
-
-                        <div class="mb-3">
-                            <div class="input-group ">
-                                <div class="input-group-prepend">
-                                    <label class="input-group-text">Mô tả sản phẩm</label>
-                                </div>
-                                <textarea name="Description" rows="6" class="form-control validation">@Model.Description</textarea>
                                 <div class="text-danger"></div>
                             </div>
                         </div>
@@ -125,7 +87,7 @@
                         <div class="input-group-prepend">
                             <label class="input-group-text">Danh mục</label>
                         </div>
-                        <select name="CategoryId" class="form-control">
+                        <select name="ProductCategoryID" class="form-control">
                             <option value="0">Chọn danh mục</option>
                             @foreach (var item in ViewBag.Category as IEnumerable<NidasShoes.Service.Model.ProductCategoryModel>)
                             {
@@ -135,13 +97,13 @@
                         <div class="text-danger"></div>
                     </div>
                 </div>
-@*
+
                 <div class="mb-3">
                     <div class="input-group ">
                         <div class="input-group-prepend">
-                            <label class="input-group-text">Số thứ tự</label>
+                            <label class="input-group-text">Tiêu đề</label>
                         </div>
-                        <input type="text" name="OrderNo" value="@Model.OrderNo" class="form-control validation" id="OrderNo" maxlength="250">
+                        <textarea  name="Title"  rows="6"  class="form-control validation" id="Title"> @Model.Manufacturer</textarea>
                         <div class="text-danger"></div>
                     </div>
                 </div>
@@ -149,131 +111,20 @@
                 <div class="mb-3">
                     <div class="input-group ">
                         <div class="input-group-prepend">
-                            <label class="input-group-text">Rank</label>
+                            <label class="input-group-text">Nhà chế tạo</label>
                         </div>
-                        <input type="text" name="Rank" value="@Model.Rank" class="form-control validation" id="Rank" maxlength="250">
+                        <textarea name="Manufacturer" rows="6" class="form-control validation">@Model.Manufacturer</textarea>
                         <div class="text-danger"></div>
                     </div>
                 </div>
 
-                <div class="mb-3">
-                    <div class="input-group ">
-                        <div class="input-group-prepend">
-                            <label class="input-group-text">Tướng</label>
-                        </div>
-                        <input type="text" name="SoTuong"value="@Model.SoTuong" class="form-control" id="SoTuong" maxlength="250">
-                        <div class="text-danger"></div>
-                    </div>
-                </div>
-
-                <div class="mb-3">
-                    <div class="input-group ">
-                        <div class="input-group-prepend">
-                            <label class="input-group-text">Trang phục</label>
-                        </div>
-                        <input type="text" name="SoTrangPhuc" value="@Model.SoTrangPhuc" class="form-control" id="SoTrangPhuc" maxlength="250">
-                        <div class="text-danger"></div>
-                    </div>
-                </div>
-
-                <div class="mb-3">
-                    <div class="input-group ">
-                        <div class="input-group-prepend">
-                            <label class="input-group-text">Loại tài khoản</label>
-                        </div>
-                        <input type="text" name="LoaiTaiKhoan" value="@Model.LoaiTaiKhoan" class="form-control validation" id="LoaiTaiKhoan" maxlength="250">
-                        <div class="text-danger"></div>
-                    </div>
-                </div>
-
-                <div class="mb-3">
-                    <div class="input-group ">
-                        <div class="input-group-prepend">
-                            <label class="input-group-text">Nổi bật</label>
-                        </div>
-                        <input type="text" name="NoiBat" value="@Model.NoiBat" class="form-control" id="NoiBat" maxlength="250">
-                        <div class="text-danger"></div>
-                    </div>
-                </div>
-
-                <div class="mb-3">
-                    <div class="input-group ">
-                        <div class="input-group-prepend">
-                            <label class="input-group-text">Đăng ký</label>
-                        </div>
-                        <input type="text" name="DangKy" value="@Model.DangKy" class="form-control validation" id="DangKy" maxlength="250">
-                        <div class="text-danger"></div>
-                    </div>
-                </div>
-
-                <div class="mb-3">
-                    <div class="input-group ">
-                        <div class="input-group-prepend">
-                            <label class="input-group-text">Vip</label>
-                        </div>
-                        <input type="text" name="VIP" value="@Model.VIP" class="form-control" id="VIP" maxlength="250">
-                        <div class="text-danger"></div>
-                    </div>
-                </div>
-
-                <div class="mb-3">
-                    <div class="input-group ">
-                        <div class="input-group-prepend">
-                            <label class="input-group-text">Top</label>
-                        </div>
-                        <input type="number" name="Top" class="form-control" value="@Model.Top" id="Top" maxlength="250">
-                        <div class="text-danger"></div>
-                    </div>
-                </div>
-
-                <div class="mb-3">
-                    <div class="input-group ">
-                        <div class="input-group-prepend">
-                            <label class="input-group-text">Account Name</label>
-                        </div>
-                        <input type="text" name="AccUserName" value="@Model.AccUserName" class="form-control validation" id="AccountName" maxlength="250">
-                        <div class="text-danger"></div>
-                    </div>
-                </div>
-
-                <div class="mb-3">
-                    <div class="input-group ">
-                        <div class="input-group-prepend">
-                            <label class="input-group-text">Password</label>
-                        </div>
-                        <input type="text" name="AccPassword" value="@Model.AccPassword" class="form-control validation" id="AccountPassword" maxlength="250">
-                        <div class="text-danger"></div>
-                    </div>
-                </div>
-
-
-                <!--Content-->
                 <div class="mb-3">
                     <h6 class=" mb-1"><label>Nội dung chi tiết</label></h6>
-                    <textarea name="Detail" id="Detail" class="ckeditor">@Html.Raw(Model.Detail)</textarea>
+                    <textarea name="Description" id="Description" class="ckeditor">@Html.Raw(Model.Description)</textarea>
                     <div class="text-danger"></div>
                 </div>
+            
 
-                <div class="mb-3">
-                    <div class="input-group ">
-                        <div class="input-group-prepend">
-                            <label class="input-group-text">Meta title</label>
-                        </div>
-                        <input type="text" name="Metatitle" value="@Model.MetaTitle" class="form-control" id="Metatitle" maxlength="250">
-                    </div>
-                    <div class="text-danger"></div>
-                </div>
-
-                <div class="mb-3">
-                    <div class="input-group ">
-                        <div class="input-group-prepend">
-                            <label class="input-group-text">Meta description</label>
-                        </div>
-                        <input type="text" name="MetaDescription" value="@Model.MetaDescription" class="form-control" id="MetaDescription" maxlength="250">
-                    </div>
-                    <div class="text-danger"></div>
-                </div>
-*@
                 <!--Trạng thái-->
                 <div class="form-group">
                     <label class="font-weight-bold mr-2">Trạng thái </label>

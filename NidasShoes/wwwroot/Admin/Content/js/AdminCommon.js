@@ -5,7 +5,7 @@ var urlGetData = '';
 // các biến để getData
 var submitData = {
     Search: "",
-    PageSize: 5,
+    PageSize: 15,
     PageNumber: 1,
 }
 // định nghĩa các function hiển thị dữ liệu
@@ -178,6 +178,7 @@ function AddOrUpdate(url) {
 function AddOrUpdateWithFile(url) {
     if (ValidationInput()) {  // kiểm tra dữ liệu đầu vào
         // read data in form
+        debugger
         let formArray = $('form.form-input').serializeArray();
         var object = {};
         jQuery.map(formArray, function (n, i) {
@@ -201,13 +202,17 @@ function AddOrUpdateWithFile(url) {
         })
         console.log(object);
         var formData = new FormData();
-        var file = $('#fileImage')[0].files[0];
+        if ($('#fileImage')[0] != null) {
+            var file = $('#fileImage')[0].files[0];
+           
+            if (file != undefined)
+                    formData.append('avatar', file);
+        }
         $(files).each(function (i, e) {
             formData.append(e.name, e);
         })
         formData.append('data', JSON.stringify(object));
-        if (file != undefined)
-            formData.append('avatar', file);
+
         swal({
             title: $('#Id').val() == 0 ? "Bạn có chắc chắn muốn thêm" : "Bạn có chắc muốn sửa dữ liệu này?",
             text: $('#Id').val() == 0 ? "" : "Sau khi sửa thì không thể quay lại!",

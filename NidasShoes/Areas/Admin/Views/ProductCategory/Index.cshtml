@@ -47,8 +47,8 @@
                             <div>
                                 <select class="form-control pageSize" name="display">
                                     <option value="1">1</option>
-                                    <option value="5" selected>5</option>
-                                    <option value="15">15</option>
+                                    <option value="5" >5</option>
+                                    <option value="15" selected>15</option>
                                     <option value="30">30</option>
                                     <option value="50">50</option>
                                     <option value="100">100</option>
@@ -73,8 +73,10 @@
                 @await Html.PartialAsync("_AddOrEdit", new NidasShoes.Service.Model.ProductCategoryModel()
                                                                {
                                                                    ID = 0,
-                                                                    Name = "",
-                                                                     Description = "",
+                                                                   ParentID=0,
+                                                                   Name = "",
+                                                                   Description = "",
+                                                                   Status = true
                                                                })
             </div>
         </div>

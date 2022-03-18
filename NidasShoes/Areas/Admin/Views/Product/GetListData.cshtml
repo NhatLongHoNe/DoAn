@@ -12,8 +12,9 @@
             <tr>
                 <th>Mã</th>
                 <th>Tên</th>
-                @*<th>Account</th>
                 <th>Danh mục</th>
+                <th>Ngày tạo</th>
+                @*<th>Account</th>
                 <th>Thứ tự</th>
                 <th>Rank</th>
                 <th>Số tướng</th>
@@ -30,6 +31,8 @@
                 <tr>
                     <td>@item.ID</td>
                     <td>@item.Name</td>
+                    <td>@item.CatagoryName</td>
+                    <td>@item.CreatedDate.ToString("dd/MM/yyy")</td>
                  @*   <td>@item.AccUserName</td>
                     <td>@item.CategoryName</td>
                     <td>@item.OrderNo</td>

@@ -7,68 +7,14 @@ i:{26b5d406-8265-4c7e-921a-2a4444c01cc4}:NidasShoes.Repository
 i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.repository\bin\debug\netcoreapp3.0\nidasshoes.repository.dll
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes.repository\bin\debug\netcoreapp3.0\nidasshoes.repository.dll
 ++Dependencies
-i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:>340
-i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:>339
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:>8343
+i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:>4307
+i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:>4306
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:>8391
 ++Common
 i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\common\
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\common\
-++DataTableHelper.cs
-i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\common\datatablehelper.cs
 ++Entity
 i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\
-++BaseParamEntity.cs
-i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\baseparamentity.cs
-++ColorEntity.cs
-i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\colorentity.cs
-++DiscountEntity.cs
-i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\discountentity.cs
-++FeedBackEntity.cs
-i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\feedbackentity.cs
-++ImagesEntity.cs
-i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\imagesentity.cs
-++MasterDataEntity.cs
-i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\masterdataentity.cs
-++NidasShoesResultEntity.cs
-i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\nidasshoesresultentity.cs
-++OrderDetailEntity.cs
-i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\orderdetailentity.cs
-++OrderEntity.cs
-i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\orderentity.cs
-++OrderStatusEntity.cs
-i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\orderstatusentity.cs
-++PaymentEntity.cs
-i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\paymententity.cs
-++ProductCategoryEntity.cs
-i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\productcategoryentity.cs
-++ProductDetailClientEntity.cs
-i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\productdetailcliententity.cs
-++ProductDetailEntity.cs
-i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\productdetailentity.cs
-++ProductEntity.cs
-i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\productentity.cs
-++ProductPriceEntity.cs
-i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\productpriceentity.cs
-++ProductReviewEntity.cs
-i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\productreviewentity.cs
-++ReceiptDetailEntity.cs
-i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\receiptdetailentity.cs
-++ReceiptEntity.cs
-i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\receiptentity.cs
-++RuleEntity.cs
-i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\ruleentity.cs
-++ShopEntity.cs
-i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\shopentity.cs
-++SizeEntity.cs
-i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\sizeentity.cs
-++SlideEntity.cs
-i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\slideentity.cs
-++StatusEntity.cs
-i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\statusentity.cs
-++SupplyEntity.cs
-i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\supplyentity.cs
-++UserEntity.cs
-i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\userentity.cs
 ++IRepository
 i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\irepository\
 ++IAuthenticationRepository.cs
@@ -99,6 +45,68 @@ i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.
 i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\irepository\iuserrepository.cs
 ++Repository
 i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\repository\
+++Frameworks
+i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:frameworks
+i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:frameworks
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:frameworks
+++Packages
+i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:packages
+i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:packages
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:packages
+++DataTableHelper.cs
+i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\common\datatablehelper.cs
+++BaseParamEntity.cs
+i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\baseparamentity.cs
+++ColorEntity.cs
+i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\colorentity.cs
+++DiscountEntity.cs
+i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\discountentity.cs
+++FeedBackEntity.cs
+i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\feedbackentity.cs
+++MasterDataEntity.cs
+i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\masterdataentity.cs
+++NidasShoesResultEntity.cs
+i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\nidasshoesresultentity.cs
+++OrderDetailEntity.cs
+i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\orderdetailentity.cs
+++OrderEntity.cs
+i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\orderentity.cs
+++OrderStatusEntity.cs
+i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\orderstatusentity.cs
+++PaymentEntity.cs
+i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\paymententity.cs
+++ProductCategoryEntity.cs
+i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\productcategoryentity.cs
+++ProductDetailClientEntity.cs
+i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\productdetailcliententity.cs
+++ProductDetailEntity.cs
+i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\productdetailentity.cs
+++ProductEntity.cs
+i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\productentity.cs
+++ProductImageEntity.cs
+i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\productimageentity.cs
+++ProductPriceEntity.cs
+i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\productpriceentity.cs
+++ProductReviewEntity.cs
+i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\productreviewentity.cs
+++ReceiptDetailEntity.cs
+i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\receiptdetailentity.cs
+++ReceiptEntity.cs
+i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\receiptentity.cs
+++RuleEntity.cs
+i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\ruleentity.cs
+++ShopEntity.cs
+i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\shopentity.cs
+++SizeEntity.cs
+i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\sizeentity.cs
+++SlideEntity.cs
+i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\slideentity.cs
+++StatusEntity.cs
+i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\statusentity.cs
+++SupplyEntity.cs
+i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\supplyentity.cs
+++UserEntity.cs
+i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\entity\userentity.cs
 ++AuthenticationRepository.cs
 i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\repository\authenticationrepository.cs
 ++CommonRepository.cs
@@ -125,55 +133,23 @@ i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.
 i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\repository\supplyrepository.cs
 ++UserRepository.cs
 i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\repository\userrepository.cs
-++Frameworks
-i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:frameworks
-i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:frameworks
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:frameworks
-++Packages
-i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:packages
-i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:packages
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:packages
 ++Microsoft.NETCore.App
 i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:c:\users\admin\desktop\doan\nidasshoes.repository\microsoft.netcore.app
 i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.service\microsoft.netcore.app
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\microsoft.netcore.app
 ++Dapper (2.0.90)
-i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:>8358
+i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:>8403
 ++Microsoft.Extensions.Configuration.Abstractions (5.0.0)
-i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:>8353
+i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:>8400
 ++Newtonsoft.Json (13.0.1)
-i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:>8355
+i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:>8402
 ++System.Data.SqlClient (4.8.2)
-i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:>8359
+i:{78fa86f6-774a-4ba7-a141-37b5fb969889}:>8404
 ++NidasShoes.Service
 i:{26b5d406-8265-4c7e-921a-2a4444c01cc4}:NidasShoes.Service
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes.service\bin\debug\netcoreapp3.0\nidasshoes.service.dll
 ++IService
 i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.service\iservice\
-++IAuthenticationService.cs
-i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.service\iservice\iauthenticationservice.cs
-++IDiscountService.cs
-i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.service\iservice\idiscountservice.cs
-++IFeedBackService.cs
-i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.service\iservice\ifeedbackservice.cs
-++IMasterDataService.cs
-i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.service\iservice\imasterdataservice.cs
-++IProductColorService.cs
-i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.service\iservice\iproductcolorservice.cs
-++IProductReviewService.cs
-i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.service\iservice\iproductreviewservice.cs
-++IProductService.cs
-i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.service\iservice\iproductservice.cs
-++IProductSizeService.cs
-i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.service\iservice\iproductsizeservice.cs
-++IShopService.cs
-i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.service\iservice\ishopservice.cs
-++ISlideService.cs
-i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.service\iservice\islideservice.cs
-++ISupplyService.cs
-i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.service\iservice\isupplyservice.cs
-++IUserService.cs
-i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.service\iservice\iuserservice.cs
 ++Model
 i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.service\model\
 ++ViewModel
@@ -186,8 +162,6 @@ i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.
 i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.service\model\discountmodel.cs
 ++FeedBackModel.cs
 i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.service\model\feedbackmodel.cs
-++ImagesModel.cs
-i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.service\model\imagesmodel.cs
 ++MasterDataModel.cs
 i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.service\model\masterdatamodel.cs
 ++NidasShoesResultModel.cs
@@ -202,8 +176,12 @@ i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.
 i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.service\model\paymentmodel.cs
 ++ProductCategoryModel.cs
 i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.service\model\productcategorymodel.cs
+++ProductDetailClientModel.cs
+i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.service\model\productdetailclientmodel.cs
 ++ProductDetailModel.cs
 i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.service\model\productdetailmodel.cs
+++ProductImageModel.cs
+i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.service\model\productimagemodel.cs
 ++ProductModel.cs
 i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.service\model\productmodel.cs
 ++ProductPriceModel.cs
@@ -230,6 +208,33 @@ i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.
 i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.service\model\usermodel.cs
 ++Service
 i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.service\service\
+++Projects
+i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:projects
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:projects
+++IAuthenticationService.cs
+i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.service\iservice\iauthenticationservice.cs
+++IDiscountService.cs
+i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.service\iservice\idiscountservice.cs
+++IFeedBackService.cs
+i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.service\iservice\ifeedbackservice.cs
+++IMasterDataService.cs
+i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.service\iservice\imasterdataservice.cs
+++IProductColorService.cs
+i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.service\iservice\iproductcolorservice.cs
+++IProductReviewService.cs
+i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.service\iservice\iproductreviewservice.cs
+++IProductService.cs
+i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.service\iservice\iproductservice.cs
+++IProductSizeService.cs
+i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.service\iservice\iproductsizeservice.cs
+++IShopService.cs
+i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.service\iservice\ishopservice.cs
+++ISlideService.cs
+i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.service\iservice\islideservice.cs
+++ISupplyService.cs
+i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.service\iservice\isupplyservice.cs
+++IUserService.cs
+i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.service\iservice\iuserservice.cs
 ++AuthenticationService.cs
 i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.service\service\authenticationservice.cs
 ++DiscountService.cs
@@ -252,29 +257,19 @@ i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.
 i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.service\service\slideservice.cs
 ++SupplyService.cs
 i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.service\service\supplyservice.cs
-++Projects
-i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:projects
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:projects
 ++Microsoft.AspNetCore.Http.Features (5.0.8)
-i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:>8360
+i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:>8401
 ++Presentation
 i:{00000000-0000-0000-0000-000000000000}:Presentation
 ++NidasShoes
 i:{e462fa87-6633-4c59-ad6b-870199f81b2b}:NidasShoes
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\.vs\nidasshoes\
 ++Connected Services 
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:>8344
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:>8392
 ++Imports
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:>4272
-++Sdk.props
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.web\sdk\sdk.props
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.illink.tasks\sdk\sdk.props
-++Sdk.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.web\sdk\sdk.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:>4310
 ++Properties
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\properties\
-++launchSettings.json
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\properties\launchsettings.json
 ++wwwroot
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\wwwroot\
 ++.sass-cache
@@ -392,6 +387,8 @@ i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\wwwroot\demo.html
 ++demobts.html
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\wwwroot\demobts.html
+++error.html
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\wwwroot\error.html
 ++favicon.ico
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\wwwroot\favicon.ico
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\wwwroot\admin\content\images\favicon.ico
@@ -428,6 +425,11 @@ i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\
 ++HomeController.cs
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\areas\admin\controllers\homecontroller.cs
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\controllers\homecontroller.cs
+++ProductCategoryController.cs
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\areas\admin\controllers\productcategorycontroller.cs
+++ProductController.cs
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\areas\admin\controllers\productcontroller.cs
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\controllers\productcontroller.cs
 ++ShopController.cs
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\areas\admin\controllers\shopcontroller.cs
 ++SlideController.cs
@@ -447,12 +449,27 @@ i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\controllers\forgotpasswordcontroller.cs
 ++LoginController.cs
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\controllers\logincontroller.cs
-++ProductController.cs
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\controllers\productcontroller.cs
 ++RegisterController.cs
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\controllers\registercontroller.cs
 ++obj
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\
+++Debug
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\bin\debug\
+++Release
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\release\
+++NidasShoes.csproj.nuget.dgspec.json
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\nidasshoes.csproj.nuget.dgspec.json
+++NidasShoes.csproj.nuget.g.props
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\nidasshoes.csproj.nuget.g.props
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\nidasshoes.csproj.nuget.g.props
+++NidasShoes.csproj.nuget.g.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\nidasshoes.csproj.nuget.g.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\nidasshoes.csproj.nuget.g.targets
+++project.assets.json
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\project.assets.json
+++project.nuget.cache
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\project.nuget.cache
 ++ForgotPassword
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\views\forgotpassword\
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\views\forgotpassword\
@@ -463,13 +480,15 @@ i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\areas\admin\views\home\
 ++Index.cshtml
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\views\home\index.cshtml
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\views\login\index.cshtml
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\views\product\index.cshtml
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\views\forgotpassword\index.cshtml
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\views\login\index.cshtml
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\views\register\index.cshtml
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\areas\admin\views\authentication\index.cshtml
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\areas\admin\views\discount\index.cshtml
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\areas\admin\views\home\index.cshtml
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\areas\admin\views\product\index.cshtml
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\areas\admin\views\productcategory\index.cshtml
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\areas\admin\views\shop\index.cshtml
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\areas\admin\views\slide\index.cshtml
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\areas\admin\views\supply\index.cshtml
@@ -479,7 +498,9 @@ i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\views\login\
 ++Product
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\views\product\
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\areas\admin\views\product\
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\views\product\
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\areas\admin\views\product\
 ++Detail.cshtml
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\views\product\detail.cshtml
 ++Register
@@ -490,6 +511,11 @@ i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\areas\admin\views\shared\
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\views\shared\
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\areas\admin\views\shared\
+++_Layout.cshtml
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\views\shared\_layout.cshtml
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\areas\admin\views\shared\_layout.cshtml
+++_ValidationScriptsPartial.cshtml
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\views\shared\_validationscriptspartial.cshtml
 ++_ViewImports.cshtml
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\views\_viewimports.cshtml
 ++_ViewStart.cshtml
@@ -508,25 +534,16 @@ i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\
 ++Startup.cs
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\startup.cs
 ++No service dependencies discovered
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:>8345
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:>8393
 ++Analyzers
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:analyzers
-++Sdk.props (C:\Program Files\dotnet\sdk\6.0.200\Sdks\Microsoft.NET.Sdk\Sdk)
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\sdk\sdk.props
-++Sdk.props (C:\Program Files\dotnet\sdk\6.0.200\Sdks\Microsoft.NET.Sdk.Razor\Sdk)
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.razor\sdk\sdk.props
-++Sdk.props (C:\Program Files\dotnet\sdk\6.0.200\Sdks\Microsoft.NET.Sdk.Web.ProjectSystem\Sdk)
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.web.projectsystem\sdk\sdk.props
-++Sdk.props (C:\Program Files\dotnet\sdk\6.0.200\Sdks\Microsoft.NET.Sdk.Publish\Sdk)
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.publish\sdk\sdk.props
-++Sdk.targets (C:\Program Files\dotnet\sdk\6.0.200\Sdks\Microsoft.NET.Sdk\Sdk)
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\sdk\sdk.targets
-++Sdk.targets (C:\Program Files\dotnet\sdk\6.0.200\Sdks\Microsoft.NET.Sdk.Razor\Sdk)
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.razor\sdk\sdk.targets
-++Sdk.targets (C:\Program Files\dotnet\sdk\6.0.200\Sdks\Microsoft.NET.Sdk.Web.ProjectSystem\Sdk)
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.web.projectsystem\sdk\sdk.targets
-++Sdk.targets (C:\Program Files\dotnet\sdk\6.0.200\Sdks\Microsoft.NET.Sdk.Publish\Sdk)
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.publish\sdk\sdk.targets
+++Sdk.props
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.web\sdk\sdk.props
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.illink.tasks\sdk\sdk.props
+++Sdk.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.web\sdk\sdk.targets
+++launchSettings.json
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\properties\launchsettings.json
 ++060b528537134f2f9508a1cf1546b6a2908e8035
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\wwwroot\.sass-cache\060b528537134f2f9508a1cf1546b6a2908e8035\
 ++09c1aa963cb1a0bf38285781bf728f26d5d2cc22
@@ -1001,6 +1018,8 @@ i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\
 ++popper.min.js
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\wwwroot\js\popper.min.js
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\wwwroot\client\js\popper.min.js
+++productDetailScript.js
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\wwwroot\js\productdetailscript.js
 ++respond.min.js
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\wwwroot\js\respond.min.js
 ++scriptLayout.js
@@ -1049,6 +1068,9 @@ i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\
 ++Discount
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\areas\admin\views\discount\
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\areas\admin\views\discount\
+++ProductCategory
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\areas\admin\views\productcategory\
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\areas\admin\views\productcategory\
 ++Shop
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\areas\admin\views\shop\
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\areas\admin\views\shop\
@@ -1061,9 +1083,6 @@ i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\
 ++User
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\areas\admin\views\user\
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\areas\admin\views\user\
-++Debug
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\bin\debug\
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\
 ++AuthorizeCustomer.cs
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\common\authorizecustomer.cs
 ++BaseController.cs
@@ -1074,27 +1093,13 @@ i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\common\hash.cs
 ++UploadFile.cs
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\common\uploadfile.cs
-++Release
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\release\
-++NidasShoes.csproj.nuget.dgspec.json
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\nidasshoes.csproj.nuget.dgspec.json
-++NidasShoes.csproj.nuget.g.props
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\nidasshoes.csproj.nuget.g.props
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\nidasshoes.csproj.nuget.g.props
-++NidasShoes.csproj.nuget.g.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\nidasshoes.csproj.nuget.g.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\nidasshoes.csproj.nuget.g.targets
-++project.assets.json
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\project.assets.json
-++project.nuget.cache
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\project.nuget.cache
+++netcoreapp3.0
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\release\netcoreapp3.0\
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\bin\debug\netcoreapp3.0\
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\bin\debug\netcoreapp3.0\runtimes\win\lib\netcoreapp3.0\
 ++Index.cshtml.cs
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\views\home\index.cshtml.cs
-++_Layout.cshtml
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\views\shared\_layout.cshtml
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\areas\admin\views\shared\_layout.cshtml
-++_ValidationScriptsPartial.cshtml
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\views\shared\_validationscriptspartial.cshtml
 ++Error.cshtml.cs
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\views\error.cshtml.cs
 ++Privacy.cshtml.cs
@@ -1115,43 +1120,33 @@ i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\.nuget\packages\microsof
 ++Microsoft.AspNetCore.App
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\microsoft.aspnetcore.app
 ++MailKit (3.1.1)
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:>8374
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:>8422
 ++Microsoft.AspNetCore.Authentication.Facebook (3.0.3)
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:>8371
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:>8419
 ++Microsoft.AspNetCore.Mvc.NewtonsoftJson (3.0.3)
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:>8372
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:>8420
 ++Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation (3.0.3)
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:>8369
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:>8417
 ++Microsoft.AspNetCore.Razor.Runtime (2.2.0)
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:>8370
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:>8418
 ++Microsoft.VisualStudio.Web.CodeGeneration.Contracts (3.0.0)
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:>8373
-++Microsoft.Common.props
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\current\microsoft.common.props
-++Microsoft.NET.Sdk.props
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.props
-++Sdk.Razor.CurrentVersion.props
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.razor\targets\sdk.razor.currentversion.props
-++Microsoft.NET.Sdk.Web.ProjectSystem.props
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.web.projectsystem\targets\microsoft.net.sdk.web.projectsystem.props
-++Microsoft.NET.Sdk.Publish.props
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.publish\targets\microsoft.net.sdk.publish.props
-++Microsoft.NET.Sdk.BeforeCommon.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.beforecommon.targets
-++Microsoft.CSharp.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\current\bin\amd64\microsoft.csharp.targets
-++Microsoft.NET.Sdk.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.targets
-++Microsoft.NET.Compatibility.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.compatibility.targets
-++NuGet.Build.Tasks.Pack.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\nuget.build.tasks.pack\build\nuget.build.tasks.pack.targets
-++Sdk.Razor.CurrentVersion.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.razor\targets\sdk.razor.currentversion.targets
-++Microsoft.NET.Sdk.Web.ProjectSystem.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.web.projectsystem\targets\microsoft.net.sdk.web.projectsystem.targets
-++Microsoft.NET.Sdk.Publish.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.publish\targets\microsoft.net.sdk.publish.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:>8421
+++Sdk.props (C:\Program Files\dotnet\sdk\6.0.200\Sdks\Microsoft.NET.Sdk\Sdk)
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\sdk\sdk.props
+++Sdk.props (C:\Program Files\dotnet\sdk\6.0.200\Sdks\Microsoft.NET.Sdk.Razor\Sdk)
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.razor\sdk\sdk.props
+++Sdk.props (C:\Program Files\dotnet\sdk\6.0.200\Sdks\Microsoft.NET.Sdk.Web.ProjectSystem\Sdk)
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.web.projectsystem\sdk\sdk.props
+++Sdk.props (C:\Program Files\dotnet\sdk\6.0.200\Sdks\Microsoft.NET.Sdk.Publish\Sdk)
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.publish\sdk\sdk.props
+++Sdk.targets (C:\Program Files\dotnet\sdk\6.0.200\Sdks\Microsoft.NET.Sdk\Sdk)
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\sdk\sdk.targets
+++Sdk.targets (C:\Program Files\dotnet\sdk\6.0.200\Sdks\Microsoft.NET.Sdk.Razor\Sdk)
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.razor\sdk\sdk.targets
+++Sdk.targets (C:\Program Files\dotnet\sdk\6.0.200\Sdks\Microsoft.NET.Sdk.Web.ProjectSystem\Sdk)
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.web.projectsystem\sdk\sdk.targets
+++Sdk.targets (C:\Program Files\dotnet\sdk\6.0.200\Sdks\Microsoft.NET.Sdk.Publish\Sdk)
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.publish\sdk\sdk.targets
 ++_alerts.scssc
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\wwwroot\.sass-cache\060b528537134f2f9508a1cf1546b6a2908e8035\_alerts.scssc
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\wwwroot\.sass-cache\151cf2a017cb34fb019570ffef3b52699e08ee00\_alerts.scssc
@@ -2189,6 +2184,8 @@ i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\
 ++demo.css
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\wwwroot\client\css\demo.css
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\wwwroot\css\donotuse\demo.css
+++errorStyle.css
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\wwwroot\client\css\errorstyle.css
 ++homeStyle.css
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\wwwroot\client\css\homestyle.css
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\wwwroot\css\donotuse\homestyle.css
@@ -2540,6 +2537,7 @@ i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\
 ++_AddOrEdit.cshtml
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\areas\admin\views\discount\_addoredit.cshtml
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\areas\admin\views\home\_addoredit.cshtml
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\areas\admin\views\productcategory\_addoredit.cshtml
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\areas\admin\views\shop\_addoredit.cshtml
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\areas\admin\views\slide\_addoredit.cshtml
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\areas\admin\views\supply\_addoredit.cshtml
@@ -2547,6 +2545,8 @@ i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\
 ++GetListData.cshtml
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\areas\admin\views\discount\getlistdata.cshtml
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\areas\admin\views\home\getlistdata.cshtml
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\areas\admin\views\product\getlistdata.cshtml
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\areas\admin\views\productcategory\getlistdata.cshtml
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\areas\admin\views\shop\getlistdata.cshtml
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\areas\admin\views\slide\getlistdata.cshtml
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\areas\admin\views\supply\getlistdata.cshtml
@@ -2554,6 +2554,8 @@ i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\
 ++Login.cshtml
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\areas\admin\views\home\login.cshtml
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\areas\admin\views\user\login.cshtml
+++Create.cshtml
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\areas\admin\views\product\create.cshtml
 ++_asideBar.cshtml
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\areas\admin\views\shared\_asidebar.cshtml
 ++_asideBarUser.cshtml
@@ -2566,152 +2568,100 @@ i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\areas\admin\views\shared\_mainfooter.cshtml
 ++_navBar.cshtml
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\areas\admin\views\shared\_navbar.cshtml
-++netcoreapp3.0
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\bin\debug\netcoreapp3.0\
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\release\netcoreapp3.0\
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\bin\debug\netcoreapp3.0\runtimes\win\lib\netcoreapp3.0\
-++Microsoft.NuGet.ImportBefore.props
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\current\imports\microsoft.common.props\importbefore\microsoft.nuget.importbefore.props
-++NuGet.props
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\common7\ide\commonextensions\microsoft\nuget\nuget.props
-++Microsoft.NET.Sdk.DefaultItems.props
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.defaultitems.props
-++Microsoft.NET.Sdk.ImportWorkloads.props
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.importworkloads.props
-++Microsoft.NET.SupportedTargetFrameworks.props
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.supportedtargetframeworks.props
-++Microsoft.NET.SupportedPlatforms.props
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.supportedplatforms.props
-++Microsoft.NET.WindowsSdkSupportedTargetPlatforms.props
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.windowssdksupportedtargetplatforms.props
-++Microsoft.NET.Sdk.CSharp.props
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.csharp.props
-++Microsoft.NET.ILLink.props
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.illink.props
-++Microsoft.NET.Compatibility.props
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.compatibility.props
-++Microsoft.NET.PackTool.props
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.packtool.props
-++Microsoft.NET.PackProjectTool.props
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.packprojecttool.props
-++Microsoft.NET.Sdk.WindowsDesktop.props
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.windowsdesktop\targets\microsoft.net.sdk.windowsdesktop.props
-++Microsoft.NET.Windows.props
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.windows.props
-++Sdk.Razor.StaticAssets.ProjectSystem.props
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.razor\sdk\sdk.razor.staticassets.projectsystem.props
-++Microsoft.TypeScript.Default.props
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\microsoft\visualstudio\v17.0\typescript\microsoft.typescript.default.props
-++Microsoft.NET.Sdk.Web.DefaultItems.props
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.web.projectsystem\targets\microsoft.net.sdk.web.defaultitems.props
-++Microsoft.NET.DefaultAssemblyInfo.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.defaultassemblyinfo.targets
-++Microsoft.NET.DefaultOutputPaths.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.defaultoutputpaths.targets
-++Microsoft.NET.Sdk.ImportPublishProfile.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.importpublishprofile.targets
-++Microsoft.NET.TargetFrameworkInference.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.targetframeworkinference.targets
-++Microsoft.NET.Sdk.Razor.BeforeCommon.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.beforecommon.targets
-++Microsoft.NET.Sdk.ImportWorkloads.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.importworkloads.targets
-++Microsoft.NET.RuntimeIdentifierInference.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.runtimeidentifierinference.targets
-++Microsoft.NET.EolTargetFrameworks.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.eoltargetframeworks.targets
-++Microsoft.NET.NuGetOfflineCache.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.nugetofflinecache.targets
-++Microsoft.Managed.Before.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\current\bin\amd64\microsoft.managed.before.targets
-++Microsoft.CSharp.CurrentVersion.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\current\bin\amd64\microsoft.csharp.currentversion.targets
-++Microsoft.Managed.After.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\current\bin\amd64\microsoft.managed.after.targets
-++Microsoft.NET.Sdk.Common.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.common.targets
-++Microsoft.PackageDependencyResolution.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.packagedependencyresolution.targets
-++Microsoft.NET.Sdk.DefaultItems.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.defaultitems.targets
-++Microsoft.NET.Sdk.FrameworkReferenceResolution.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.frameworkreferenceresolution.targets
-++Microsoft.NET.Sdk.Shared.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.shared.targets
-++Microsoft.NET.DisableStandardFrameworkResolution.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.disablestandardframeworkresolution.targets
-++Microsoft.NET.DesignerSupport.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.designersupport.targets
-++Microsoft.NET.GenerateAssemblyInfo.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.generateassemblyinfo.targets
-++Microsoft.NET.GenerateGlobalUsings.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.generateglobalusings.targets
-++Microsoft.NET.GenerateSupportedRuntime.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.generatesupportedruntime.targets
-++Microsoft.NET.ComposeStore.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.composestore.targets
-++Microsoft.NET.CrossGen.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.crossgen.targets
-++Microsoft.NET.ObsoleteReferences.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.obsoletereferences.targets
-++Microsoft.NET.Publish.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.publish.targets
-++Microsoft.NET.PackTool.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.packtool.targets
-++Microsoft.NET.PackProjectTool.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.packprojecttool.targets
-++Microsoft.NET.PreserveCompilationContext.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.preservecompilationcontext.targets
-++Microsoft.NET.ConflictResolution.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.conflictresolution.targets
-++Microsoft.NET.Sdk.CSharp.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.csharp.targets
-++Microsoft.NET.ILLink.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.illink.targets
-++Microsoft.NET.Sdk.Analyzers.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.analyzers.targets
-++Microsoft.NET.Windows.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.windows.targets
-++Microsoft.NET.Compatibility.Common.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.compatibility.common.targets
-++Microsoft.NET.Sdk.Razor.Compilation.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.compilation.targets
-++Microsoft.NET.Sdk.Razor.Configuration.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.configuration.targets
-++Microsoft.NET.Sdk.Razor.CodeGeneration.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.codegeneration.targets
-++Microsoft.NET.Sdk.Razor.Component.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.component.targets
-++Microsoft.NET.Sdk.Razor.StaticWebAssets.5_0.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.staticwebassets.5_0.targets
-++Microsoft.NET.Sdk.Razor.GenerateAssemblyInfo.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.generateassemblyinfo.targets
-++Microsoft.NET.Sdk.Razor.MvcApplicationPartsDiscovery.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.mvcapplicationpartsdiscovery.targets
-++Microsoft.NET.Sdk.Razor.DesignTime.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\microsoft\visualstudio\razor\microsoft.net.sdk.razor.designtime.targets
-++Microsoft.TypeScript.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\microsoft\visualstudio\v17.0\typescript\microsoft.typescript.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files (x86)\microsoft sdks\typescript\4.3\build\microsoft.typescript.targets
-++Microsoft.TypeScript.DotNetCore.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\microsoft\visualstudio\v17.0\typescript\microsoft.typescript.dotnetcore.targets
-++Microsoft.Web.Designtime.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\microsoft\visualstudio\managed.web\microsoft.web.designtime.targets
-++Default.pubxml
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.publish\targets\publishprofiles\default.pubxml
-++Microsoft.NET.Sdk.Publish.ComputeFiles.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.publish\targets\computetargets\microsoft.net.sdk.publish.computefiles.targets
-++Microsoft.NET.Sdk.Publish.FilterFiles.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.publish\targets\copytargets\microsoft.net.sdk.publish.filterfiles.targets
-++Microsoft.NET.Sdk.Publish.CopyFiles.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.publish\targets\copytargets\microsoft.net.sdk.publish.copyfiles.targets
-++Microsoft.NET.Sdk.Publish.TransformFiles.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.publish\targets\transformtargets\microsoft.net.sdk.publish.transformfiles.targets
-++Microsoft.NET.Sdk.Publish.FileSystem.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.publish\targets\publishtargets\microsoft.net.sdk.publish.filesystem.targets
-++Microsoft.NET.Sdk.DotNetCLITool.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.publish\targets\dotnetclitooltargets\microsoft.net.sdk.dotnetclitool.targets
+++Razor
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\
+++staticwebassets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\staticwebassets\
+++.NETCoreApp,Version=v3.0.AssemblyAttributes.cs
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\.netcoreapp,version=v3.0.assemblyattributes.cs
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\release\netcoreapp3.0\.netcoreapp,version=v3.0.assemblyattributes.cs
+++apphost.exe
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\apphost.exe
+++NidasShoes.AssemblyInfo.cs
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\nidasshoes.assemblyinfo.cs
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\release\netcoreapp3.0\nidasshoes.assemblyinfo.cs
+++NidasShoes.AssemblyInfoInputs.cache
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\nidasshoes.assemblyinfoinputs.cache
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\release\netcoreapp3.0\nidasshoes.assemblyinfoinputs.cache
+++NidasShoes.assets.cache
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\nidasshoes.assets.cache
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\release\netcoreapp3.0\nidasshoes.assets.cache
+++NidasShoes.csproj.AssemblyReference.cache
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\nidasshoes.csproj.assemblyreference.cache
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\release\netcoreapp3.0\nidasshoes.csproj.assemblyreference.cache
+++NidasShoes.csproj.BuildWithSkipAnalyzers
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\nidasshoes.csproj.buildwithskipanalyzers
+++NidasShoes.csproj.CopyComplete
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\nidasshoes.csproj.copycomplete
+++NidasShoes.csproj.CoreCompileInputs.cache
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\nidasshoes.csproj.corecompileinputs.cache
+++NidasShoes.csproj.FileListAbsolute.txt
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\nidasshoes.csproj.filelistabsolute.txt
+++NidasShoes.dll
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\nidasshoes.dll
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\bin\debug\netcoreapp3.0\nidasshoes.dll
+++NidasShoes.GeneratedMSBuildEditorConfig.editorconfig
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\nidasshoes.generatedmsbuildeditorconfig.editorconfig
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\release\netcoreapp3.0\nidasshoes.generatedmsbuildeditorconfig.editorconfig
+++NidasShoes.genruntimeconfig.cache
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\nidasshoes.genruntimeconfig.cache
+++NidasShoes.MvcApplicationPartsAssemblyInfo.cache
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\nidasshoes.mvcapplicationpartsassemblyinfo.cache
+++NidasShoes.MvcApplicationPartsAssemblyInfo.cs
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\nidasshoes.mvcapplicationpartsassemblyinfo.cs
+++NidasShoes.pdb
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\nidasshoes.pdb
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\bin\debug\netcoreapp3.0\nidasshoes.pdb
+++NidasShoes.RazorAssemblyInfo.cache
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\nidasshoes.razorassemblyinfo.cache
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\release\netcoreapp3.0\nidasshoes.razorassemblyinfo.cache
+++NidasShoes.RazorAssemblyInfo.cs
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\nidasshoes.razorassemblyinfo.cs
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\release\netcoreapp3.0\nidasshoes.razorassemblyinfo.cs
+++NidasShoes.RazorCoreGenerate.cache
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\nidasshoes.razorcoregenerate.cache
+++NidasShoes.RazorTargetAssemblyInfo.cache
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\nidasshoes.razortargetassemblyinfo.cache
+++NidasShoes.RazorTargetAssemblyInfo.cs
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\nidasshoes.razortargetassemblyinfo.cs
+++NidasShoes.TagHelpers.input.cache
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\nidasshoes.taghelpers.input.cache
+++NidasShoes.TagHelpers.output.cache
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\nidasshoes.taghelpers.output.cache
+++NidasShoes.Views.dll
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\nidasshoes.views.dll
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\bin\debug\netcoreapp3.0\nidasshoes.views.dll
+++NidasShoes.Views.pdb
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\nidasshoes.views.pdb
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\bin\debug\netcoreapp3.0\nidasshoes.views.pdb
+++project.razor.json
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\project.razor.json
+++Microsoft.Common.props
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\current\microsoft.common.props
+++Microsoft.NET.Sdk.props
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.props
+++Sdk.Razor.CurrentVersion.props
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.razor\targets\sdk.razor.currentversion.props
+++Microsoft.NET.Sdk.Web.ProjectSystem.props
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.web.projectsystem\targets\microsoft.net.sdk.web.projectsystem.props
+++Microsoft.NET.Sdk.Publish.props
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.publish\targets\microsoft.net.sdk.publish.props
+++Microsoft.NET.Sdk.BeforeCommon.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.beforecommon.targets
+++Microsoft.CSharp.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\current\bin\amd64\microsoft.csharp.targets
+++Microsoft.NET.Sdk.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.targets
+++Microsoft.NET.Compatibility.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.compatibility.targets
+++NuGet.Build.Tasks.Pack.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\nuget.build.tasks.pack\build\nuget.build.tasks.pack.targets
+++Sdk.Razor.CurrentVersion.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.razor\targets\sdk.razor.currentversion.targets
+++Microsoft.NET.Sdk.Web.ProjectSystem.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.web.projectsystem\targets\microsoft.net.sdk.web.projectsystem.targets
+++Microsoft.NET.Sdk.Publish.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.publish\targets\microsoft.net.sdk.publish.targets
 ++adapters
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\wwwroot\admin\content\ckeditor\adapters\
 ++lang
@@ -3109,14 +3059,8 @@ i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\bin\debug\netcoreapp3.0\newtonsoft.json.dll
 ++NidasShoes.deps.json
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\bin\debug\netcoreapp3.0\nidasshoes.deps.json
-++NidasShoes.dll
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\bin\debug\netcoreapp3.0\nidasshoes.dll
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\nidasshoes.dll
 ++NidasShoes.exe
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\bin\debug\netcoreapp3.0\nidasshoes.exe
-++NidasShoes.pdb
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\bin\debug\netcoreapp3.0\nidasshoes.pdb
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\nidasshoes.pdb
 ++NidasShoes.Repository.dll
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\bin\debug\netcoreapp3.0\nidasshoes.repository.dll
 ++NidasShoes.Repository.pdb
@@ -3132,12 +3076,6 @@ i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\
 ++NidasShoes.StaticWebAssets.xml
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\bin\debug\netcoreapp3.0\nidasshoes.staticwebassets.xml
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\staticwebassets\nidasshoes.staticwebassets.xml
-++NidasShoes.Views.dll
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\bin\debug\netcoreapp3.0\nidasshoes.views.dll
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\nidasshoes.views.dll
-++NidasShoes.Views.pdb
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\bin\debug\netcoreapp3.0\nidasshoes.views.pdb
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\nidasshoes.views.pdb
 ++System.Data.SqlClient.dll
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\bin\debug\netcoreapp3.0\system.data.sqlclient.dll
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\bin\debug\netcoreapp3.0\runtimes\unix\lib\netcoreapp2.1\system.data.sqlclient.dll
@@ -3168,104 +3106,149 @@ i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\
 ++System.Text.Encoding.CodePages.dll
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\bin\debug\netcoreapp3.0\system.text.encoding.codepages.dll
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\bin\debug\netcoreapp3.0\runtimes\win\lib\netcoreapp2.0\system.text.encoding.codepages.dll
-++Razor
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\
-++staticwebassets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\staticwebassets\
-++.NETCoreApp,Version=v3.0.AssemblyAttributes.cs
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\.netcoreapp,version=v3.0.assemblyattributes.cs
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\release\netcoreapp3.0\.netcoreapp,version=v3.0.assemblyattributes.cs
-++apphost.exe
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\apphost.exe
-++NidasShoes.AssemblyInfo.cs
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\nidasshoes.assemblyinfo.cs
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\release\netcoreapp3.0\nidasshoes.assemblyinfo.cs
-++NidasShoes.AssemblyInfoInputs.cache
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\nidasshoes.assemblyinfoinputs.cache
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\release\netcoreapp3.0\nidasshoes.assemblyinfoinputs.cache
-++NidasShoes.assets.cache
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\nidasshoes.assets.cache
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\release\netcoreapp3.0\nidasshoes.assets.cache
-++NidasShoes.csproj.AssemblyReference.cache
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\nidasshoes.csproj.assemblyreference.cache
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\release\netcoreapp3.0\nidasshoes.csproj.assemblyreference.cache
-++NidasShoes.csproj.BuildWithSkipAnalyzers
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\nidasshoes.csproj.buildwithskipanalyzers
-++NidasShoes.csproj.CopyComplete
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\nidasshoes.csproj.copycomplete
-++NidasShoes.csproj.CoreCompileInputs.cache
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\nidasshoes.csproj.corecompileinputs.cache
-++NidasShoes.csproj.FileListAbsolute.txt
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\nidasshoes.csproj.filelistabsolute.txt
-++NidasShoes.GeneratedMSBuildEditorConfig.editorconfig
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\nidasshoes.generatedmsbuildeditorconfig.editorconfig
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\release\netcoreapp3.0\nidasshoes.generatedmsbuildeditorconfig.editorconfig
-++NidasShoes.genruntimeconfig.cache
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\nidasshoes.genruntimeconfig.cache
-++NidasShoes.MvcApplicationPartsAssemblyInfo.cache
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\nidasshoes.mvcapplicationpartsassemblyinfo.cache
-++NidasShoes.MvcApplicationPartsAssemblyInfo.cs
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\nidasshoes.mvcapplicationpartsassemblyinfo.cs
-++NidasShoes.RazorAssemblyInfo.cache
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\nidasshoes.razorassemblyinfo.cache
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\release\netcoreapp3.0\nidasshoes.razorassemblyinfo.cache
-++NidasShoes.RazorAssemblyInfo.cs
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\nidasshoes.razorassemblyinfo.cs
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\release\netcoreapp3.0\nidasshoes.razorassemblyinfo.cs
-++NidasShoes.RazorCoreGenerate.cache
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\nidasshoes.razorcoregenerate.cache
-++NidasShoes.RazorTargetAssemblyInfo.cache
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\nidasshoes.razortargetassemblyinfo.cache
-++NidasShoes.RazorTargetAssemblyInfo.cs
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\nidasshoes.razortargetassemblyinfo.cs
-++NidasShoes.TagHelpers.input.cache
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\nidasshoes.taghelpers.input.cache
-++NidasShoes.TagHelpers.output.cache
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\nidasshoes.taghelpers.output.cache
-++project.razor.json
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\project.razor.json
-++Microsoft.NuGet.props
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\microsoft\nuget\17.0\microsoft.nuget.props
-++Microsoft.NETCoreSdk.BundledVersions.props
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\microsoft.netcoresdk.bundledversions.props
-++Microsoft.NET.Sdk.WindowsDesktop.WindowsForms.props
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.windowsdesktop\targets\microsoft.net.sdk.windowsdesktop.windowsforms.props
-++Microsoft.NET.Sdk.WindowsDesktop.WPF.props
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.windowsdesktop\targets\microsoft.net.sdk.windowsdesktop.wpf.props
-++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.android)
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.android\workloadmanifest.targets
-++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.ios)
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.ios\workloadmanifest.targets
-++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.maccatalyst)
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.maccatalyst\workloadmanifest.targets
-++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.macos)
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.macos\workloadmanifest.targets
-++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.maui)
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.maui\workloadmanifest.targets
-++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.tvos)
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.tvos\workloadmanifest.targets
-++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.workload.emscripten)
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.workload.emscripten\workloadmanifest.targets
-++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.workload.mono.toolchain)
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.workload.mono.toolchain\workloadmanifest.targets
-++Microsoft.CSharp.Core.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\current\bin\roslyn\microsoft.csharp.core.targets
-++Microsoft.CSharp.DesignTime.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\microsoft\visualstudio\managed\microsoft.csharp.designtime.targets
-++Microsoft.Common.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\current\bin\amd64\microsoft.common.targets
-++Microsoft.NET.Sdk.DefaultItems.Shared.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.defaultitems.shared.targets
-++Microsoft.NETCoreSdk.BundledCliTools.props
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\microsoft.netcoresdk.bundledclitools.props
-++Microsoft.NET.DefaultPackageConflictOverrides.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.defaultpackageconflictoverrides.targets
-++Microsoft.CodeAnalysis.NetAnalyzers.props
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\analyzers\build\microsoft.codeanalysis.netanalyzers.props
-++03.02.02.00.props
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files (x86)\microsoft sdks\typescript\versions\03.02.02.00.props
-++04.03.05.00.props
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files (x86)\microsoft sdks\typescript\versions\04.03.05.00.props
+++NidasShoes.StaticWebAssets.Manifest.cache
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\staticwebassets\nidasshoes.staticwebassets.manifest.cache
+++Microsoft.NuGet.ImportBefore.props
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\current\imports\microsoft.common.props\importbefore\microsoft.nuget.importbefore.props
+++NuGet.props
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\common7\ide\commonextensions\microsoft\nuget\nuget.props
+++Microsoft.NET.Sdk.DefaultItems.props
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.defaultitems.props
+++Microsoft.NET.Sdk.ImportWorkloads.props
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.importworkloads.props
+++Microsoft.NET.SupportedTargetFrameworks.props
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.supportedtargetframeworks.props
+++Microsoft.NET.SupportedPlatforms.props
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.supportedplatforms.props
+++Microsoft.NET.WindowsSdkSupportedTargetPlatforms.props
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.windowssdksupportedtargetplatforms.props
+++Microsoft.NET.Sdk.CSharp.props
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.csharp.props
+++Microsoft.NET.ILLink.props
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.illink.props
+++Microsoft.NET.Compatibility.props
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.compatibility.props
+++Microsoft.NET.PackTool.props
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.packtool.props
+++Microsoft.NET.PackProjectTool.props
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.packprojecttool.props
+++Microsoft.NET.Sdk.WindowsDesktop.props
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.windowsdesktop\targets\microsoft.net.sdk.windowsdesktop.props
+++Microsoft.NET.Windows.props
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.windows.props
+++Sdk.Razor.StaticAssets.ProjectSystem.props
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.razor\sdk\sdk.razor.staticassets.projectsystem.props
+++Microsoft.TypeScript.Default.props
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\microsoft\visualstudio\v17.0\typescript\microsoft.typescript.default.props
+++Microsoft.NET.Sdk.Web.DefaultItems.props
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.web.projectsystem\targets\microsoft.net.sdk.web.defaultitems.props
+++Microsoft.NET.DefaultAssemblyInfo.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.defaultassemblyinfo.targets
+++Microsoft.NET.DefaultOutputPaths.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.defaultoutputpaths.targets
+++Microsoft.NET.Sdk.ImportPublishProfile.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.importpublishprofile.targets
+++Microsoft.NET.TargetFrameworkInference.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.targetframeworkinference.targets
+++Microsoft.NET.Sdk.Razor.BeforeCommon.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.beforecommon.targets
+++Microsoft.NET.Sdk.ImportWorkloads.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.importworkloads.targets
+++Microsoft.NET.RuntimeIdentifierInference.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.runtimeidentifierinference.targets
+++Microsoft.NET.EolTargetFrameworks.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.eoltargetframeworks.targets
+++Microsoft.NET.NuGetOfflineCache.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.nugetofflinecache.targets
+++Microsoft.Managed.Before.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\current\bin\amd64\microsoft.managed.before.targets
+++Microsoft.CSharp.CurrentVersion.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\current\bin\amd64\microsoft.csharp.currentversion.targets
+++Microsoft.Managed.After.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\current\bin\amd64\microsoft.managed.after.targets
+++Microsoft.NET.Sdk.Common.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.common.targets
+++Microsoft.PackageDependencyResolution.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.packagedependencyresolution.targets
+++Microsoft.NET.Sdk.DefaultItems.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.defaultitems.targets
+++Microsoft.NET.Sdk.FrameworkReferenceResolution.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.frameworkreferenceresolution.targets
+++Microsoft.NET.Sdk.Shared.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.shared.targets
+++Microsoft.NET.DisableStandardFrameworkResolution.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.disablestandardframeworkresolution.targets
+++Microsoft.NET.DesignerSupport.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.designersupport.targets
+++Microsoft.NET.GenerateAssemblyInfo.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.generateassemblyinfo.targets
+++Microsoft.NET.GenerateGlobalUsings.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.generateglobalusings.targets
+++Microsoft.NET.GenerateSupportedRuntime.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.generatesupportedruntime.targets
+++Microsoft.NET.ComposeStore.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.composestore.targets
+++Microsoft.NET.CrossGen.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.crossgen.targets
+++Microsoft.NET.ObsoleteReferences.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.obsoletereferences.targets
+++Microsoft.NET.Publish.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.publish.targets
+++Microsoft.NET.PackTool.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.packtool.targets
+++Microsoft.NET.PackProjectTool.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.packprojecttool.targets
+++Microsoft.NET.PreserveCompilationContext.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.preservecompilationcontext.targets
+++Microsoft.NET.ConflictResolution.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.conflictresolution.targets
+++Microsoft.NET.Sdk.CSharp.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.csharp.targets
+++Microsoft.NET.ILLink.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.illink.targets
+++Microsoft.NET.Sdk.Analyzers.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.analyzers.targets
+++Microsoft.NET.Windows.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.windows.targets
+++Microsoft.NET.Compatibility.Common.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.compatibility.common.targets
+++Microsoft.NET.Sdk.Razor.Compilation.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.compilation.targets
+++Microsoft.NET.Sdk.Razor.Configuration.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.configuration.targets
+++Microsoft.NET.Sdk.Razor.CodeGeneration.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.codegeneration.targets
+++Microsoft.NET.Sdk.Razor.Component.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.component.targets
+++Microsoft.NET.Sdk.Razor.StaticWebAssets.5_0.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.staticwebassets.5_0.targets
+++Microsoft.NET.Sdk.Razor.GenerateAssemblyInfo.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.generateassemblyinfo.targets
+++Microsoft.NET.Sdk.Razor.MvcApplicationPartsDiscovery.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.razor\targets\microsoft.net.sdk.razor.mvcapplicationpartsdiscovery.targets
+++Microsoft.NET.Sdk.Razor.DesignTime.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\microsoft\visualstudio\razor\microsoft.net.sdk.razor.designtime.targets
+++Microsoft.TypeScript.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\microsoft\visualstudio\v17.0\typescript\microsoft.typescript.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files (x86)\microsoft sdks\typescript\4.3\build\microsoft.typescript.targets
+++Microsoft.TypeScript.DotNetCore.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\microsoft\visualstudio\v17.0\typescript\microsoft.typescript.dotnetcore.targets
+++Microsoft.Web.Designtime.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\microsoft\visualstudio\managed.web\microsoft.web.designtime.targets
+++Default.pubxml
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.publish\targets\publishprofiles\default.pubxml
+++Microsoft.NET.Sdk.Publish.ComputeFiles.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.publish\targets\computetargets\microsoft.net.sdk.publish.computefiles.targets
+++Microsoft.NET.Sdk.Publish.FilterFiles.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.publish\targets\copytargets\microsoft.net.sdk.publish.filterfiles.targets
+++Microsoft.NET.Sdk.Publish.CopyFiles.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.publish\targets\copytargets\microsoft.net.sdk.publish.copyfiles.targets
+++Microsoft.NET.Sdk.Publish.TransformFiles.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.publish\targets\transformtargets\microsoft.net.sdk.publish.transformfiles.targets
+++Microsoft.NET.Sdk.Publish.FileSystem.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.publish\targets\publishtargets\microsoft.net.sdk.publish.filesystem.targets
+++Microsoft.NET.Sdk.DotNetCLITool.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.publish\targets\dotnetclitooltargets\microsoft.net.sdk.dotnetclitool.targets
 ++bootstrap-grid.css
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\wwwroot\admin\content\bootstrap4\css\bootstrap-grid.css
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
@@ -4424,18 +4407,56 @@ i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\bin\debug\netcoreapp3.0\runtimes\win-x64\
 ++win-x86
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\bin\debug\netcoreapp3.0\runtimes\win-x86\
-++NidasShoes.StaticWebAssets.Manifest.cache
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\staticwebassets\nidasshoes.staticwebassets.manifest.cache
-++Microsoft.NET.ILLink.Tasks.props
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.illink.tasks\build\microsoft.net.illink.tasks.props
-++System.Windows.Forms.Analyzers.props
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.windowsdesktop\targets\system.windows.forms.analyzers.props
-++Microsoft.Managed.Core.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\current\bin\roslyn\microsoft.managed.core.targets
-++Microsoft.Managed.DesignTime.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\microsoft\visualstudio\managed\microsoft.managed.designtime.targets
-++Microsoft.Common.CurrentVersion.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\current\bin\amd64\microsoft.common.currentversion.targets
+++_ViewImports.cshtml.g.cs
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\views\_viewimports.cshtml.g.cs
+++_ViewStart.cshtml.g.cs
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\views\_viewstart.cshtml.g.cs
+++Error.cshtml.g.cs
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\views\error.cshtml.g.cs
+++Privacy.cshtml.g.cs
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\views\privacy.cshtml.g.cs
+++Microsoft.NuGet.props
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\microsoft\nuget\17.0\microsoft.nuget.props
+++Microsoft.NETCoreSdk.BundledVersions.props
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\microsoft.netcoresdk.bundledversions.props
+++Microsoft.NET.Sdk.WindowsDesktop.WindowsForms.props
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.windowsdesktop\targets\microsoft.net.sdk.windowsdesktop.windowsforms.props
+++Microsoft.NET.Sdk.WindowsDesktop.WPF.props
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.windowsdesktop\targets\microsoft.net.sdk.windowsdesktop.wpf.props
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.android)
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.android\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.ios)
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.ios\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.maccatalyst)
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.maccatalyst\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.macos)
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.macos\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.maui)
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.maui\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.tvos)
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.sdk.tvos\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.workload.emscripten)
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.workload.emscripten\workloadmanifest.targets
+++WorkloadManifest.targets (C:\Program Files\dotnet\sdk-manifests\6.0.200\microsoft.net.workload.mono.toolchain)
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk-manifests\6.0.200\microsoft.net.workload.mono.toolchain\workloadmanifest.targets
+++Microsoft.CSharp.Core.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\current\bin\roslyn\microsoft.csharp.core.targets
+++Microsoft.CSharp.DesignTime.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\microsoft\visualstudio\managed\microsoft.csharp.designtime.targets
+++Microsoft.Common.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\current\bin\amd64\microsoft.common.targets
+++Microsoft.NET.Sdk.DefaultItems.Shared.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.sdk.defaultitems.shared.targets
+++Microsoft.NETCoreSdk.BundledCliTools.props
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\microsoft.netcoresdk.bundledclitools.props
+++Microsoft.NET.DefaultPackageConflictOverrides.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\targets\microsoft.net.defaultpackageconflictoverrides.targets
+++Microsoft.CodeAnalysis.NetAnalyzers.props
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\analyzers\build\microsoft.codeanalysis.netanalyzers.props
+++03.02.02.00.props
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files (x86)\microsoft sdks\typescript\versions\03.02.02.00.props
+++04.03.05.00.props
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files (x86)\microsoft sdks\typescript\versions\04.03.05.00.props
 ++bootstrap-grid.css.map
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\wwwroot\admin\content\bootstrap4\css\bootstrap-grid.css.map
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
@@ -5133,43 +5154,38 @@ i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\bin\debug\netcoreapp3.0\runtimes\win-arm64\native\
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\bin\debug\netcoreapp3.0\runtimes\win-x64\native\
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\bin\debug\netcoreapp3.0\runtimes\win-x86\native\
-++_ViewImports.cshtml.g.cs
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\views\_viewimports.cshtml.g.cs
-++_ViewStart.cshtml.g.cs
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\views\_viewstart.cshtml.g.cs
-++Error.cshtml.g.cs
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\views\error.cshtml.g.cs
-++Privacy.cshtml.g.cs
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\views\privacy.cshtml.g.cs
-++Microsoft.Managed.Core.CurrentVersions.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\current\bin\roslyn\microsoft.managed.core.currentversions.targets
-++NidasShoes.csproj.user
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\nidasshoes.csproj.user
-++Microsoft.NET.props
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\current\bin\amd64\microsoft.net.props
-++Microsoft.CodeAnalysis.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\microsoft\visualstudio\v17.0\codeanalysis\microsoft.codeanalysis.targets
-++Microsoft.Xaml.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\current\bin\amd64\microsoft.xaml.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\windows\microsoft.net\framework\v4.0.30319\microsoft.xaml.targets
-++Microsoft.WorkflowBuildExtensions.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\current\bin\amd64\microsoft.workflowbuildextensions.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\windows\microsoft.net\framework\v4.0.30319\microsoft.workflowbuildextensions.targets
-++Microsoft.TeamTest.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\microsoft\visualstudio\v17.0\teamtest\microsoft.teamtest.targets
-++NuGet.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\common7\ide\commonextensions\microsoft\nuget\nuget.targets
-++Microsoft.Docker.ImportAfter.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\current\microsoft.common.targets\importafter\microsoft.docker.importafter.targets
-++Microsoft.NET.Build.Extensions.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\current\microsoft.common.targets\importafter\microsoft.net.build.extensions.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\microsoft\microsoft.net.build.extensions\microsoft.net.build.extensions.targets
-++Microsoft.NuGet.ImportAfter.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\current\microsoft.common.targets\importafter\microsoft.nuget.importafter.targets
-++Microsoft.Web.ImportAfter.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\current\microsoft.common.targets\importafter\microsoft.web.importafter.targets
-++Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\.nuget\packages\microsoft.aspnetcore.mvc.razor.runtimecompilation\3.0.3\build\netcoreapp3.0\microsoft.aspnetcore.mvc.razor.runtimecompilation.targets
+++Index.cshtml.g.cs
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\views\forgotpassword\index.cshtml.g.cs
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\views\home\index.cshtml.g.cs
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\views\login\index.cshtml.g.cs
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\views\product\index.cshtml.g.cs
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\views\register\index.cshtml.g.cs
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\areas\admin\views\authentication\index.cshtml.g.cs
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\areas\admin\views\discount\index.cshtml.g.cs
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\areas\admin\views\home\index.cshtml.g.cs
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\areas\admin\views\product\index.cshtml.g.cs
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\areas\admin\views\productcategory\index.cshtml.g.cs
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\areas\admin\views\shop\index.cshtml.g.cs
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\areas\admin\views\slide\index.cshtml.g.cs
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\areas\admin\views\supply\index.cshtml.g.cs
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\areas\admin\views\user\index.cshtml.g.cs
+++Detail.cshtml.g.cs
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\views\product\detail.cshtml.g.cs
+++_Layout.cshtml.g.cs
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\views\shared\_layout.cshtml.g.cs
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\areas\admin\views\shared\_layout.cshtml.g.cs
+++_ValidationScriptsPartial.cshtml.g.cs
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\views\shared\_validationscriptspartial.cshtml.g.cs
+++Microsoft.NET.ILLink.Tasks.props
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.illink.tasks\build\microsoft.net.illink.tasks.props
+++System.Windows.Forms.Analyzers.props
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.windowsdesktop\targets\system.windows.forms.analyzers.props
+++Microsoft.Managed.Core.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\current\bin\roslyn\microsoft.managed.core.targets
+++Microsoft.Managed.DesignTime.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\microsoft\visualstudio\managed\microsoft.managed.designtime.targets
+++Microsoft.Common.CurrentVersion.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\current\bin\amd64\microsoft.common.currentversion.targets
 ++bootstrap-grid.min.css.map
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\wwwroot\admin\content\bootstrap4\css\bootstrap-grid.min.css.map
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
@@ -6536,30 +6552,35 @@ i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\bin\debug\netcoreapp3.0\runtimes\win-arm64\native\sni.dll
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\bin\debug\netcoreapp3.0\runtimes\win-x64\native\sni.dll
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\bin\debug\netcoreapp3.0\runtimes\win-x86\native\sni.dll
-++Index.cshtml.g.cs
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\areas\admin\views\authentication\index.cshtml.g.cs
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\views\forgotpassword\index.cshtml.g.cs
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\views\home\index.cshtml.g.cs
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\views\login\index.cshtml.g.cs
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\views\product\index.cshtml.g.cs
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\views\register\index.cshtml.g.cs
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\areas\admin\views\discount\index.cshtml.g.cs
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\areas\admin\views\home\index.cshtml.g.cs
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\areas\admin\views\shop\index.cshtml.g.cs
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\areas\admin\views\slide\index.cshtml.g.cs
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\areas\admin\views\supply\index.cshtml.g.cs
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\areas\admin\views\user\index.cshtml.g.cs
-++Detail.cshtml.g.cs
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\views\product\detail.cshtml.g.cs
-++_Layout.cshtml.g.cs
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\areas\admin\views\shared\_layout.cshtml.g.cs
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\views\shared\_layout.cshtml.g.cs
-++_ValidationScriptsPartial.cshtml.g.cs
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\views\shared\_validationscriptspartial.cshtml.g.cs
-++Microsoft.Docker.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\sdks\microsoft.docker.sdk\build\microsoft.docker.targets
-++Microsoft.Web.IISSupport.targets
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\microsoft\visualstudio\managed.web\microsoft.web.iissupport.targets
+++Microsoft.Managed.Core.CurrentVersions.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\current\bin\roslyn\microsoft.managed.core.currentversions.targets
+++NidasShoes.csproj.user
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\nidasshoes.csproj.user
+++Microsoft.NET.props
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\current\bin\amd64\microsoft.net.props
+++Microsoft.CodeAnalysis.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\microsoft\visualstudio\v17.0\codeanalysis\microsoft.codeanalysis.targets
+++Microsoft.Xaml.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\current\bin\amd64\microsoft.xaml.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\windows\microsoft.net\framework\v4.0.30319\microsoft.xaml.targets
+++Microsoft.WorkflowBuildExtensions.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\current\bin\amd64\microsoft.workflowbuildextensions.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\windows\microsoft.net\framework\v4.0.30319\microsoft.workflowbuildextensions.targets
+++Microsoft.TeamTest.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\microsoft\visualstudio\v17.0\teamtest\microsoft.teamtest.targets
+++NuGet.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\common7\ide\commonextensions\microsoft\nuget\nuget.targets
+++Microsoft.Docker.ImportAfter.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\current\microsoft.common.targets\importafter\microsoft.docker.importafter.targets
+++Microsoft.NET.Build.Extensions.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\current\microsoft.common.targets\importafter\microsoft.net.build.extensions.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\microsoft\microsoft.net.build.extensions\microsoft.net.build.extensions.targets
+++Microsoft.NuGet.ImportAfter.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\current\microsoft.common.targets\importafter\microsoft.nuget.importafter.targets
+++Microsoft.Web.ImportAfter.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\current\microsoft.common.targets\importafter\microsoft.web.importafter.targets
+++Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\.nuget\packages\microsoft.aspnetcore.mvc.razor.runtimecompilation\3.0.3\build\netcoreapp3.0\microsoft.aspnetcore.mvc.razor.runtimecompilation.targets
 ++bootstrap.bundle.min.js.map
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\wwwroot\admin\content\bootstrap4\js\bootstrap.bundle.min.js.map
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
@@ -6607,15 +6628,10 @@ i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\wwwroot\admin\content\dist\css\alt\adminlte.plugins.min.css.map
 ++jquery.slim.min.map
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\wwwroot\admin\content\plugins\jquery\jquery.slim.min.map
-++outputforflash.fla
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\wwwroot\admin\content\ckeditor\samples\old\htmlwriter\assets\outputforflash\outputforflash.fla
-++outputforflash.swf
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\wwwroot\admin\content\ckeditor\samples\old\htmlwriter\assets\outputforflash\outputforflash.swf
-++swfobject.js
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\wwwroot\admin\content\ckeditor\samples\old\htmlwriter\assets\outputforflash\swfobject.js
 ++_AddOrEdit.cshtml.g.cs
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\areas\admin\views\discount\_addoredit.cshtml.g.cs
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\areas\admin\views\home\_addoredit.cshtml.g.cs
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\areas\admin\views\productcategory\_addoredit.cshtml.g.cs
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\areas\admin\views\shop\_addoredit.cshtml.g.cs
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\areas\admin\views\slide\_addoredit.cshtml.g.cs
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\areas\admin\views\supply\_addoredit.cshtml.g.cs
@@ -6623,6 +6639,8 @@ i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\
 ++GetListData.cshtml.g.cs
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\areas\admin\views\discount\getlistdata.cshtml.g.cs
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\areas\admin\views\home\getlistdata.cshtml.g.cs
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\areas\admin\views\product\getlistdata.cshtml.g.cs
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\areas\admin\views\productcategory\getlistdata.cshtml.g.cs
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\areas\admin\views\shop\getlistdata.cshtml.g.cs
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\areas\admin\views\slide\getlistdata.cshtml.g.cs
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\areas\admin\views\supply\getlistdata.cshtml.g.cs
@@ -6630,6 +6648,8 @@ i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\
 ++Login.cshtml.g.cs
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\areas\admin\views\home\login.cshtml.g.cs
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\areas\admin\views\user\login.cshtml.g.cs
+++Create.cshtml.g.cs
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\areas\admin\views\product\create.cshtml.g.cs
 ++_asideBar.cshtml.g.cs
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\areas\admin\views\shared\_asidebar.cshtml.g.cs
 ++_asideBarUser.cshtml.g.cs
@@ -6642,12 +6662,13 @@ i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\areas\admin\views\shared\_mainfooter.cshtml.g.cs
 ++_navBar.cshtml.g.cs
 i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\obj\debug\netcoreapp3.0\razor\areas\admin\views\shared\_navbar.cshtml.g.cs
-++ProductDetailClientModel.cs
-i:{7c852bc4-e99b-4f31-a095-2bfe2b5da83b}:c:\users\admin\desktop\doan\nidasshoes.service\model\productdetailclientmodel.cs
-++errorStyle.css
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\wwwroot\client\css\errorstyle.css
-++women - Copy.html
-++error.html
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\wwwroot\error.html
-++productDetailScript.js
-i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\wwwroot\js\productdetailscript.js
+++Microsoft.Docker.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\sdks\microsoft.docker.sdk\build\microsoft.docker.targets
+++Microsoft.Web.IISSupport.targets
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\program files\microsoft visual studio\2022\community\msbuild\microsoft\visualstudio\managed.web\microsoft.web.iissupport.targets
+++outputforflash.fla
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\wwwroot\admin\content\ckeditor\samples\old\htmlwriter\assets\outputforflash\outputforflash.fla
+++outputforflash.swf
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\wwwroot\admin\content\ckeditor\samples\old\htmlwriter\assets\outputforflash\outputforflash.swf
+++swfobject.js
+i:{2216cb95-5a24-4cf7-bfb9-5e654373f673}:c:\users\admin\desktop\doan\nidasshoes\wwwroot\admin\content\ckeditor\samples\old\htmlwriter\assets\outputforflash\swfobject.js

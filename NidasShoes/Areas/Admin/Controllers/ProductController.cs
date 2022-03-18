@@ -61,17 +61,17 @@ namespace WebApp.Areas.Admin.Controllers
             List<string> images = new List<string>();
             images.AddRange(product.ProductImage.Select(x => x.Image).ToList());
             images.AddRange(await UploadFile.UploadFiles(request.Files.ToList(), _hostingEnvironment, CurrentUser.UserId));
-            string avatar = images.Where(x => x.Contains("avatar") && images.IndexOf(x) == images.Count() - 1).FirstOrDefault();
-            if (product.ID == 0)
-            {
-                product.Image = avatar ?? "/Admin/Content/images/no-image-available-thumb(1349x760-crop).jpg";
-            }
-            else if (avatar != null)
-            {
-                product.Image = avatar;
-            }
+            //string avatar = images.Where(x => x.Contains("avatar") && images.IndexOf(x) == images.Count() - 1).FirstOrDefault();
+            //if (product.ID == 0)
+            //{
+            //    product.Image = avatar ?? "/Admin/Content/images/no-image-available-thumb(1349x760-crop).jpg";
+            //}
+            //else if (avatar != null)
+            //{
+            //    product.Image = avatar;
+            //}
 
-            if (avatar != null) images.Remove(avatar);
+            //if (avatar != null) images.Remove(avatar);
             // create productImage
             var productImage = new List<ProductImageModel>();
             foreach (var img in images)

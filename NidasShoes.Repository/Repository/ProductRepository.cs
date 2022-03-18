@@ -93,29 +93,15 @@ namespace NidasShoes.Repository.Repository
         {
             var param = new DynamicParameters();
             param.Add("@Id", product.ID);
+            param.Add("@ProductCategoryID", product.ProductCategoryID);
             param.Add("@Code", product.Code);
             param.Add("@Name", product.Name);
-            //param.Add("@Image", product.);
-            //param.Add("@Description", product.Description);
-            //param.Add("@Detail", product.Detail);
-            //param.Add("@CategoryId", product.CategoryId);
-            //param.Add("@OrderNo", product.OrderNo);
-            //param.Add("@Rank", product.Rank);
-            //param.Add("@SoTuong", product.SoTuong);
-            //param.Add("@SoTrangPhuc", product.SoTrangPhuc);
-            //param.Add("@LoaiTaiKhoan", product.LoaiTaiKhoan);
-            //param.Add("@NoiBat", product.NoiBat);
-            //param.Add("@DangKy", product.DangKy);
-            //param.Add("@VIP", product.VIP);
-            //param.Add("@Top", product.Top);
-            //param.Add("@AccUserName", product.AccUserName);
-            //param.Add("@AccPassword", product.AccPassword);
-            //param.Add("@MetaTitle", product.MetaTitle);
-            //param.Add("@MetaDescription", product.MetaDescription);
-            //param.Add("@Status", product.Status);
-            //param.Add("@Price", product.Price);
+            param.Add("@Title", product.Title);
+            param.Add("@Description", product.Description);
+            param.Add("@Status", product.Status);
+            param.Add("@Manufacturer", product.Manufacturer);
             param.Add("@ProductImage", productImages.ConvertListToDataTable(), System.Data.DbType.Object);
-            var result = await _commonRepository.ListProcedureAsync<bool>("NidasShoes_create_product", param);
+            var result = await _commonRepository.ListProcedureAsync<bool>("NidasShoes_create_or_update_Product", param);
             return result;
         }
 

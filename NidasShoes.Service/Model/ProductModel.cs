@@ -17,7 +17,8 @@ namespace NidasShoes.Service.Model
         public double ExportPrice { get; set; }
         public DateTime CreatedDate { get; set; }
         public string Manufacturer { get; set; }
+        public string CatagoryName { get; set; }
         public List<ProductImageModel> ProductImage { get; set; } = new List<ProductImageModel>();
-
+        
     }
 }

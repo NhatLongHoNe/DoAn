@@ -7,18 +7,26 @@
         <div class="form-group mb-3" hidden>
             <input type="number" name="Id" class="form-control" id="Id" value="@Model.ID">
         </div>
-
+    @*    <div class="form-group mb-3">
+            <label class="font-weight-bold mb-1">Tên danh mục cha</label>
+            <input type="text" name="ParentID" class="form-control validation" id="ParentID" value="@Model.ParentID">
+            <div class="text-danger"></div>
+        </div>*@
         <div class="form-group mb-3">
             <label class="font-weight-bold mb-1">Tên danh mục</label>
             <input type="text" name="Name" class="form-control validation" id="name" value="@Model.Name">
             <div class="text-danger"></div>
         </div>
-
         <div class="form-group mb-3">
             <label class="font-weight-bold mb-1">Mô tả</label>
-            <input type="text" name="Description" class="form-control validation" value="@Model.Description">
+            <input type="text" name="Description" class="form-control validation" id="name" value="@Model.Description">
             <div class="text-danger"></div>
         </div>
+     @*   <div class="form-group mb-3">
+            <label class="font-weight-bold mb-1">Trạng thái</label>
+            <input type="text" name="Status" class="form-control validation" value="@Model.Status">
+            <div class="text-danger"></div>
+        </div>*@
 @*
         <div class="form-group mb-3">
             <label class="font-weight-bold mb-1">Hình ảnh</label>
@@ -38,7 +46,7 @@
         <div class="row">
             <div class="col-md-12 text-right mr-0 pr-0 mt-1 mb-0 modal-footer">
                 <button type="button" class="btn btn btn-red btnCancel" onclick="RefreshForm()"><i class="fas fa-reply-all"></i> Nhập lại</button>
-                <button type="button" class="btn btn-green btnSave" data-id="0" onclick="AddOrUpdateWithFile('/Admin/ProductCategory/AddOrUpdate')"> <i class="far fa-save"></i> Ghi lại</button>
+                <button type="button" class="btn btn-green btnSave" data-id="0" onclick="AddOrUpdate('/Admin/ProductCategory/AddOrUpdate')"> <i class="far fa-save"></i> Ghi lại</button>
             </div>
         </div>
     </form>

@@ -17,6 +17,8 @@ namespace NidasShoes.Repository.Entity
         public string Manufacturer { get; set; }
         public double ExportPrice { get; set; }
         public DateTime CreatedDate { get; set; }
+        public string CatagoryName { get; set; }
+
         public List<ProductImageEntity> ProductImage { get; set; } = new List<ProductImageEntity>();
 
     }
