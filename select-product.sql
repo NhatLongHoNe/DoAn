@@ -36,9 +36,26 @@ SELECT * FROM dbo.ProductImage
 SELECT * FROM dbo.ProductPrice
 SELECT * FROM dbo.ProductDetail
 SELECT * FROM productcolor
+go
+-- product detail
+ ALTER proc [dbo].[NidasShoes_get_Client_Product_Detail]
+@Id int	 ,
+@sizeID int,
+@colorID int
+as
+begin
+	 declare @whereSql nvarchar(max) = N'',
+			@sql nvarchar(max) = N''
+	 if ISNULL(@sizeID,'') != ''
+		begin
+			set @whereSql += N'and  c.id ='+@sizeID+''
+		end
+	  if ISNULL(@colorID,'') != ''
+		begin
+			set @whereSql += N'and s.id ='+@colorID+''
+		end
 
-			 -- product detail
-SELECT p.*
+	SELECT TOP(1) p.*
 	,pc.name [NameProductCategory]
 	,pc.Description [DescriptionProductCategory] 
 	,c.name [NameColor]
@@ -48,7 +65,7 @@ SELECT p.*
 	,tpp.ImportPrice
 	,tpp.ExportPrice
 	,tpp.CreatedDate [LastUpdatedDate]
-	,pd.ID
+	,pd.ID	productDetailID
 	FROM product p 
 	LEFT JOIN dbo.ProductCategory pc ON p.ProductCategoryID = pc.ID  
 	LEFT JOIN dbo.ProductDetail	 pd ON p.id =pd.ProductID
@@ -58,17 +75,34 @@ SELECT p.*
 		SELECT TOP(1) * FROM dbo.ProductPrice pp WHERE pd.id = pp.ProductDetailID
 		ORDER BY pp.CreatedDate DESC
 	) AS tpp
-	WHERE p.ID = 4 AND c.id = 1 AND s.id =1
+	WHERE p.ID = @Id + @whereSql
+end
 GO
-        
 
-	OUTER APPLY(
-		SELECT TOP(1)* FROM dbo.ProductImage i WHERE i.productId = p.ID
+[NidasShoes_get_Client_Product_Detail] 4 ,0,0
+
+
+     CREATE proc [dbo].[forgot_password]
+@email nvarchar(255),
+@newPass nvarchar(255)
+as
+begin
+	if exists (select top 1 * from [User] where Email = @email)
+	begin
+		update [User]
+		set HashedPassword = @newPass
+		where Email = @email
+	end
+	select @@ROWCOUNT
+end
+
+	--OUTER APPLY(
+	--	SELECT TOP(1)* FROM dbo.ProductImage i WHERE i.productId = p.ID
 	
-	) AS [tpi]
-	OUTER APPLY(
-		SELECT TOP(1)pp.* FROM dbo.ProductPrice pp 
-		JOIN dbo.ProductDetail pd ON pp.ProductDetailID = pd.ID
-		WHERE pd.ProductID =p.ID
-		ORDER BY pp.CreatedDate DESC
-	) AS [tpp]
+	--) AS [tpi]
+	--OUTER APPLY(
+	--	SELECT TOP(1)pp.* FROM dbo.ProductPrice pp 
+	--	JOIN dbo.ProductDetail pd ON pp.ProductDetailID = pd.ID
+	--	WHERE pd.ProductID =p.ID
+	--	ORDER BY pp.CreatedDate DESC
+	--) AS [tpp]
