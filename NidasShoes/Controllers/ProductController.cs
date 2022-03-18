@@ -41,7 +41,7 @@ namespace NidasShoes.Controllers
         public async Task<IActionResult> Detail(int ID, int sizeID, int colorID)
         {
             var product = JsonConvert.DeserializeObject<NidasShoesResultModel<ProductDetailClientModel>>(await _productService.GetProductDetailClient(ID, sizeID, colorID));
-            ViewBag.productImages = JsonConvert.DeserializeObject<NidasShoesResultModel<ImagesModel>>(await _productService.GetProductImageByProductID(ID));
+            ViewBag.productImages = JsonConvert.DeserializeObject<NidasShoesResultModel<ProductImageModel>>(await _productService.GetProductImageByProductID(ID));
             ViewBag.productSize = JsonConvert.DeserializeObject<NidasShoesResultModel<SizeModel>>(await _productService.GetProductSizeByProductID(ID));
             ViewBag.productColor = JsonConvert.DeserializeObject<NidasShoesResultModel<ColorModel>>(await _productService.GetProductColorByProductID(ID));
             

@@ -782,19 +782,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {}
+    "C:\\Users\\NHAT-PC\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\doan\\NidasShoes.Repository\\NidasShoes.Repository.csproj",
+      "projectUniqueName": "C:\\Users\\NHAT-PC\\Desktop\\DoAn\\NidasShoes.Repository\\NidasShoes.Repository.csproj",
       "projectName": "NidasShoes.Repository",
-      "projectPath": "C:\\Users\\Admin\\Desktop\\doan\\NidasShoes.Repository\\NidasShoes.Repository.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Desktop\\doan\\NidasShoes.Repository\\obj\\",
+      "projectPath": "C:\\Users\\NHAT-PC\\Desktop\\DoAn\\NidasShoes.Repository\\NidasShoes.Repository.csproj",
+      "packagesPath": "C:\\Users\\NHAT-PC\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\NHAT-PC\\Desktop\\DoAn\\NidasShoes.Repository\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\NHAT-PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -852,7 +852,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

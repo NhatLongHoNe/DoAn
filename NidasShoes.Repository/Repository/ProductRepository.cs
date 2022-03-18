@@ -89,7 +89,7 @@ namespace NidasShoes.Repository.Repository
             return result;
         }
 
-        public async Task<NidasShoesResultEntity<bool>> AddOrUpdateProduct(ProductEntity product, List<ImagesEntity> productImages)
+        public async Task<NidasShoesResultEntity<bool>> AddOrUpdateProduct(ProductEntity product, List<ProductImageEntity> productImages)
         {
             var param = new DynamicParameters();
             param.Add("@Id", product.ID);
@@ -127,11 +127,11 @@ namespace NidasShoes.Repository.Repository
             return result;
         }
 
-        public async Task<NidasShoesResultEntity<ImagesEntity>> GetProductImageByProductID(int Id)
+        public async Task<NidasShoesResultEntity<ProductImageEntity>> GetProductImageByProductID(int Id)
         {
             var param = new DynamicParameters();
             param.Add("@Id", Id);
-            var result = await _commonRepository.ListProcedureAsync<ImagesEntity>("NidasShoes_get_productImage_by_ProductID", param);
+            var result = await _commonRepository.ListProcedureAsync<ProductImageEntity>("NidasShoes_get_productImage_by_ProductID", param);
             return result;
         }
         public async Task<NidasShoesResultEntity<SizeEntity>> GetProductSizeByProductID(int Id)
