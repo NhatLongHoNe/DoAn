@@ -8,6 +8,7 @@ namespace NidasShoes.Service.Model
     {
         public int ID { get; set; }
         public int ProductCategoryID { get; set; }
+        public int ProductDetailID { get; set; } = 0;
         public string Code { get; set; }
         public string Name { get; set; }
         public string Title { get; set; }
@@ -22,7 +23,7 @@ namespace NidasShoes.Service.Model
         public string NameColor { get; set; }
         public string CodeColor { get; set; }
         public string NameSize { get; set; }
-        public string Quantity { get; set; }
+        public int Quantity { get; set; }
         public string Manufacturer { get; set; }
     }
 }

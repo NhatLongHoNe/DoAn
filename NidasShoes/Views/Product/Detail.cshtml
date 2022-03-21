@@ -1,8 +1,38 @@
 ﻿@using NidasShoes.Service.Model
 @model NidasShoes.Service.Model.NidasShoesResultModel<NidasShoes.Service.Model.ProductDetailClientModel>
-@{
-}
+@section scripts{
+<script>
+    $(document).ready(function(){
+    var quantitiy=0;
+       $('.quantity-right-plus').click(function(e){
+            // Stop acting like a button
+            e.preventDefault();
+            // Get the field name
+            var quantity = parseInt($('#quantity').val());
+            // If is not undefined
+                $('#quantity').val(quantity + 1);
+                // Increment
+        });
 
+         $('.quantity-left-minus').click(function(e){
+            // Stop acting like a button
+            e.preventDefault();
+            // Get the field name
+            var quantity = parseInt($('#quantity').val());
+
+            // If is not undefined
+
+                // Increment
+                if(quantity>0){
+                $('#quantity').val(quantity - 1);
+                }
+        });
+
+    });
+</script>
+<script src="~/js/productDetailScript.js"></script>
+  
+}
 @{
 
     Service.Model.ProductDetailClientModel data = Model.Results.First();
@@ -32,20 +62,7 @@
     <div class="container">
         <div class="row row-pb-lg product-detail-wrap">
             <div class="col-sm-8">
-                <div class="owl-carousel">
-              @*      @if (productImages.Results.Count() <= 1)
-                    {
-                        @foreach (var item in productImages.Results)
-                        {
-                            <div class="item">
-                                <div class="product-entry border">
-                                    <a href="#" class="prod-img">
-                                        <img src="@item.Image" class="img-fluid" alt="@data.Name">
-                                    </a>
-                                </div>
-                            </div>
-                        }
-                    }*@
+                <div class="owl-carousel slick-detail-product">
                      <div class="item checkedDetail">
                         <div class="product-entry border">
                             <a href="#" class="prod-img">
@@ -135,7 +152,7 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-12 text-center">
-                            <p class="addtocart"><a href="cart.html" class="btn btn-primary btn-addtocart"><i class="icon-shopping-cart"></i> Add to Cart</a></p>
+                            <p class="addtocart"><a href="#" id="btnAddToCart" data-id="@data.ProductDetailID" class="btn btn-primary btn-addtocart"><i class="icon-shopping-cart"></i> Add to Cart</a></p>
                         </div>
                     </div>
                 </div>
@@ -267,42 +284,3 @@
     </div>
 </div>
 <input class="d-none" value="@data.ID" id="productID" />
-@section scripts{
-<script>
-    $(document).ready(function(){
-
-    var quantitiy=0;
-       $('.quantity-right-plus').click(function(e){
-
-            // Stop acting like a button
-            e.preventDefault();
-            // Get the field name
-            var quantity = parseInt($('#quantity').val());
-
-            // If is not undefined
-
-                $('#quantity').val(quantity + 1);
-
-
-                // Increment
-
-        });
-
-         $('.quantity-left-minus').click(function(e){
-            // Stop acting like a button
-            e.preventDefault();
-            // Get the field name
-            var quantity = parseInt($('#quantity').val());
-
-            // If is not undefined
-
-                // Increment
-                if(quantity>0){
-                $('#quantity').val(quantity - 1);
-                }
-        });
-
-    });
-</script>
-<script src="~/js/productDetailScript.js"></script>
-}

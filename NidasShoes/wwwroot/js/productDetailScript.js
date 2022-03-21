@@ -33,24 +33,22 @@ function GetProductDetailBy() {
         success: function (res) {
             let data = JSON.parse(res);
             console.log(data);
-            if (data.image != null) {
-                $("#imgDetail").attr("src", data.image);
+            if (data != null) {
+                if (data.image != null) {
+                    $("#imgDetail").attr("src", data.image);
+                    //console.log($(".slick-detail-product").children(".active").children(".img-fluid").attr("src"));
+                    //$(".slick-detail-product").children(".active").children('img').attr("src", data.image);
+                }
+                if (data.exportPrice != null) {
+                    $("#peoductPrice").html("" + numeral(data.exportPrice).format('0,0') + "");
+                }
+                console.log("data.productDetailID", data.productDetailID);
+                if (data.productDetailID != null) {
+                    $('#btnAddToCart').attr("data-id", data.productDetailID);
+                } 
+            } else {
+                $('#btnAddToCart').attr("data-id", 0);
             }
-            if (data.exportPrice != null) {
-                $("#peoductPrice").html("" + data.exportPrice.toLocaleString('it-IT', { style: 'currency', currency: 'VND' }) +"");
-            }
-            
-
-            //var owl = $('.owl-carousel');
-            //owl.owlCarousel({
-               
-            //});
-            //var $owl = $('.owl-carousel').owlCarousel({
-            //    items: 1,
-            //    loop: true
-            //});
-            $(".owl-item:nth-child(4)").addClass("active ");
-            $('.owl-carousel').trigger('to.owl.carousel', 4);
         },
         error: function (error) {
             console.log(error);

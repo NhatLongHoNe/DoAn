@@ -183,9 +183,21 @@
         "netcoreapp3.0": {
           "targetAlias": "netcoreapp3.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[11.0.1, )"
+            },
             "MailKit": {
               "target": "Package",
               "version": "[3.1.1, )"
+            },
+            "Microsoft.AspNet.Mvc": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "Microsoft.AspNet.Providers.Core": {
+              "target": "Package",
+              "version": "[2.0.0, )"
             },
             "Microsoft.AspNetCore.Authentication.Facebook": {
               "target": "Package",

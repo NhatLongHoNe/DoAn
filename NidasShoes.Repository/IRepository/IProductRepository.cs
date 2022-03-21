@@ -25,7 +25,14 @@ namespace NidasShoes.Repository.IRepository
         Task<NidasShoesResultEntity<SizeEntity>> GetProductSizeByProductID(int Id);
         Task<NidasShoesResultEntity<ColorEntity>> GetProductColorByProductID(int Id);
 
+        //product Detail
+        Task<NidasShoesResultEntity<ProductDetailEntity>> GetListDataProductDetail(BaseParamEntity baseParam);
+        Task<NidasShoesResultEntity<Boolean>> AddOrUpdateProductDetail(ProductDetailEntity productDetail);
+        Task<NidasShoesResultEntity<ProductDetailEntity>> GetProductDetailById(int Id);
+        Task<NidasShoesResultEntity<Boolean>> DeleteProductDetailById(int Id);
+
         //client
+        Task<NidasShoesResultEntity<ProductDetailClientEntity>> GetProductDetailClientByProductDetailId(int Id);
         Task<NidasShoesResultEntity<ProductEntity>> GetListDataProductByProductCategoryId(int productCategoryId, BaseParamEntity baseParam);
         Task<NidasShoesResultEntity<ProductEntity>> GetListDataClientProduct(BaseParamEntity baseParam);
         Task<NidasShoesResultEntity<ProductEntity>> GetListDataProductByParentID(int parentID, BaseParamEntity baseParam);

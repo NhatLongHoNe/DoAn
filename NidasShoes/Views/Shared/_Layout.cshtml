@@ -44,9 +44,7 @@
 
 </head>
 <body>
-
     <div class="colorlib-loader"></div>
-
     <div id="page">
         <nav class="colorlib-nav" role="navigation">
             <div class="top-menu">
@@ -67,21 +65,23 @@
                     <div class="row">
                         <div class="col-sm-12 text-left menu-1">
                             <ul>
-                                <li class="active"><a href="index.html">Trang chủ</a></li>
+                                <li class="active"><a href="/">Trang chủ</a></li>
                                 <li class="has-dropdown">
-                                    <a href="men.html">Nam</a>
+                                    <a href="/product">Toàn bộ sản phẩm</a>
                                     <ul class="dropdown">
-                                        <li><a href="cart.html">Shopping Cart</a></li>
+                                        <li><a href="/cart">Shopping Cart</a></li>
                                         <li><a href="checkout.html">Checkout</a></li>
                                         <li><a href="order-complete.html">Order Complete</a></li>
                                         <li><a href="add-to-wishlist.html">Wishlist</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="women.html">Nữ</a></li>
                                 <li><a href="about.html">Về chúng tôi</a></li>
                                 <li><a href="contact.html">Liên hệ</a></li>
                               
-                                <li class="cart"><a href="cart.html"><i class="icon-shopping-cart"></i> Cart [0]</a></li>
+                                <li class="cart"><a href="/cart">
+                                    <i class="icon-shopping-cart"></i> 
+                                    Giỏ hàng [<span class="countCard">0</span>]</a>
+                                </li>
                                   <li class="account check-user-false">
 									<a href="/login">Đăng nhập</a>
 								</li>
@@ -236,6 +236,11 @@
     <script src="~/js/bootstrap-datepicker.js"></script>
     <!-- Stellar Parallax -->
     <script src="~/js/jquery.stellar.min.js"></script>
+    @*mustache*@
+    <script src="~/js/mustache.min.js"></script>
+    @*format number*@
+    <script src="~/js/numeral.min.js"></script>
+    
     <!-- Main -->
 
     <!-- bootstrap -->
@@ -254,6 +259,7 @@
     <script src="~/client/js/scriptLayout.js"></script>
     <script src="~/client/js/homeLayout.js"></script>
     <script src="~/Admin/Content/js/AdminCommon.js"></script>
+    <script src="~/js/controllers/ShoppingCart.js"></script>
 
     @RenderSection("Scripts", required: false)
 </body>

@@ -152,7 +152,64 @@ namespace NidasShoes.Repository.Repository
         }
         #endregion
 
+        #region Product Detail
+        public async Task<NidasShoesResultEntity<bool>> AddOrUpdateProductDetail(ProductDetailEntity productDetailEntity)
+        {
+            var param = new DynamicParameters();
+            param.Add("@Id", productDetailEntity.ID);
+            param.Add("@ProductID", productDetailEntity.ProductID);
+            param.Add("@SizeID", productDetailEntity.SizeID);
+            param.Add("@ColorID", productDetailEntity.ColorID);
+            param.Add("@Quantity", productDetailEntity.Quantity);
+            param.Add("@Image", productDetailEntity.Image);
+            
+            var result = await _commonRepository.ListProcedureAsync<bool>("NidasShoes_create_or_update_ProductDetail", param);
+            return result;
+        }
+
+
+
+        public async Task<NidasShoesResultEntity<bool>> DeleteProductDetailById(int Id)
+        {
+            var param = new DynamicParameters();
+            param.Add("@Id", Id);
+            var result = await _commonRepository.ListProcedureAsync<bool>("NidasShoes_delete_ProductDetail", param);
+            return result;
+        }
+
+        public async Task<NidasShoesResultEntity<ProductDetailEntity>> GetProductDetailById(int Id)
+        {
+            var param = new DynamicParameters();
+            param.Add("@Id", Id);
+            var result = await _commonRepository.ListProcedureAsync<ProductDetailEntity>("NidasShoes_get_ProductDetail_byId", param);
+            return result;
+        }
+
+        public async Task<NidasShoesResultEntity<ProductDetailEntity>> GetListDataProductDetail(BaseParamEntity baseParam)
+        {
+            int Totals = 0, PageCount = 0;
+            var param = new DynamicParameters();
+            param.Add("@BaseParam", baseParam.ConvertObjectToDataTable(), System.Data.DbType.Object);
+            param.Add("@Totals", Totals, System.Data.DbType.Int32, System.Data.ParameterDirection.InputOutput);
+            param.Add("@PageCount", PageCount, System.Data.DbType.Int32, System.Data.ParameterDirection.InputOutput);
+            var res = await _commonRepository.ListProcedureAsync<ProductDetailEntity>("NidasShoes_get_ProductDetail", param);
+            res.TotalRecords = param.Get<int>("@Totals");
+            res.PageCount = param.Get<int>("@PageCount");
+            res.PageSize = baseParam.PageSize;
+            res.PageNumber = baseParam.PageNumber;
+            return res;
+        }
+        #endregion
+
         #region Product client
+
+        public async Task<NidasShoesResultEntity<ProductDetailClientEntity>> GetProductDetailClientByProductDetailId(int Id)
+        {
+            var param = new DynamicParameters();
+            param.Add("@Id", Id);
+            var result = await _commonRepository.ListProcedureAsync<ProductDetailClientEntity>("NidasShoes_get_Client_Product_Detail_by_productDetailId", param);
+            return result;
+        }
         public async Task<NidasShoesResultEntity<ProductEntity>> GetListDataClientProduct(BaseParamEntity baseParam)
         {
             int Totals = 0, PageCount = 0;

@@ -17,38 +17,32 @@ namespace NidasShoes.Service.Service
         {
             _productRepository = productRepository;
         }
-
+        #region product category
         public async Task<string> AddOrUpdate(ProductCategoryModel productCategory)
         {
             var productCategoryEntity = JsonConvert.DeserializeObject<ProductCategoryEntity>(JsonConvert.SerializeObject(productCategory));
             var response = await _productRepository.AddOrUpdate(productCategoryEntity);
             return JsonConvert.SerializeObject(response);
         }
-
-
-
         public async Task<string> DeleteById(int Id)
         {
             var response = await _productRepository.DeleteById(Id);
             return JsonConvert.SerializeObject(response);
         }
-
-
         public async Task<string> GetById(int Id)
         {
             var response = await _productRepository.GetById(Id);
             return JsonConvert.SerializeObject(response);
         }
-
-
-
         public async Task<string> GetListData(BaseParamModel baseParam)
         {
             var baseEntity = JsonConvert.DeserializeObject<BaseParamEntity>(JsonConvert.SerializeObject(baseParam));
             var response = await _productRepository.GetListData(baseEntity);
             return JsonConvert.SerializeObject(response);
         }
+        #endregion
 
+        #region product 
         public async Task<string> GetListDataProduct(BaseParamModel baseParam)
         {
             var baseEntity = JsonConvert.DeserializeObject<BaseParamEntity>(JsonConvert.SerializeObject(baseParam));
@@ -75,7 +69,39 @@ namespace NidasShoes.Service.Service
             var res = await _productRepository.GetProductById(Id);
             return JsonConvert.SerializeObject(res);
         }
+        #endregion
 
+        #region product detail
+        public async Task<string> AddOrUpdateProductDetail(ProductDetailModel productDetail)
+        {
+            var productDetailEntity = JsonConvert.DeserializeObject<ProductDetailEntity>(JsonConvert.SerializeObject(productDetail));
+            var response = await _productRepository.AddOrUpdateProductDetail(productDetailEntity);
+            return JsonConvert.SerializeObject(response);
+        }
+        public async Task<string> DeleteProductDetailById(int Id)
+        {
+            var response = await _productRepository.DeleteProductDetailById(Id);
+            return JsonConvert.SerializeObject(response);
+        }
+        public async Task<string> GetProductDetailById(int Id)
+        {
+            var response = await _productRepository.GetProductDetailById(Id);
+            return JsonConvert.SerializeObject(response);
+        }
+        public async Task<string> GetListDataProductDetail(BaseParamModel baseParam)
+        {
+            var baseEntity = JsonConvert.DeserializeObject<BaseParamEntity>(JsonConvert.SerializeObject(baseParam));
+            var response = await _productRepository.GetListDataProductDetail(baseEntity);
+            return JsonConvert.SerializeObject(response);
+        }
+        #endregion
+
+        #region product client
+        public async Task<string> GetProductDetailClientByProductDetailId(int Id)
+        {
+            var response = await _productRepository.GetProductDetailClientByProductDetailId(Id);
+            return JsonConvert.SerializeObject(response);
+        }
         public async Task<string> GetProductImageByProductID(int Id)
         {
             var res = await _productRepository.GetProductImageByProductID(Id);
@@ -94,7 +120,7 @@ namespace NidasShoes.Service.Service
         public async Task<string> GetListDataProductByProductCategoryId(int productCategoryId, BaseParamModel baseParam)
         {
             var baseEntity = JsonConvert.DeserializeObject<BaseParamEntity>(JsonConvert.SerializeObject(baseParam));
-            var response = await _productRepository.GetListDataProductByProductCategoryId(productCategoryId,baseEntity);
+            var response = await _productRepository.GetListDataProductByProductCategoryId(productCategoryId, baseEntity);
             return JsonConvert.SerializeObject(response);
         }
 
@@ -112,8 +138,9 @@ namespace NidasShoes.Service.Service
 
         public async Task<string> GetProductDetailClient(int productID, int sizeID, int colorID)
         {
-            var res = await _productRepository.GetProductDetailClient(productID,sizeID,colorID);
+            var res = await _productRepository.GetProductDetailClient(productID, sizeID, colorID);
             return JsonConvert.SerializeObject(res);
         }
+        #endregion
     }
 }

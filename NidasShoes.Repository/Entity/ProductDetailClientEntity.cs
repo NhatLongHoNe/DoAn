@@ -8,6 +8,7 @@ namespace NidasShoes.Repository.Entity
     {
         public int ID { get; set; }
         public int ProductCategoryID { get; set; }
+        public int ProductDetailID { get; set; }
         public string Code { get; set; }
         public string Name { get; set; }
         public string Title { get; set; }

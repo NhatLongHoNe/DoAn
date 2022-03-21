@@ -1,0 +1,112 @@
+﻿@model NidasShoes.Service.Model.NidasShoesResultModel<NidasShoes.Service.Model.SizeModel>
+@{
+    var data = Model.Results;
+    var pageSize = Model.PageSize;
+    var pageNumber = Model.PageNumber;
+    var pageCount = Model.PageCount;
+}
+
+<div class="data-table">
+    <table id="myTable" class="table table-striped table-bordered text-left table-hover" style="background:#fff;">
+        <thead>
+            <tr>
+                <th>Size</th>
+               
+                
+                <th style="text-align:right">Tác vụ</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in data)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td style="width:80px;text-align:right">
+                        <div class="d-flex justify-content-end w-100">
+                            @*<button class="btn-green btn-event btnDetail" data-id="@item.Id"><i class="fas fa-info-circle"></i> </button>*@
+                            <button class="btn-yellow btn-event btnEdit" data-id="@item.ID" onclick="GetFormAddOrEdit('/Admin/ProductSize/_AddOrEdit',@item.ID)"><i class="far fa-edit"></i> </button>
+                            <button class="btn-red btn-event btnDelete" role="button" data-id="@item.ID" onclick="DeleteById('/Admin/ProductSize/DeleteById',@item.ID)"><i class="far fa-trash-alt"></i> </button>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+        <tfoot>
+
+        </tfoot>
+    </table>
+
+    <div class="pagination-container">
+        <ul class="pagination">
+            @if (pageCount <= 4)
+            {
+                for (int index = 1; index <= pageCount; index++)
+                {
+                    if (index == pageNumber)
+                    {
+                        <li class="active"><a data-index="@index">@index</a></li>
+                    }
+                    else
+                    {
+                        <li><a data-index="@index">@index</a></li>
+                    }
+                }
+            }
+            else
+            {
+                if (pageNumber <= 2)
+                {
+                    for (int index = 1; index <= 4; index++)
+                    {
+                        if (index == pageNumber)
+                        {
+                            <li class="active"><a data-index="@index">@index</a></li>
+                        }
+                        else
+                        {
+                            <li><a data-index="@index">@index</a></li>
+                        }
+                    }
+                    <li><a class="nextPage" data-index="@pageCount"><i class="fas fa-chevron-right"></i></a></li>
+                }
+                else if (pageNumber >= pageCount - 2)
+                {
+                    <li><a class="prevPage" data-index="1"><i class="fas fa-chevron-left"></i></a></li>
+
+                    for (int index = pageCount - 3; index <= pageCount; index++)
+                    {
+                        if (index == pageNumber)
+                        {
+                            <li class="active"><a data-index="@index">@index</a></li>
+                        }
+                        else
+                        {
+                            <li><a data-index="@index">@index</a></li>
+                        }
+                    }
+                }
+                else
+                {
+                    <li><a class="prevPage" data-index="1"><i class="fas fa-chevron-left"></i></a></li>
+                    for (int index = pageNumber - 1; index <= pageNumber + 2; index++)
+                    {
+                        if (index == pageNumber)
+                        {
+                            <li class="active"><a data-index="@index">@index</a></li>
+                        }
+                        else
+                        {
+                            <li><a data-index="@index">@index</a></li>
+                        }
+                    }
+                    <li><a class="nextPage" data-index="@pageCount"><i class="fas fa-chevron-right"></i></a></li>
+                }
+            }
+
+        </ul>
+    </div>
+</div>
+
+
+
