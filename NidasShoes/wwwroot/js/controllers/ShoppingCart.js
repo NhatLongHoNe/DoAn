@@ -44,6 +44,18 @@ var cart = {
             }
             $('#lblTotalOrder').text(numeral(cart.getTotalOrder()).format('0,0'));
         });
+        $('#btnContinue').off('click').on('click', function (e) {
+            e.preventDefault();
+            window.location.href = "/product";
+        });
+        $('#btnDeleteAll').off('click').on('click', function (e) {
+            e.preventDefault();
+            cart.deleteAll();
+        });
+        $('#btnCheckout').off('click').on('click', function (e) {
+            e.preventDefault();
+            $('#divCheckout').show();
+        });
     },
     getTotalOrder: function () {
         var listTextBox = $('.txtQuantity');
@@ -52,8 +64,8 @@ var cart = {
             total += parseInt($(item).val()) * parseFloat($(item).data('price'));
         });
         return total;
-    }
-    ,addItem: function (Id) {
+    },
+    addItem: function (Id) {
         $.ajax({
             url: '/Cart/Add',
             type: 'POST',
@@ -84,6 +96,18 @@ var cart = {
             }
         })
     },
+    deleteAll: function () {
+        $.ajax({
+            url: '/Cart/DeleteAll',
+            type: 'POST',
+            dataType: 'json',
+            success: function (response) {
+                if (response.status) {
+                    cart.loadData();
+                }
+            }
+        });
+    },
     loadData: function () {
         $.ajax({
             url: '/Cart/GetAll',
@@ -113,7 +137,7 @@ var cart = {
 
                     $('#cartBody').html(html);
                     if (html == '') {
-                        $('#cartContent').html('Không có sản phẩm nào trong giỏ hàng.');
+                        $('#cartContent').html('<h3 class="text-center">Không có sản phẩm nào trong giỏ hàng.</h3>');
                     }
                     $('#lblTotalOrder').text(numeral(cart.getTotalOrder()).format('0,0'));
                     cart.registerEvent();

@@ -1275,3 +1275,5 @@ C:\Users\Admin\Desktop\doan\NidasShoes\bin\Debug\netcoreapp3.0\System.Web.WebPag
 C:\Users\Admin\Desktop\doan\NidasShoes\bin\Debug\netcoreapp3.0\System.Web.WebPages.Razor.dll
 C:\Users\Admin\Desktop\doan\NidasShoes\bin\Debug\netcoreapp3.0\System.Web.WebPages.dll
 C:\Users\Admin\Desktop\doan\NidasShoes\bin\Debug\netcoreapp3.0\Microsoft.Web.Infrastructure.dll
+C:\Users\Admin\Desktop\doan\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Views\Cart\CheckOut.cshtml.g.cs
+C:\Users\Admin\Desktop\doan\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Views\Cart\OrderComplete.cshtml.g.cs

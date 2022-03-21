@@ -1,5 +1,5 @@
 ﻿@section Scripts{
-    
+
 }
 <div class="breadcrumbs">
     <div class="container">
@@ -12,7 +12,7 @@
 </div>
 
 
-<div class="colorlib-product">
+<div id="cartContent" class="colorlib-product">
     <div class="container">
         <div class="row row-pb-lg">
             <div class="col-md-10 offset-md-1">
@@ -57,13 +57,11 @@
                         <span>Remove</span>
                     </div>
                 </div>
-                 <div id="cartContent">
-
+                <div id="cartContent">
                 </div>
                 <div id="cartBody">
-
                 </div>
-                
+
             </div>
         </div>
         <div class="row row-pb-lg">
@@ -93,6 +91,19 @@
                                     <p><span><strong>Total:</strong></span> <span>0.00</span></p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row row-pb-lg">
+            <div class="col-md-12">
+                <div class="total-wrap">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <button class="btn btn-success" id="btnContinue">tiếp tục mua hàng</button>
+                            <button class="btn btn-danger" id="btnDeleteAll">xoá giỏ hàng</button>
+                            <button class="btn btn-info" id="btnCheckout">Thanh toán</button>
                         </div>
                     </div>
                 </div>
@@ -197,7 +208,7 @@
 
 
 @*<script id="tplCart" type="x-tmpl-mustache">
-  <tr>
+    <tr>
     <td>{{ProductDetailId}}</td>
     <td>{{ProductName}}</td>
     <td><img src="{{Image}}" height="50" /></td>
@@ -205,6 +216,6 @@
     <td><input type="number" data-id="{{ProductId}}" data-price="{{Price}}" value="{{Quantity}}" class="input txtQuantity" /></td>
     <td id="amount_{{ProductId}}">{{Amount}}</td>
     <td><button class="btn btn-danger btnDeleteItem" data-id="{{ProductId}}"><i class="fa fa-close"></i></button></td>
-  </tr>
+    </tr>
 
-</script>*@
+    </script>*@

@@ -148,7 +148,21 @@ namespace NidasShoes.Controllers
                 status = false
             });
         }
-
+       
+        public IActionResult CheckOut()
+        {
+            byte[] arrCart = new byte[0];
+            var cartSession = new List<CartViewModel>();
+            if (HttpContext.Session.TryGetValue("SessionCart", out arrCart))
+            {
+                cartSession = JsonConvert.DeserializeObject<List<CartViewModel>>(Encoding.UTF8.GetString(arrCart));
+            }
+            else
+            {
+                return Redirect("/Cart");
+            }
+            return View();
+        }
         [HttpPost]
         public IActionResult DeleteAll()
         {
@@ -159,6 +173,10 @@ namespace NidasShoes.Controllers
             {
                 status = true
             });
+        }
+        public IActionResult OrderComplete()
+        {
+            return View();
         }
     }
 }
