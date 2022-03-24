@@ -20,3 +20,7 @@
 .pagination{
     justify-content:center;
 }
+.process.active p span {
+    color: #88c8bc;
+    font-weight: bold;
+}

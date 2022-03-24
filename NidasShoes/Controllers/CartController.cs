@@ -14,11 +14,12 @@ namespace NidasShoes.Controllers
     public class CartController : Controller
     {
         private readonly IProductService _productService;
+        private readonly IOrderService _orderService;
         public CartController(IProductService productService
-           )
+           , IOrderService orderService)
         {
             _productService = productService;
-
+            _orderService = orderService;
         }
 
         public IActionResult Index()
@@ -51,7 +52,7 @@ namespace NidasShoes.Controllers
             {
                 cart = JsonConvert.DeserializeObject<List<CartViewModel>>(Encoding.UTF8.GetString(arrCart));
                 //var productDetail = _productService
-                if(cart.Any(x=>x.ProductDetailID == productDetailID))
+                if (cart.Any(x => x.ProductDetailID == productDetailID))
                 {
                     foreach (var item in cart)
                     {
@@ -148,7 +149,7 @@ namespace NidasShoes.Controllers
                 status = false
             });
         }
-       
+
         public IActionResult CheckOut()
         {
             byte[] arrCart = new byte[0];
@@ -177,6 +178,57 @@ namespace NidasShoes.Controllers
         public IActionResult OrderComplete()
         {
             return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> CreateOrder(string orderViewModel)
+        {
+            var order = JsonConvert.DeserializeObject<OrderModel>(orderViewModel);
+
+            if (string.IsNullOrEmpty(order.CustomerName))
+            {
+                return Json(new
+                {
+                    status = false
+                });
+            }
+            //user session
+            byte[] arrUser = new byte[0];
+            if (HttpContext.Session.TryGetValue("User_Client", out arrUser))
+            {
+                var userSession = JsonConvert.DeserializeObject<UserModel>(Encoding.UTF8.GetString(arrUser));
+                order.CustomerID = userSession.Id;
+            }
+
+            //cart session
+            byte[] arrCart = new byte[0];
+            var cartSession = new List<CartViewModel>();
+            if (HttpContext.Session.TryGetValue("SessionCart", out arrCart))
+            {
+                cartSession = JsonConvert.DeserializeObject<List<CartViewModel>>(Encoding.UTF8.GetString(arrCart));
+                List<OrderDetailModel> orderDetails = new List<OrderDetailModel>();
+                foreach (var item in cartSession)
+                {
+                    var detail = new OrderDetailModel();
+                    detail.ProductDetailID = item.ProductDetailID;
+                    detail.Quantity = item.Quantity;
+                    detail.Price = item.Product.ExportPrice;
+                    orderDetails.Add(detail);
+                }
+                order.OrderDetails = orderDetails;
+            }
+            
+            var res = JsonConvert.DeserializeObject<NidasShoesResultModel<OrderModel>>(await _orderService.AddOrUpdate(order));
+            if (res.Results.Count() == 0)
+            {
+                return Json(new
+                {
+                    status = true
+                });
+            }
+            return Json(new
+            {
+                status = false
+            });
         }
     }
 }

@@ -1,0 +1,77 @@
+﻿using Dapper;
+using NidasShoes.Repository.Common;
+using NidasShoes.Repository.Entity;
+using NidasShoes.Repository.IRepository;
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace NidasShoes.Repository.Repository
+{
+    public class OrderRepository : IOrderRepository
+    {
+        ICommonRepository _commonRepository;
+        public OrderRepository(ICommonRepository commonRepository)
+        {
+            _commonRepository = commonRepository;
+        }
+
+        public async Task<NidasShoesResultEntity<bool>> AddOrUpdate(OrderEntity order)
+        {
+            var param = new DynamicParameters();
+            param.Add("@Id", order.ID);
+            param.Add("@CustomerID", order.CustomerID);
+            param.Add("@EmployeeID", order.EmployeeID);
+            param.Add("@PaymentID", order.PaymentID);
+            param.Add("@DiscountID", order.DiscountID);
+            param.Add("@Description", order.Description);
+            param.Add("@Note", order.Note);
+            param.Add("@OrderStatusID", order.OrderStatusID);
+            param.Add("@CustomerName", order.CustomerName);
+            param.Add("@CustomerMobile", order.CustomerMobile);
+            param.Add("@CustomerEmail", order.CustomerEmail);
+            param.Add("@CustomerAddress", order.CustomerAddress);
+
+            param.Add("@OrderDetail", order.orderDetails.ConvertListToDataTable(), System.Data.DbType.Object);
+            var result = await _commonRepository.ListProcedureAsync<bool>("NidasShoes_create_or_update_Order", param);
+            return result;
+        }
+
+        public async Task<NidasShoesResultEntity<bool>> AddOrUpdate(OrderEntity order, OrderDetailEntity orderDetail)
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task<NidasShoesResultEntity<bool>> DeleteById(int Id)
+        {
+            var param = new DynamicParameters();
+            param.Add("@Id", Id);
+            var result = await _commonRepository.ListProcedureAsync<bool>("NidasShoes_delete_Order", param);
+            return result;
+        }
+
+        public async Task<NidasShoesResultEntity<OrderEntity>> GetById(int Id)
+        {
+            var param = new DynamicParameters();
+            param.Add("@Id", Id);
+            var result = await _commonRepository.ListProcedureAsync<OrderEntity>("NidasShoes_get_Order_byId", param);
+            return result;
+        }
+
+        public async Task<NidasShoesResultEntity<OrderEntity>> GetListData(BaseParamEntity baseParam)
+        {
+            int Totals = 0, PageCount = 0;
+            var param = new DynamicParameters();
+            param.Add("@BaseParam", baseParam.ConvertObjectToDataTable(), System.Data.DbType.Object);
+            param.Add("@Totals", Totals, System.Data.DbType.Int32, System.Data.ParameterDirection.InputOutput);
+            param.Add("@PageCount", PageCount, System.Data.DbType.Int32, System.Data.ParameterDirection.InputOutput);
+            var res = await _commonRepository.ListProcedureAsync<OrderEntity>("NidasShoes_get_Order", param);
+            res.TotalRecords = param.Get<int>("@Totals");
+            res.PageCount = param.Get<int>("@PageCount");
+            res.PageSize = baseParam.PageSize;
+            res.PageNumber = baseParam.PageNumber;
+            return res;
+        }
+    }
+}

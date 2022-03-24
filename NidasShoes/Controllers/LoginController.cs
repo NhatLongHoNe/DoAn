@@ -140,7 +140,26 @@ namespace WebApp.Controllers
 
             return Json(false);
         }
+        [HttpPost]
+        public async Task<IActionResult> GetUser()
+        {
+            byte[] arr = new byte[0];
 
+            if (HttpContext.Session.TryGetValue("User_Client", out arr))
+            {
+                var json = JsonConvert.DeserializeObject<UserModel>(Encoding.UTF8.GetString(arr));
+                var result = JsonConvert.DeserializeObject<NidasShoesResultModel<UserModel>>(await _userService.GetById(json.Id)).Results.FirstOrDefault();
+                return Json(new
+                {
+                    data = result,
+                    status = true
+                });
+            }
+            return Json(new
+            {
+                status = false
+            });
+        }
 
         static Random random = new Random();
         public static string RandomString(int length)
