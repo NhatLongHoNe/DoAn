@@ -116,11 +116,11 @@ var cart = {
         // điều kiện nếu thanh toán kiểu khác
 
         // check null or empty
-        for (const [key, value] of Object.entries(order)) {
-            console.log(key, value);
+        //for (const [key, value] of Object.entries(order)) {
+        //    console.log(key, value);
             
-        }
-        return 0;
+        //}
+        //return 0;
         $.ajax({
             url: '/Cart/CreateOrder',
             type: 'POST',

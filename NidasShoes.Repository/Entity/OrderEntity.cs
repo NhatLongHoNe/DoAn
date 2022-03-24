@@ -23,6 +23,8 @@ namespace NidasShoes.Repository.Entity
         public OrderStatusEntity OrderStatus { get; set; }
         public string PaymentName { get; set; }
         public string StatusName { get; set; }
+        public string EmployeeName { get; set; }
+
 
     }
 }

@@ -13,5 +13,13 @@ namespace NidasShoes.Repository.IRepository
         Task<NidasShoesResultEntity<Boolean>> AddOrUpdate(OrderEntity order,OrderDetailEntity orderDetail);
         Task<NidasShoesResultEntity<OrderEntity>> GetById(int Id);
         Task<NidasShoesResultEntity<Boolean>> DeleteById(int Id);
+
+        // order status
+        Task<NidasShoesResultEntity<OrderStatusEntity>> GetListDataStatus(BaseParamEntity baseParam);
+
+        //order Detail
+        Task<NidasShoesResultEntity<OrderDetailEntity>> GetListDataOrderDetailByOrderId(int Id);
+
+
     }
 }

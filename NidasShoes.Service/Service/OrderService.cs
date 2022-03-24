@@ -42,5 +42,18 @@ namespace NidasShoes.Service.Service
             var res = await _orderRepository.GetListData(baseEntity);
             return JsonConvert.SerializeObject(res);
         }
+
+        public async Task<string> GetListDataOrderDetailByOrderId(int Id)
+        {
+            var res = await _orderRepository.GetListDataOrderDetailByOrderId(Id);
+            return JsonConvert.SerializeObject(res);
+        }
+
+        public async Task<string> GetListDataStatus(BaseParamModel baseParam)
+        {
+            var baseEntity = JsonConvert.DeserializeObject<BaseParamEntity>(JsonConvert.SerializeObject(baseParam));
+            var res = await _orderRepository.GetListDataStatus(baseEntity);
+            return JsonConvert.SerializeObject(res);
+        }
     }
 }

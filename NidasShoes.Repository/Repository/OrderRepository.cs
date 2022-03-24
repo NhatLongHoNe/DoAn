@@ -73,5 +73,31 @@ namespace NidasShoes.Repository.Repository
             res.PageNumber = baseParam.PageNumber;
             return res;
         }
+
+      
+
+        public async Task<NidasShoesResultEntity<OrderStatusEntity>> GetListDataStatus(BaseParamEntity baseParam)
+        {
+            int Totals = 0, PageCount = 0;
+            var param = new DynamicParameters();
+            param.Add("@BaseParam", baseParam.ConvertObjectToDataTable(), System.Data.DbType.Object);
+            param.Add("@Totals", Totals, System.Data.DbType.Int32, System.Data.ParameterDirection.InputOutput);
+            param.Add("@PageCount", PageCount, System.Data.DbType.Int32, System.Data.ParameterDirection.InputOutput);
+            var res = await _commonRepository.ListProcedureAsync<OrderStatusEntity>("NidasShoes_get_OrderStatus", param);
+            res.TotalRecords = param.Get<int>("@Totals");
+            res.PageCount = param.Get<int>("@PageCount");
+            res.PageSize = baseParam.PageSize;
+            res.PageNumber = baseParam.PageNumber;
+            return res;
+        }
+
+        // order detail
+        public async Task<NidasShoesResultEntity<OrderDetailEntity>> GetListDataOrderDetailByOrderId(int Id)
+        {
+            var param = new DynamicParameters();
+            param.Add("@Id", Id);
+            var result = await _commonRepository.ListProcedureAsync<OrderDetailEntity>("NidasShoes_get_OrderDetail_by_OrderId", param);
+            return result;
+        }
     }
 }

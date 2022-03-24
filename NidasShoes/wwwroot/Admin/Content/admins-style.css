@@ -135,6 +135,9 @@ ul li {
 .btn-red {
     background: #cb5a5e;
 }
+.btn-blue {
+    background: #74c0fc;
+}
 
 .d-relative {
     position: relative;

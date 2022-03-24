@@ -12,5 +12,10 @@ namespace NidasShoes.Service.IService
         Task<string> AddOrUpdate(OrderModel orderModel);
         Task<string> GetById(int Id);
         Task<string> DeleteById(int Id);
+
+        Task<string> GetListDataStatus(BaseParamModel baseParam);
+
+        Task<string> GetListDataOrderDetailByOrderId(int Id);
+
     }
 }

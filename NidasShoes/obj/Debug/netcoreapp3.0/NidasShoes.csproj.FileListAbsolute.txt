@@ -1300,3 +1300,7 @@ C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Areas\Adm
 C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Views\Cart\CheckOut.cshtml.g.cs
 C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Views\Cart\Index.cshtml.g.cs
 C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Views\Cart\OrderComplete.cshtml.g.cs
+C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\Order\GetListData.cshtml.g.cs
+C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\Order\Index.cshtml.g.cs
+C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\Order\_AddOrEdit.cshtml.g.cs
+C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\Order\GetOrderDetail.cshtml.g.cs

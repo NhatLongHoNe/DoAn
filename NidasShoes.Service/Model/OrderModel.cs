@@ -13,13 +13,18 @@ namespace NidasShoes.Service.Model
         public int DiscountID { get; set; }
         public DateTime CreatedDate { get; set; }
         public string Description { get; set; }
-        public string Note { get; set; }
+        public string Note { get; set; } = "";
         public int OrderStatusID { get; set; }
         public string CustomerName { get; set; }
         public string CustomerMobile { get; set; }
         public string CustomerEmail { get; set; }
         public string CustomerAddress { get; set; }
+
         public List<OrderDetailModel> OrderDetails { get; set; } = new List<OrderDetailModel>();
+        public string StatusName { get; set; }
+        public string PaymentName { get; set; }
+        public string EmployeeName { get; set; }
+
 
     }
 }
