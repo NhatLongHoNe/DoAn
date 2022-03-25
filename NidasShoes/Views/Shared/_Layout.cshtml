@@ -38,6 +38,8 @@
     <link href="~/client/toastr/toastr.css" rel="stylesheet" />
     @* slick *@
     <link href="~/client/css/styleSlick.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- nhật css -->
     <link rel="stylesheet" href="~/css/n_css_all_page.css">
 
@@ -77,17 +79,25 @@
                                 </li>
                                 <li><a href="about.html">Về chúng tôi</a></li>
                                 <li><a href="contact.html">Liên hệ</a></li>
-                              
-                                <li class="cart"><a href="/cart">
-                                    <i class="icon-shopping-cart"></i> 
-                                    Giỏ hàng [<span class="countCard">0</span>]</a>
+
+                                <li class="cart">
+                                    <a href="/cart">
+                                        <i class="icon-shopping-cart"></i>
+                                        Giỏ hàng [<span class="countCard">0</span>]
+                                    </a>
                                 </li>
-                                  <li class="account check-user-false">
-									<a href="/login">Đăng nhập</a>
-								</li>
-                                <li class="account check-user-true ">
+                                <li class="account check-user-false">
+                                    <a href="/login">Đăng nhập</a>
+                                </li>
+                                <li class="has-dropdown account check-user-true ">
                                     <a class="sa-userName" href="/user/profile" title="User"></a>
+                                    <ul class="dropdown">
+                                        <li><a href="/order">Đơn hàng</a></li>
+                                    </ul>
+                                </li>
+                                <li class="account check-user-true ">
                                     <a style="cursor:pointer" class="" onclick="LogoutClient()" title="Đăng Xuất">Đăng xuất</a>
+
                                 </li>
                             </ul>
                         </div>
@@ -120,31 +130,31 @@
 
         @RenderBody()
         <div class="colorlib-partner">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-8 offset-sm-2 text-center colorlib-heading colorlib-heading-sm">
-                    <h2>ĐỐI TÁC TIN CẬY</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 offset-sm-2 text-center colorlib-heading colorlib-heading-sm">
+                        <h2>ĐỐI TÁC TIN CẬY</h2>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col partner-col text-center">
-                    <img src="~/images/brand-1.jpg" class="img-fluid" alt="Free html4 bootstrap 4 template">
-                </div>
-                <div class="col partner-col text-center">
-                    <img src="~/images/brand-2.jpg" class="img-fluid" alt="Free html4 bootstrap 4 template">
-                </div>
-                <div class="col partner-col text-center">
-                    <img src="~/images/brand-3.jpg" class="img-fluid" alt="Free html4 bootstrap 4 template">
-                </div>
-                <div class="col partner-col text-center">
-                    <img src="~/images/brand-4.jpg" class="img-fluid" alt="Free html4 bootstrap 4 template">
-                </div>
-                <div class="col partner-col text-center">
-                    <img src="~/images/brand-5.jpg" class="img-fluid" alt="Free html4 bootstrap 4 template">
+                <div class="row">
+                    <div class="col partner-col text-center">
+                        <img src="~/images/brand-1.jpg" class="img-fluid" alt="Free html4 bootstrap 4 template">
+                    </div>
+                    <div class="col partner-col text-center">
+                        <img src="~/images/brand-2.jpg" class="img-fluid" alt="Free html4 bootstrap 4 template">
+                    </div>
+                    <div class="col partner-col text-center">
+                        <img src="~/images/brand-3.jpg" class="img-fluid" alt="Free html4 bootstrap 4 template">
+                    </div>
+                    <div class="col partner-col text-center">
+                        <img src="~/images/brand-4.jpg" class="img-fluid" alt="Free html4 bootstrap 4 template">
+                    </div>
+                    <div class="col partner-col text-center">
+                        <img src="~/images/brand-5.jpg" class="img-fluid" alt="Free html4 bootstrap 4 template">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
         <footer id="colorlib-footer" role="contentinfo">
             <div class="container">
                 <div class="row row-pb-md">
@@ -207,7 +217,7 @@
                     </div>
                 </div>
             </div>
-      
+
         </footer>
     </div>
 
@@ -240,9 +250,8 @@
     <script src="~/js/mustache.min.js"></script>
     @*format number*@
     <script src="~/js/numeral.min.js"></script>
-    
-    <!-- Main -->
 
+    <!-- Main -->
     <!-- validate -->
     <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
     <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>

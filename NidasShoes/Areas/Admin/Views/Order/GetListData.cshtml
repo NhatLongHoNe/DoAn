@@ -14,7 +14,7 @@
         <thead>
             <tr>
                 <th>Mã đơn hàng</th>
-                   <th>Tên khách hàng</th>
+                <th>Tên khách hàng</th>
                 <th>Số điện thoại</th>
                 <th>Email</th>
                 <th>Địa chỉ nhận</th>
@@ -22,7 +22,7 @@
                 <th>Tình trạng đơn hàng</th>
                 <th>Thanh toán</th>
                 <th>Nhân viên chăm sóc</th>
-                
+
                 <th style="text-align:right">Tác vụ</th>
                 <th>Cập nhật trạng thái </th>
             </tr>
@@ -32,7 +32,7 @@
             {
                 <tr>
                     <td>@item.ID</td>
-                       <td>@item.CustomerName</td>
+                    <td>@item.CustomerName</td>
                     <td>@item.CustomerMobile</td>
                     <td>@item.CustomerEmail</td>
                     <td>@item.CustomerAddress</td>
@@ -50,15 +50,18 @@
                     </td>
                     <th>
 
-                       <select class="form-control" id="orderStatusId">
-                           @foreach (var order in dataStatus.Results)
-                          {
-                              @if(order.ID==item.OrderStatusID){
-                                <option value="@order.ID" data-id="@order.ID" selected >@order.Name</option>
-                              }else{
-                                <option value="@order.ID" data-id="@order.ID">@order.Name</option>
-                              }
-                          }
+                        <select class="form-control txtOrderStatus" id="orderStatusId" data-id="@item.ID">
+                            @foreach (var order in dataStatus.Results)
+                            {
+                                @if (order.ID == item.OrderStatusID)
+                                {
+                                    <option value="@order.ID" data-id="@order.ID" selected>@order.Name</option>
+                                }
+                                else
+                                {
+                                    <option value="@order.ID" data-id="@order.ID">@order.Name</option>
+                                }
+                            }
                         </select>
                     </th>
                 </tr>
@@ -66,7 +69,6 @@
         </tbody>
 
         <tfoot>
-
         </tfoot>
     </table>
 
@@ -143,13 +145,28 @@
 
 
 
-@*<script>
-     $('.btnDetail').off('click').on('click', function (e) {
-            //xoa dieu huong mac dinh cua the a
+<script>
+    $('.txtOrderStatus').change(function () {
+           var OrderId = eval($(this).attr("data-id"));
+           var StatusId =  eval($(this).val());
+           //var price = eval($(this).attr("data-price"));
+           console.log(OrderId,StatusId);
+             $.ajax({
+               url: '/Admin/Order/UpdateStatusOrder',
+               type: 'POST',
+               data:{
+                   OrderId : OrderId,
+                   StatusId:StatusId
+               },
+               dataType: 'json',
+               success: function (response) {
+                   if (response.status) {
+                          urlGetData = '/Admin/Order/GetListData';
+                          GetDataToTable(urlGetData)
+                   }else{
 
-            var orderId = eval($(this).data('id'));
-            if (orderId) {
-                
-            }
-        });
-</script>*@
+                   }
+               }
+           })
+    });
+</script>

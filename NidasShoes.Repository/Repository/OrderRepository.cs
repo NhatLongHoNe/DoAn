@@ -99,5 +99,23 @@ namespace NidasShoes.Repository.Repository
             var result = await _commonRepository.ListProcedureAsync<OrderDetailEntity>("NidasShoes_get_OrderDetail_by_OrderId", param);
             return result;
         }
+
+        public async Task<NidasShoesResultEntity<OrderEntity>> GetByCustomerId(int CustomerId)
+        {
+            var param = new DynamicParameters();
+            param.Add("@Id", CustomerId);
+            var result = await _commonRepository.ListProcedureAsync<OrderEntity>("NidasShoes_get_Order_by_CustomerId", param);
+            return result;
+        }
+
+        public async Task<NidasShoesResultEntity<bool>> UpdateStatusOrder(int OrderId, int StatusId, int EmployeeID)
+        {
+            var param = new DynamicParameters();
+            param.Add("@Id", OrderId);
+            param.Add("@StatusID", StatusId);
+            param.Add("@EmployeeID", EmployeeID);
+            var result = await _commonRepository.ListProcedureAsync<bool>("NidasShoes_Update_Status_Order_By_Id", param);
+            return result;
+        }
     }
 }

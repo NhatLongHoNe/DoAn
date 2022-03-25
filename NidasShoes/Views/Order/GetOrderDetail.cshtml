@@ -1,0 +1,95 @@
+﻿@using NidasShoes.Service.Model
+@{
+    ViewBag.Title = "Trang chi tiết đơn hàng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    var listProductDetail = (List<ProductDetailClientModel>)ViewBag.ListProductDetail;
+    var order = (OrderModel)ViewBag.Order;
+    var orderDetail = ViewBag.OrderDetail;
+    var cost = ViewBag.Cost;
+
+
+}
+<style>
+    .data-table {
+        margin: 0 auto;
+        padding-top: 50px;
+    }
+</style>
+<div class="controller">
+    <div class="row">
+        <div class="data-table">
+            <table id="infoOrder" class="table table-striped table-bordered text-left table-hover" style="background:#fff;">
+                <thead>
+                    <tr>
+                        <th>Mã đơn hàng</th>
+                        <th>Ngày tạo đơn hàng</th>
+                        <th>Tên khách hàng</th>
+                        <th>Số điện thoại</th>
+                        <th>Email</th>
+                        <th>Địa chỉ nhận</th>
+                        <th>Trạng thái đơn hàng</th>
+                        <th>Hình thức thanh toán</th>
+                        <th>Nhân viên chăm sóc</th>
+                        <th>Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>@order.ID</td>
+                        <td>@order.CreatedDate.ToString("dd/MM/yyy")</td>
+                        <td>@order.CustomerName</td>
+                        <td>@order.CustomerMobile</td>
+                        <td>@order.CustomerEmail</td>
+                        <td>@order.CustomerAddress</td>
+                        <td>@order.StatusName</td>
+                        <td>@order.PaymentName</td>
+                        <th>@order.EmployeeName</th>
+                        <td>@order.Note</td>
+                    </tr>
+
+                </tbody>
+
+                <tfoot>
+                </tfoot>
+            </table>
+            <table id="infoOrder" class="table table-striped table-bordered text-left table-hover" style="background:#fff;">
+                <thead>
+                    <tr>
+                        <th>Ảnh</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Size</th>
+                        <th>Màu</th>
+                        <th>Số lượng</th>
+                        <th>Giá tiền</th>
+                        <th>Tổng</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in listProductDetail)
+                    {
+                        <tr>
+                            <td><img src="@item.Image" style="width:80px;height:40px;" /></td>
+                            <td>@item.Name</td>
+                            <td>@item.NameSize</td>
+                            <td>@item.NameColor</td>
+                            <td>@item.Quantity</td>
+                            <td>@item.ExportPrice.ToString("0,000")</td>
+                            <td>@((item.ExportPrice*item.Quantity).ToString("0,000"))</td>
+                        </tr>
+                    }
+                </tbody>
+
+                <tfoot>
+                 @*   <tr>
+                        <td colspan=""></td>
+                        <td colspan="">Tổng tiền: @cost.ToString("0,000")</td>
+                    </tr>*@
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</div>

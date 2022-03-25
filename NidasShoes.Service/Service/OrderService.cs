@@ -30,6 +30,8 @@ namespace NidasShoes.Service.Service
             return JsonConvert.SerializeObject(res);
         }
 
+     
+
         public async Task<string> GetById(int Id)
         {
             var res = await _orderRepository.GetById(Id);
@@ -53,6 +55,16 @@ namespace NidasShoes.Service.Service
         {
             var baseEntity = JsonConvert.DeserializeObject<BaseParamEntity>(JsonConvert.SerializeObject(baseParam));
             var res = await _orderRepository.GetListDataStatus(baseEntity);
+            return JsonConvert.SerializeObject(res);
+        }
+        public async Task<string> GetByCustomerId(int CustomerId)
+        {
+            var res = await _orderRepository.GetByCustomerId(CustomerId);
+            return JsonConvert.SerializeObject(res);
+        }
+        public async Task<string> UpdateStatusOrder(int OrderId, int StatusId, int EmployeeID)
+        {
+            var res = await _orderRepository.UpdateStatusOrder(OrderId, StatusId, EmployeeID);
             return JsonConvert.SerializeObject(res);
         }
     }

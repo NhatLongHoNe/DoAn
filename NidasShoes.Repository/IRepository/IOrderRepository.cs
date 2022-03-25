@@ -14,6 +14,9 @@ namespace NidasShoes.Repository.IRepository
         Task<NidasShoesResultEntity<OrderEntity>> GetById(int Id);
         Task<NidasShoesResultEntity<Boolean>> DeleteById(int Id);
 
+        Task<NidasShoesResultEntity<OrderEntity>> GetByCustomerId(int Id);
+        Task<NidasShoesResultEntity<Boolean>> UpdateStatusOrder(int OrderId, int StatusId, int EmployeeID);
+
         // order status
         Task<NidasShoesResultEntity<OrderStatusEntity>> GetListDataStatus(BaseParamEntity baseParam);
 

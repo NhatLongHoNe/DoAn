@@ -5,6 +5,7 @@ using NidasShoes.Service.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace NidasShoes.Areas.Admin.Controllers
@@ -119,6 +120,28 @@ namespace NidasShoes.Areas.Admin.Controllers
             }
 
             return View(result);
+        }
+        [HttpPost]
+        public async Task<IActionResult> UpdateStatusOrder(int OrderId,int StatusId)
+        {
+            byte[] arr = new byte[0];
+
+            if (HttpContext.Session.TryGetValue("User", out arr))
+            {
+                var json = JsonConvert.DeserializeObject<UserModel>(Encoding.UTF8.GetString(arr));
+                var res = JsonConvert.DeserializeObject<NidasShoesResultModel<bool>>(await _OrderService.UpdateStatusOrder(OrderId, StatusId, json.Id));
+                if (res.Success)
+                {
+                    return Json(new
+                    {
+                        status = true
+                    });
+                }
+            }
+            return Json(new
+            {
+                status = false
+            });
         }
     }
 }
