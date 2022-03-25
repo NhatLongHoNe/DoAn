@@ -53,7 +53,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <p class="bread"><span><a href="index.html">Home</a></span> / <span>Product Details</span>  / <span>@data.Name</span> </p>
+                <p class="bread"><span><a href="index.html">Trang chủ</a></span> / <span>Chi tiết sản phẩm</span>  / <span>@data.Name</span> </p>
             </div>
         </div>
     </div>
@@ -179,7 +179,7 @@
 
                             <div class="tab-content" id="pills-tabContent">
                                 <div class="tab-pane border fade show active" id="pills-description" role="tabpanel" aria-labelledby="pills-description-tab">
-                                    @data.Description
+                                     @Html.Raw(data.Description)
                                 </div>
 
                                 <div class="tab-pane border fade" id="pills-manufacturer" role="tabpanel" aria-labelledby="pills-manufacturer-tab">
