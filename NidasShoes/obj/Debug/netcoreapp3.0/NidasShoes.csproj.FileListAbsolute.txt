@@ -591,7 +591,6 @@ C:\Users\Admin\Desktop\doan\NidasShoes\bin\Debug\netcoreapp3.0\refs\Microsoft.Ne
 C:\Users\Admin\Desktop\doan\NidasShoes\bin\Debug\netcoreapp3.0\refs\Microsoft.VisualBasic.Core.dll
 C:\Users\Admin\Desktop\doan\NidasShoes\bin\Debug\netcoreapp3.0\refs\Microsoft.VisualBasic.dll
 C:\Users\Admin\Desktop\doan\NidasShoes\bin\Debug\netcoreapp3.0\refs\Microsoft.Win32.Primitives.dll
-C:\Users\Admin\Desktop\doan\NidasShoes\bin\Debug\netcoreapp3.0\refs\Microsoft.Win32.Registry.dll
 C:\Users\Admin\Desktop\doan\NidasShoes\bin\Debug\netcoreapp3.0\refs\mscorlib.dll
 C:\Users\Admin\Desktop\doan\NidasShoes\bin\Debug\netcoreapp3.0\refs\netstandard.dll
 C:\Users\Admin\Desktop\doan\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.AppContext.dll
@@ -615,7 +614,6 @@ C:\Users\Admin\Desktop\doan\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.Data.
 C:\Users\Admin\Desktop\doan\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.Data.dll
 C:\Users\Admin\Desktop\doan\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.Diagnostics.Contracts.dll
 C:\Users\Admin\Desktop\doan\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.Diagnostics.Debug.dll
-C:\Users\Admin\Desktop\doan\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.Diagnostics.DiagnosticSource.dll
 C:\Users\Admin\Desktop\doan\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.Diagnostics.EventLog.dll
 C:\Users\Admin\Desktop\doan\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.Diagnostics.FileVersionInfo.dll
 C:\Users\Admin\Desktop\doan\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.Diagnostics.Process.dll
@@ -696,7 +694,6 @@ C:\Users\Admin\Desktop\doan\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.Runti
 C:\Users\Admin\Desktop\doan\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.Runtime.Serialization.Json.dll
 C:\Users\Admin\Desktop\doan\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.Runtime.Serialization.Primitives.dll
 C:\Users\Admin\Desktop\doan\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.Runtime.Serialization.Xml.dll
-C:\Users\Admin\Desktop\doan\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.Security.AccessControl.dll
 C:\Users\Admin\Desktop\doan\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.Security.Claims.dll
 C:\Users\Admin\Desktop\doan\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.Security.Cryptography.Algorithms.dll
 C:\Users\Admin\Desktop\doan\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.Security.Cryptography.Cng.dll
@@ -708,7 +705,6 @@ C:\Users\Admin\Desktop\doan\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.Secur
 C:\Users\Admin\Desktop\doan\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.Security.dll
 C:\Users\Admin\Desktop\doan\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.Security.Permissions.dll
 C:\Users\Admin\Desktop\doan\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.Security.Principal.dll
-C:\Users\Admin\Desktop\doan\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.Security.Principal.Windows.dll
 C:\Users\Admin\Desktop\doan\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.Security.SecureString.dll
 C:\Users\Admin\Desktop\doan\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.ServiceModel.Web.dll
 C:\Users\Admin\Desktop\doan\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.ServiceProcess.dll
@@ -1310,3 +1306,5 @@ C:\Users\Admin\Desktop\doan\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Areas\Admin
 C:\Users\Admin\Desktop\doan\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\Order\_AddOrEdit.cshtml.g.cs
 C:\Users\Admin\Desktop\doan\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Views\Order\Index.cshtml.g.cs
 C:\Users\Admin\Desktop\doan\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Views\Order\GetOrderDetail.cshtml.g.cs
+C:\Users\Admin\Desktop\doan\NidasShoes\bin\Debug\netcoreapp3.0\Rotativa.AspNetCore.dll
+C:\Users\Admin\Desktop\doan\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\Order\GetOrderDetailPrint.cshtml.g.cs

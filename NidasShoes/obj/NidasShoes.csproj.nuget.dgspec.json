@@ -218,6 +218,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Contracts": {
               "target": "Package",
               "version": "[3.0.0, )"
+            },
+            "Rotativa.AspNetCore": {
+              "target": "Package",
+              "version": "[1.0.6, )"
             }
           },
           "imports": [

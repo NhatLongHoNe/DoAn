@@ -1,0 +1,77 @@
+﻿@model NidasShoes.Service.Model.ViewModel.OrderToPfdViewModel
+
+@{
+    ViewBag.Title = "DFD";
+    
+}
+<style>
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container{
+      display: flex;
+      width:600px;
+      justify-content: center;
+      align-items: center;
+      flex-direction:column;
+    }
+
+    .order, .semmary {
+      display: flex;
+      justify-content: space-between;
+    }
+    .item{
+      display:flex;
+    }
+    .item-name,.item-price{
+      padding: 0 15px;
+    }
+</style>
+
+<div class="container" style="text-align:center">
+    <div class="title">
+        <h3>$$ Your Bill $$</h3>
+    </div>
+    <div class="order">
+        <h5>Mã đơn hàng : @Model.ID</h5>
+        <h5>Tên khách hàng: @Model.CustomerName</h5>
+        <h5>Số điện thoại: @Model.CustomerMobile</h5>
+        <h5>Email: @Model.CustomerEmail</h5>
+        <h5>Địa chỉ nhận: @Model.CustomerAddress</h5>
+        <h5>Hình thức thanh toán: @Model.PaymentName</h5>
+        <h5>Note: @Model.Note</h5>
+        <h5>Ngày tạo đơn hàng: @Model.CreatedDate.ToString("dd/MM/yyy")</h5>
+    </div>
+    <div class="summary">
+        <div class="summary-detail">
+            <h5>Chi tiết hoá đơn</h5>
+        </div>
+        <table  width="600">
+              @foreach (var item in Model.ProductDetails)
+            {
+            <tr style="">
+                <th width="50%" style="margin-right:40px; padding-right:10px" class="item-name">@item.Name</th>
+                <th width="10%" style="padding-right:10px" class="item-name">@item.NameSize</th>
+                <th width="10%" style="padding-right:10px" class="item-name">@item.NameColor</th>
+                <th width="10%" style="padding-right:10px" class="item-name">@item.Quantity</th>
+                <th width="10%" style="padding-right:10px" class="item-name">@item.ExportPrice.ToString("0,000")</th>
+                <th width="10%" style="padding-right:10px" class="item-name">@((item.ExportPrice*item.Quantity).ToString("0,000"))</th>
+            </tr>
+            }
+        </table>
+       
+    </div>
+    <div class="total">
+        <h3>Tổng tiền : @Model.TotalCost.ToString("0,000")</h3>
+    </div>
+     <div class="receipt">
+        @*<h5>Địa chỉ</h5>*@
+    </div>
+    <div class="receipt">
+        <h5>Thanks for visiting Nidas Shoes :D</h5>
+    </div>
+</div>
+

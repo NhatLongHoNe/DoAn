@@ -2,6 +2,8 @@
 using Newtonsoft.Json;
 using NidasShoes.Service.IService;
 using NidasShoes.Service.Model;
+using NidasShoes.Service.Model.ViewModel;
+using Rotativa.AspNetCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -105,21 +107,57 @@ namespace NidasShoes.Areas.Admin.Controllers
             ViewBag.OrderDetail = result;
             return View();
         }
-        [HttpPost]
+        
         public async Task<IActionResult> GetOrderDetailPrint(int orderId)
         {
             var response = await _OrderService.GetListDataOrderDetailByOrderId(orderId);
             var result = JsonConvert.DeserializeObject<NidasShoesResultModel<OrderDetailModel>>(response).Results;
 
             var listDataDetail = new List<ProductDetailClientModel>();
-
+            double cost = 0;
             foreach (var item in result)
             {
-                var detail = JsonConvert.DeserializeObject<NidasShoesResultModel<ProductDetailClientModel>>(await _ProductService.GetProductDetailById(item.ProductDetailID)).Results.First();
-                listDataDetail.Add(detail);
+                var json = await _ProductService.GetProductDetailClientByProductDetailId(item.ProductDetailID);
+                var detail = JsonConvert.DeserializeObject<NidasShoesResultModel<ProductDetailClientModel>>(json).Results;
+                if (detail.Count > 0)
+                {
+                    var productDetail = detail.First();
+                    productDetail.Quantity = item.Quantity;
+                    productDetail.ExportPrice = item.Price;
+                    listDataDetail.Add(productDetail);
+                }
+                cost += (double)(item.Price * item.Quantity);
             }
 
-            return View(result);
+            var order = JsonConvert.DeserializeObject<NidasShoesResultModel<OrderModel>>(await _OrderService.GetById(orderId)).Results.First();
+
+            //ViewBag.Order = order;
+
+            //ViewBag.Cost = cost;
+            //ViewBag.OrderDetail = result;
+            OrderToPfdViewModel model = new OrderToPfdViewModel()
+            {
+                ID = order.ID,
+                CustomerID = order.CustomerID,
+                EmployeeID = order.EmployeeID,
+                PaymentID = order.PaymentID,
+                DiscountID = order.DiscountID,
+                CreatedDate = order.CreatedDate,
+                Description = order.Description,
+                Note = order.Note,
+                OrderStatusID = order.OrderStatusID,
+                CustomerName = order.CustomerName,
+                CustomerMobile = order.CustomerMobile,
+                CustomerEmail = order.CustomerEmail,
+                CustomerAddress = order.CustomerAddress,
+                OrderDetails = result,
+                StatusName = order.StatusName,
+                PaymentName = order.PaymentName,
+                EmployeeName = order.EmployeeName,
+                TotalCost = cost,
+                ProductDetails = listDataDetail            
+            };
+            return new ViewAsPdf(model);
         }
         [HttpPost]
         public async Task<IActionResult> UpdateStatusOrder(int OrderId,int StatusId)

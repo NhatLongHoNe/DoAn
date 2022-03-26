@@ -10,6 +10,7 @@ using NidasShoes.Repository.IRepository;
 using NidasShoes.Repository.Repository;
 using NidasShoes.Service.IService;
 using NidasShoes.Service.Service;
+using Rotativa.AspNetCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,6 +45,8 @@ namespace NidasShoes
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
             services.AddServerSideBlazor();
+
+           
 
             // repository
             services.AddTransient<ICommonRepository, CommonRepository>();
@@ -118,6 +121,7 @@ namespace NidasShoes
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+            RotativaConfiguration.Setup((Microsoft.AspNetCore.Hosting.IHostingEnvironment)env);
         }
     }
 }
