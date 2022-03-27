@@ -11,5 +11,7 @@ namespace NidasShoes.Repository.Entity
         public int ProductDetailID { get; set; }
         public int ImportQuantity { get; set; }
         public double ImportPrice { get; set; }
+        public DateTime CreatedDate { get; set; }
+
     }
 }

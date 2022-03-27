@@ -62,6 +62,7 @@ namespace NidasShoes
             services.AddTransient<IProductSizeRepository, ProductSizeRepository>();
             services.AddTransient<IProductRepository, ProductRepository>();
             services.AddTransient<IOrderRepository, OrderRepository>();
+            services.AddTransient<IReceiptRepository, ReceiptRepository>();
 
 
 
@@ -78,6 +79,7 @@ namespace NidasShoes
             services.AddTransient<IProductSizeService, ProductSizeService>();
             services.AddTransient<IProductService, ProductService>();
             services.AddTransient<IOrderService, OrderService>();
+            services.AddTransient<IReceiptService, ReceiptService>();
 
 
         }

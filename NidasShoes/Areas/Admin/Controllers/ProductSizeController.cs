@@ -68,5 +68,19 @@ namespace NidasShoes.Areas.Admin.Controllers
             var result = JsonConvert.DeserializeObject<NidasShoesResultModel<bool>>(response);
             return Json(result.Results.First());
         }
+
+        [HttpGet]
+        public async Task<IActionResult> GetlistSize()
+        {
+            BaseParamModel baseParam = new BaseParamModel()
+            {
+                PageNumber =1,
+                PageSize = 1000000,
+                Search = ""
+            };
+            var response = await _productSizeService.GetListData(baseParam);
+            var result = JsonConvert.DeserializeObject<NidasShoesResultModel<SizeModel>>(response);
+            return Json(result.Results);
+        }
     }
 }

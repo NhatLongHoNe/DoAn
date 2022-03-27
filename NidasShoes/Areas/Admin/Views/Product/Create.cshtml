@@ -61,7 +61,14 @@
             color: red;
         }
 </style>
+@section scripts{
+<script src="~/Admin/Content/js/AdminCommon.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
 
+@*<script type="text/javascript">
+  $('.js-example-basic-single').select2();
+</script>*@
+}
 <form class="show-table form-input">
     <div class="container-fluid objInfor pl-3 pr-3">
         <div class="row mb-1 objnews">
@@ -87,7 +94,8 @@
                         <div class="input-group-prepend">
                             <label class="input-group-text">Danh mục</label>
                         </div>
-                        <select name="ProductCategoryID" class="form-control">
+                        @*js-example-basic-single*@
+                        <select name="ProductCategoryID" class="form-control ">
                             <option value="0">Chọn danh mục</option>
                             @foreach (var item in ViewBag.Category as IEnumerable<NidasShoes.Service.Model.ProductCategoryModel>)
                             {
@@ -170,7 +178,3 @@
     </div>
 </form>
 
-@section scripts{ 
-    <script src="~/Admin/Content/js/AdminCommon.js"></script>
-
-}

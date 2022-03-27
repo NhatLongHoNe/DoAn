@@ -43,7 +43,7 @@
                     <td style="width:80px;text-align:right">
                         <div class="d-flex justify-content-end w-100">
                             <a href="/Admin/Order/GetOrderDetail?orderId=@item.ID" class="btn-green btn-event btnDetail" data-id="@item.ID"><i class="fas fa-info-circle"></i> </a>
-                            <button class="btn-blue btn-event btnPrint" data-id="@item.ID"><i class="fa fa-print"></i></button>
+                            <a href="/Admin/Order/GetOrderDetailPrint?orderId=@item.ID"  class="btn-blue btn-event btnPrint" data-id="@item.ID"><i class="fa fa-print"></i></a>
                             @*<button class="btn-yellow btn-event btnEdit" data-id="@item.ID" onclick="GetFormAddOrEdit('/Admin/Supply/_AddOrEdit',@item.ID)"><i class="far fa-edit"></i> </button>*@
                             @*<button class="btn-red btn-event btnDelete" role="button" data-id="@item.ID" onclick="DeleteById('/Admin/Supply/DeleteById',@item.ID)"><i class="far fa-trash-alt"></i> </button>*@
                         </div>

@@ -1,0 +1,98 @@
+﻿@using NidasShoes.Service.Model
+
+@{
+    ViewBag.Title = "Trang nhập kho";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmins.cshtml";
+}
+@{
+    var listProduct = (NidasShoesResultModel<ProductModel>)ViewBag.product;
+    var productSize = (NidasShoesResultModel<SizeModel>)ViewBag.productSize;
+    var productColor = (NidasShoesResultModel<ColorModel>)ViewBag.productColor;
+    var supply = (NidasShoesResultModel<SupplyModel>)ViewBag.supply;
+}
+@section scripts{
+<script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
+<script src="~/Admin/Content/js/controller/ReceiptScript.js"></script>
+}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8">
+            <button class="btn btn-green mb-3 text-white" id="btn-add">Add Item</button>
+
+            <div id="ulist">
+                <div class="productdetail-item">
+                    <div class="pd-item-child row mb-2">
+                        <div class="col">
+                            <select class="form-control select-data-product">
+                                <option class="" selected>Chọn sản phẩm</option>
+                                @foreach (var item in listProduct.Results)
+                                {
+                                    <option class="" data-productid="@item.ID">@item.Name</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="col">
+                            @*<input class='form-control select-data-size' type='text' placeholder='Chọn size' />*@
+                            <select class="form-control select-data-size">
+                                <option class="" selected>Chọn size</option>
+                                @foreach (var item in productSize.Results)
+                                {
+                                    <option class="" data-sizeid="@item.ID">@item.Name</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="col">
+                            <select class="form-control select-data-color">
+                                <option class="" selected>Chọn màu</option>
+                                @foreach (var item in productColor.Results)
+                                {
+                                    <option class="" data-colorid="@item.ID">@item.Name</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="col">
+                            <input type="text"  class="form-control txtQuantity" placeholder="số lượng">
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control txtImportPrice" placeholder="Giá nhập">
+                        </div>
+                        <button class=" text-white btn btn-red remove-item-child">
+                            xóa
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="collapse border show objInfor">
+                <div class="alert-danger mb-3 admins-h2 btn-red">
+                    THÔNG TIN NHẬP KHO
+                </div>
+                <div class="form-group mb-3" hidden>
+                    <input type="number" name="Id" class="form-control" id="Id" value="">
+                </div>
+                <div class="form-group mb-3">
+                    <label class="font-weight-bold mb-1">Nhà cung cấp</label>
+                      <select class="form-control select-data-supply">
+                            <option class="" selected>Chọn nhà cung cấp</option>
+                            @foreach (var item in supply.Results)
+                            {
+                                <option class="" data-supplyid="@item.ID">@item.Name</option>
+                            }
+                     </select>
+                </div>
+                <div class="form-group mb-3">
+                    <label class="font-weight-bold mb-1">Ghi chú</label>
+                    <input type="text" name="Note" class="form-control" id="txtNote" value="">
+                    <div class="text-danger"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-right mr-0 pr-0 mt-1 mb-0 modal-footer">
+                        <button type="button" class="btn btn btn-red btnCancel" onclick="RefreshForm()"><i class="fas fa-reply-all"></i> Nhập lại</button>
+                        <button type="button" class="btn btn-green btnSaveReceipt" data-id="0"> <i class="far fa-save"></i> Ghi lại</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

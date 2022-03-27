@@ -997,7 +997,6 @@ C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\bin\Debug\netcoreapp3.0\refs\Microsoft.
 C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\bin\Debug\netcoreapp3.0\refs\Microsoft.VisualBasic.Core.dll
 C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\bin\Debug\netcoreapp3.0\refs\Microsoft.VisualBasic.dll
 C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\bin\Debug\netcoreapp3.0\refs\Microsoft.Win32.Primitives.dll
-C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\bin\Debug\netcoreapp3.0\refs\Microsoft.Win32.Registry.dll
 C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\bin\Debug\netcoreapp3.0\refs\mscorlib.dll
 C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\bin\Debug\netcoreapp3.0\refs\netstandard.dll
 C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.AppContext.dll
@@ -1021,7 +1020,6 @@ C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.Dat
 C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.Data.dll
 C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.Diagnostics.Contracts.dll
 C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.Diagnostics.Debug.dll
-C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.Diagnostics.DiagnosticSource.dll
 C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.Diagnostics.EventLog.dll
 C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.Diagnostics.FileVersionInfo.dll
 C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.Diagnostics.Process.dll
@@ -1102,7 +1100,6 @@ C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.Run
 C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.Runtime.Serialization.Json.dll
 C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.Runtime.Serialization.Primitives.dll
 C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.Runtime.Serialization.Xml.dll
-C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.Security.AccessControl.dll
 C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.Security.Claims.dll
 C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.Security.Cryptography.Algorithms.dll
 C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.Security.Cryptography.Cng.dll
@@ -1114,7 +1111,6 @@ C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.Sec
 C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.Security.dll
 C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.Security.Permissions.dll
 C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.Security.Principal.dll
-C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.Security.Principal.Windows.dll
 C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.Security.SecureString.dll
 C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.ServiceModel.Web.dll
 C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\bin\Debug\netcoreapp3.0\refs\System.ServiceProcess.dll
@@ -1308,3 +1304,8 @@ C:\Users\Admin\Desktop\doan\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Views\Order
 C:\Users\Admin\Desktop\doan\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Views\Order\GetOrderDetail.cshtml.g.cs
 C:\Users\Admin\Desktop\doan\NidasShoes\bin\Debug\netcoreapp3.0\Rotativa.AspNetCore.dll
 C:\Users\Admin\Desktop\doan\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\Order\GetOrderDetailPrint.cshtml.g.cs
+C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\bin\Debug\netcoreapp3.0\Rotativa.AspNetCore.dll
+C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\Order\GetOrderDetailPrint.cshtml.g.cs
+C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Views\Order\GetOrderDetail.cshtml.g.cs
+C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Views\Order\Index.cshtml.g.cs
+C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\Receipt\Create.cshtml.g.cs
