@@ -5,14 +5,14 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <p class="bread"><span><a href="index.html">Trang chủ</a></span> / <span>Giỏ hàng</span></p>
+                <p class="bread"><span><a href="/">Trang chủ</a></span> / <span>Giỏ hàng</span></p>
             </div>
         </div>
     </div>
 </div>
 
 
-<div id="cartContent" class="colorlib-product">
+<div id="cartContent" class="">
     <div class="container">
         <div class="row row-pb-lg">
 					<div class="col-sm-10 offset-md-1">
@@ -72,10 +72,10 @@
                             <form action="#">
                                 <div class="row form-group">
                                     <div class="col-sm-9">
-                                        <input type="text" name="quantity" class="form-control input-number" placeholder="Mã giảm giá...">
+                                        <input type="text" id="txtDiscount" name="quantity" class="form-control input-number" placeholder="Mã giảm giá...">
                                     </div>
                                     <div class="col-sm-3">
-                                        <input type="submit" value="Áp dụng phiếu giảm giá" class="btn btn-primary">
+                                        <input type="submit" id="btnDiscount" value="Áp dụng phiếu giảm giá" class="btn btn-primary">
                                     </div>
                                 </div>
                             </form>
@@ -83,12 +83,12 @@
                         <div class="col-sm-4 text-center">
                             <div class="total">
                                 <div class="sub">
-                                    <p><span>Tổng tiến:</span> <span id="lblTotalOrder"></span></p>
-                                  @*  <p><span>Delivery:</span> <span>$0.00</span></p>
-                                    <p><span>Discount:</span> <span>$0.00</span></p>*@
+                                    <p><span>Tiền:</span> <span class="lblPriceOrder"></span></p>
+                                    @*<p><span>Ship:</span> <span>Báo sau thanh toán</span></p>*@
+                                    <p class="d-flex"><span>Giảm:</span> <span data-discountId="0" data-discount="0" class="lblDiscount"> 0%</span></p>
                                 </div>
                                 <div class="grand-total">
-                                    @*<p><span><strong>Total:</strong></span> <span>0.00</span></p>*@
+                                    <p><span><strong>Tổng tiền:</strong></span> <span class="lblTotalOrder"></span></p>
                                 </div>
                             </div>
                         </div>

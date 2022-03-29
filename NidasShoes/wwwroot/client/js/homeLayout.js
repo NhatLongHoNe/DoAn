@@ -150,7 +150,7 @@ loadpage();
 
 function SearchProduct() {
     let search = $("#search-product").val();
-    debugger
+    //debugger
     let val = $(this).attr('data-index') ?? "";
     location.href = "/product?pageNumber=" + val + "&search=" + search;
 }

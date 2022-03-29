@@ -1,20 +1,36 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@using NidasShoes.Service.Model
+@model List<NidasShoes.Service.Model.CartViewModel>
 @{
+    var checkUser = (bool)ViewBag.CheckUser;
+    var totalPrice = 0.0;
+    var discount = new DiscountModel();
+
+    foreach (var i in Model)
+    {
+        totalPrice += i.Quantity * i.Product.ExportPrice;
+    }
+    if (ViewBag.discoutSession != null)
+    {
+        discount = (DiscountModel)ViewBag.discoutSession;
+
+        totalPrice = totalPrice * (double)((100-(double)discount.Rate)/100);
+    }
+    
+
+
 }
 <div class="breadcrumbs">
     <div class="container">
         <div class="row">
             <div class="col">
-                <p class="bread"><span><a href="index.html">Home</a></span> / <span>Checkout</span></p>
+                <p class="bread"><span><a href="/">Home</a></span> / <span>Checkout</span></p>
             </div>
         </div>
     </div>
 </div>
 
 
-<div class="colorlib-product">
+<div class="">
     <div class="container">
         <div class="row row-pb-lg">
             <div class="col-sm-10 offset-md-1">
@@ -69,16 +85,19 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="txtMessage">Ghi chú</label>
-                                <textarea id="txtMessage" class="form-control" placeholder="Message"  rows="3"></textarea>
+                                <textarea id="txtMessage" class="form-control" placeholder="Message" rows="3"></textarea>
                             </div>
                         </div>
-
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                    <label><input type="checkbox" id="chkUserLogInfo" >&nbsp; Sử dụng thông tin đăng nhập </label>
+                        @if (checkUser)
+                        {
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label><input type="checkbox" id="chkUserLogInfo">&nbsp; Sử dụng thông tin đăng nhập </label>
                                     @*<label><input type="radio" name="optradio"> Ship to different address</label>*@
+                                </div>
                             </div>
-                        </div>
+                        }
+
                     </div>
                 </form>
             </div>
@@ -90,14 +109,19 @@
                             <h2>Cart Total</h2>
                             <ul>
                                 <li>
-                                    <span>Subtotal</span> <span>$100.00</span>
                                     <ul>
-                                        <li><span>1 x Product Name</span> <span>$99.00</span></li>
-                                        <li><span>1 x Product Name</span> <span>$78.00</span></li>
+                                        @foreach (var item in Model)
+                                        {
+                                            <li class="d-flex"><span>@item.Quantity x @item.Product.Name</span> <span>@((item.Quantity*item.Product.ExportPrice).ToString("0,000"))</span></li>
+                                        }
                                     </ul>
                                 </li>
-                                <li><span>Shipping</span> <span>$0.00</span></li>
-                                <li><span>Order Total</span> <span>$180.00</span></li>
+                                @if(discount.Rate !=0){
+                                    <li class="d-flex"><span>Giảm</span> <span class="asdg">@(discount.Rate)%</span></li>
+                                }else{
+                                     <li class="d-flex"><span>Giảm</span> <span class="asdg">0</span></li>
+                                }
+                                <li class="d-flex"><span>Tổng tiền</span> <span class="lblTotalOrder">@(totalPrice.ToString("0,000"))</span></li>
                             </ul>
                         </div>
                     </div>

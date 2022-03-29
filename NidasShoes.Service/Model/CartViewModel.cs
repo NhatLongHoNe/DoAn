@@ -10,5 +10,9 @@ namespace NidasShoes.Service.Model
         public int ProductDetailID { get; set; }
         public ProductDetailClientModel Product { get; set; }
         public int Quantity { set; get; }
+        public int DiscoutID { get; set; }
+        public double Rate { get; set; }
+
+
     }
 }

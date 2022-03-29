@@ -1309,3 +1309,5 @@ C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Areas\Adm
 C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Views\Order\GetOrderDetail.cshtml.g.cs
 C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Views\Order\Index.cshtml.g.cs
 C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\Receipt\Create.cshtml.g.cs
+C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Views\About\Index.cshtml.g.cs
+C:\Users\NHAT-PC\Desktop\DoAn\NidasShoes\obj\Debug\netcoreapp3.0\Razor\Views\Contact\Index.cshtml.g.cs
