@@ -16,60 +16,39 @@ namespace WebApp.Areas.Admin.Controllers
     {
         IAuthenticationService _authenticationService;
         IConfiguration _configuration;
-        public HomeController(IConfiguration configuration, IAuthenticationService authenticationService)
+        IOrderService _orderService;
+        IReceiptService _receiptService;
+        public HomeController(IConfiguration configuration
+            , IAuthenticationService authenticationService
+            ,IOrderService orderService
+            , IReceiptService receiptService
+            )
         {
             _authenticationService = authenticationService;
             _configuration = configuration;
+            _orderService = orderService;
+            _receiptService = receiptService;
         }
         [HttpGet]
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
+            BaseParamModel baseParam = new BaseParamModel()
+            {
+                PageNumber = 1,
+                PageSize = 100000000,
+                Search = "",
+            };
+            var dataOrder = JsonConvert.DeserializeObject<NidasShoesResultModel<OrderModel>>(await _orderService.GetListData(baseParam)).Results;
+            
+            var dataRecipt = JsonConvert.DeserializeObject<NidasShoesResultModel<ReceiptDetailModel>>(await _receiptService.GetListDataReceiptDetail(baseParam)).Results;
+
+            ViewBag.CountOrderNew = dataOrder.Where(x=>x.OrderStatusID==1).Count();
+            ViewBag.CountOrder = dataOrder.Count();
+            ViewBag.TotalOrderPrice = dataOrder.Where(x=>x.OrderStatusID!=1&& x.OrderStatusID != 6).Sum(x => x.TotalCost);
+
+            ViewBag.TotalReciptPrice = dataRecipt.Sum(x => x.ImportPrice * x.ImportQuantity);
+
             return View();
-        }
-
-        [HttpPost]
-        public async Task<PartialViewResult> GetListData(BaseParamModel baseParam)
-        {
-            var response = await _authenticationService.GetListData(baseParam);
-            var result = JsonConvert.DeserializeObject<NidasShoesResultModel<UserModel>>(response);
-            return PartialView(result);
-        }
-
-        [HttpPost]
-        public async Task<PartialViewResult> _AddOrEdit(int Id)
-        {
-            var response = await _authenticationService.GetById(Id);
-            var result = JsonConvert.DeserializeObject<NidasShoesResultModel<UserModel>>(response);
-            if (result.Results.Count() == 0)
-            {
-                return PartialView(new UserModel()
-                {
-                    Id = 0,
-                    UserName = "",
-                    HashedPassword = "",
-                });
-            }
-            else
-            {
-                return PartialView(result.Results.FirstOrDefault());
-            }
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> AddOrUpdate(UserModel obj)
-        {
-            obj.HashedPassword = Hash.Encrypt(obj.HashedPassword, _configuration.GetValue<string>("PrivateKey"));
-            var response = await _authenticationService.AddOrUpdate(obj);
-            var result = JsonConvert.DeserializeObject<NidasShoesResultModel<bool>>(response);
-            return Json(result.Results.FirstOrDefault());
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> DeleteById(int Id)
-        {
-            var response = await _authenticationService.DeleteById(Id);
-            var result = JsonConvert.DeserializeObject<NidasShoesResultModel<bool>>(response);
-            return Json(result.Results.First());
         }
     }
 }

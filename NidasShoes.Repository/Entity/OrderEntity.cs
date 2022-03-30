@@ -24,6 +24,7 @@ namespace NidasShoes.Repository.Entity
         public string PaymentName { get; set; }
         public string StatusName { get; set; }
         public string EmployeeName { get; set; }
+        public double TotalCost { get; set; }
 
 
     }

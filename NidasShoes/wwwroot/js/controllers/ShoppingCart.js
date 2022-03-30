@@ -173,7 +173,8 @@ var cart = {
             CustomerMobile: $('#txtPhone').val(),
             Note: $('#txtMessage').val(),
             PaymentID: $('input[name="paymentMethod"]:checked').val(),
-            OrderStatusID: 1
+            OrderStatusID: 1,
+            ToTalCost: $('#txtTotalCost').val()
             //BankCode: $('input[groupname="bankcode"]:checked').prop('id'),
         }
         // điều kiện nếu thanh toán kiểu khác

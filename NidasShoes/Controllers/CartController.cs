@@ -227,7 +227,11 @@ namespace NidasShoes.Controllers
             if (HttpContext.Session.TryGetValue("SessionDiscout", out arrDiscount))
             {
                 var discountSession = JsonConvert.DeserializeObject<DiscountModel>(Encoding.UTF8.GetString(arrDiscount));
-                order.DiscountID = discountSession.ID;
+              if(discountSession != null)
+                {
+                    order.DiscountID = discountSession.ID;
+
+                }
             }
             //cart session
             byte[] arrCart = new byte[0];

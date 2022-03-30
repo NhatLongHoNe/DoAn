@@ -32,6 +32,7 @@ namespace NidasShoes.Repository.Repository
             param.Add("@CustomerMobile", order.CustomerMobile);
             param.Add("@CustomerEmail", order.CustomerEmail);
             param.Add("@CustomerAddress", order.CustomerAddress);
+            param.Add("@TotalCost", order.TotalCost);
 
             param.Add("@OrderDetail", order.orderDetails.ConvertListToDataTable(), System.Data.DbType.Object);
             var result = await _commonRepository.ListProcedureAsync<bool>("NidasShoes_create_or_update_Order", param);

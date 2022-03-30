@@ -15,15 +15,12 @@
 
         totalPrice = totalPrice * (double)((100-(double)discount.Rate)/100);
     }
-    
-
-
 }
 <div class="breadcrumbs">
     <div class="container">
         <div class="row">
             <div class="col">
-                <p class="bread"><span><a href="/">Home</a></span> / <span>Checkout</span></p>
+                <p class="bread"><span><a href="/">Trang chủ</a></span> / <span>Checkout</span></p>
             </div>
         </div>
     </div>
@@ -122,6 +119,7 @@
                                      <li class="d-flex"><span>Giảm</span> <span class="asdg">0</span></li>
                                 }
                                 <li class="d-flex"><span>Tổng tiền</span> <span class="lblTotalOrder">@(totalPrice.ToString("0,000"))</span></li>
+                               
                             </ul>
                         </div>
                     </div>
@@ -171,3 +169,4 @@
         </div>
     </div>
 </div>
+ <input class="d-none" id="txtTotalCost" value="@totalPrice" type="text" />
