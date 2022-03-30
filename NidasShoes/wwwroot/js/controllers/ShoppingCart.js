@@ -42,8 +42,10 @@ var cart = {
             else {
                 $('#amount_' + productDetailID).text(0);
             }
-            $('#lblTotalOrder').text(numeral(cart.getTotalOrder()).format('0,0'));
-
+            $('.lblPriceOrder').text(numeral(cart.getTotalOrder()).format('0,0'));
+            var rateDiscount = eval($('.lblDiscount').attr("data-discount"));
+            if (rateDiscount > 0);
+            $('.lblTotalOrder').text(numeral(cart.getTotalOrder() * ((100 - rateDiscount) / 100)).format('0,0'));
             cart.updateAll();
 
         });
@@ -58,7 +60,9 @@ var cart = {
         });
         $('#btnCheckout').off('click').on('click', function (e) {
             e.preventDefault();
-            window.location.href = "/cart/checkout";
+            var discountId = eval($('.lblDiscount').attr("data-discountId"));
+            cart.gotoCheckOut(discountId);
+            
         });
         $('#chkUserLogInfo').off('click').on('click', function (e) {
             if ($(this).prop('checked')) {
@@ -76,7 +80,33 @@ var cart = {
                 cart.createOrder();
             }
         });
-
+        $('#btnDiscount').off('click').on('click', function (e) {
+            e.preventDefault();
+            var txtDiscount = $('#txtDiscount').val();
+            if (txtDiscount) {
+                cart.addCodeDiscount(txtDiscount);
+            } else {
+                toastr["warning"]("bạn cần nhập mã giảm giá");
+                return 0;
+            }
+        });
+    },
+    gotoCheckOut: function (discountId) {
+        $.ajax({
+            url: '/Cart/SaveDiscoutSession',
+            type: 'post',
+            data: {
+                discountId: discountId
+            },
+            dataType: 'json',
+            success: function (response) {
+                if (response.status) {
+                  
+                    window.location.href = "/cart/checkout";
+                }
+            }
+        })
+        window.location.href = "/cart/checkout";
     },
     getTotalOrder: function () {
         var listTextBox = $('.txtQuantity');
@@ -98,6 +128,39 @@ var cart = {
                     $('#txtAddress').val(user.address);
                     $('#txtEmail').val(user.email);
                     $('#txtPhone').val(user.phoneNumber);
+                }
+            }
+        })
+    },
+    addCodeDiscount: function (code) {
+        $.ajax({
+            url: '/Cart/CheckDiscount',
+            type: 'POST',
+            dataType: 'json',
+            data: {
+                code : code
+            },
+            success: function (response) {
+                console.log(response);
+                if (response.status == 0) {
+                    toastr["warning"]("mã này không tồn tại");
+                }
+                if (response.status == 1) {
+                    toastr["success"]("áp dụng mã thành công");
+                    $('.lblDiscount').text(response.rate + "%");
+                    $('.lblDiscount').attr('data-discount', response.rate);
+                    $('.lblDiscount').attr('data-discountId', response.id);
+
+                    $('.lblPriceOrder').text(numeral(cart.getTotalOrder()).format('0,0'));
+                    var rateDiscount = eval($('.lblDiscount').attr("data-discount"));
+                    if (rateDiscount > 0);
+                    $('.lblTotalOrder').text(numeral(cart.getTotalOrder() * ((100 - rateDiscount) / 100)).format('0,0'));
+                }
+                if (response.status == 2) {
+                    toastr["warning"]("mã này đã hết hạn sử dụng");
+                }
+                if (response.status == -1)  {
+                    toastr["error"]("Lỗi");
                 }
             }
         })
@@ -257,7 +320,10 @@ var cart = {
                     if (html == '') {
                         $('#cartContent').html('<h3 class="text-center">Không có sản phẩm nào trong giỏ hàng.</h3>');
                     }
-                    $('#lblTotalOrder').text(numeral(cart.getTotalOrder()).format('0,0'));
+                    $('.lblPriceOrder').text(numeral(cart.getTotalOrder()).format('0,0'));
+                    var rateDiscount = eval($('.lblDiscount').attr("data-discount"));
+                    if (rateDiscount>0);
+                    $('.lblTotalOrder').text(numeral(cart.getTotalOrder() * ((100-rateDiscount)/100)).format('0,0'));
                     cart.registerEvent();
                 }
             }

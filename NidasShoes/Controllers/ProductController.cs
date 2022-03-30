@@ -25,11 +25,11 @@ namespace NidasShoes.Controllers
         {
             BaseParamModel baseParam = new BaseParamModel()
             {
-                PageSize = pageSize ?? 10,
+                PageSize = pageSize ?? 16,
                 PageNumber = pageNumber ?? 1,
                 Search = search ?? ""
             };
-            baseParam.PageSize = pageSize ?? 4;
+            //baseParam.PageSize = pageSize ?? 16;
 
             var res = await _productService.GetListDataClientProduct(baseParam);
             ViewBag.Search = search;

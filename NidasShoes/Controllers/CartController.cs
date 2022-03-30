@@ -4,6 +4,7 @@ using Newtonsoft.Json;
 using NidasShoes.Common;
 using NidasShoes.Service.IService;
 using NidasShoes.Service.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,23 +16,19 @@ namespace NidasShoes.Controllers
     {
         private readonly IProductService _productService;
         private readonly IOrderService _orderService;
+        private readonly IDiscountService _discountService;
         public CartController(IProductService productService
-           , IOrderService orderService)
+           , IOrderService orderService
+            , IDiscountService discountService)
         {
             _productService = productService;
             _orderService = orderService;
+            _discountService = discountService;
         }
 
         public IActionResult Index()
         {
-            //byte[] arrCart = new byte[0];
-            //if (HttpContext.Session.TryGetValue("SessionCart", out arrCart))
-            //{
-            //    var json = JsonConvert.DeserializeObject<List<CartViewModel>>(Encoding.UTF8.GetString(arrCart));
-
-            //    //var result = JsonConvert.DeserializeObject<NidasShoesResultModel<UserModel>>(await _userService.GetById(json.Id)).Results.FirstOrDefault();
-            //    return Json(json);
-            //}
+          
             return View();
         }
         [HttpPost]
@@ -152,17 +149,44 @@ namespace NidasShoes.Controllers
 
         public IActionResult CheckOut()
         {
+            byte[] arrUser = new byte[0];
             byte[] arrCart = new byte[0];
+            byte[] arrDiscount = new byte[0];
+            var checkUser = false;
+            if (HttpContext.Session.TryGetValue("User_Client", out arrUser))
+            {
+                var userSession = JsonConvert.DeserializeObject<UserModel>(Encoding.UTF8.GetString(arrUser));
+                checkUser = true;
+            }
+            ViewBag.CheckUser = checkUser;
             var cartSession = new List<CartViewModel>();
             if (HttpContext.Session.TryGetValue("SessionCart", out arrCart))
             {
                 cartSession = JsonConvert.DeserializeObject<List<CartViewModel>>(Encoding.UTF8.GetString(arrCart));
+                if (HttpContext.Session.TryGetValue("SessionDiscout", out arrDiscount))
+                {
+                    var discoutSession = JsonConvert.DeserializeObject<DiscountModel>(Encoding.UTF8.GetString(arrDiscount));
+                    ViewBag.discoutSession = discoutSession;
+                }
+                return View(cartSession);
             }
             else
             {
                 return Redirect("/Cart");
             }
-            return View();
+            
+        }
+        [HttpPost]
+        public async Task<IActionResult> SaveDiscoutSession(int discountId)
+        {
+            var discountSession = JsonConvert.DeserializeObject<NidasShoesResultModel<DiscountModel>>(await _discountService.GetById(discountId)).Results.FirstOrDefault();
+            
+            HttpContext.Session.Set("SessionDiscout", Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(discountSession)));
+
+            return Json(new
+            {
+                status = true
+            });
         }
         [HttpPost]
         public IActionResult DeleteAll()
@@ -198,7 +222,13 @@ namespace NidasShoes.Controllers
                 var userSession = JsonConvert.DeserializeObject<UserModel>(Encoding.UTF8.GetString(arrUser));
                 order.CustomerID = userSession.Id;
             }
-
+            //discount session
+            byte[] arrDiscount = new byte[0];
+            if (HttpContext.Session.TryGetValue("SessionDiscout", out arrDiscount))
+            {
+                var discountSession = JsonConvert.DeserializeObject<DiscountModel>(Encoding.UTF8.GetString(arrDiscount));
+                order.DiscountID = discountSession.ID;
+            }
             //cart session
             byte[] arrCart = new byte[0];
             var cartSession = new List<CartViewModel>();
@@ -220,6 +250,10 @@ namespace NidasShoes.Controllers
             var res = JsonConvert.DeserializeObject<NidasShoesResultModel<OrderModel>>(await _orderService.AddOrUpdate(order));
             if (res.Results.Count() == 0)
             {
+                //reset discout
+                var discountSession = new DiscountModel();
+                HttpContext.Session.Set("SessionDiscout", Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(discountSession)));
+
                 return Json(new
                 {
                     status = true
@@ -228,6 +262,57 @@ namespace NidasShoes.Controllers
             return Json(new
             {
                 status = false
+            });
+        }
+        [HttpPost]
+        public async Task<IActionResult> CheckDiscount(string code)
+        {
+            BaseParamModel model = new BaseParamModel()
+            {
+                PageNumber = 1,
+                PageSize =  1000000000,
+                Search = ""
+            };
+            byte[] arrCart = new byte[0];
+            var cartSession = new List<CartViewModel>();
+            if (HttpContext.Session.TryGetValue("SessionCart", out arrCart))
+            {
+                //cartSession = JsonConvert.DeserializeObject<List<CartViewModel>>(Encoding.UTF8.GetString(arrCart));
+
+                var listDiscount = JsonConvert.DeserializeObject<NidasShoesResultModel<DiscountModel>>(await _discountService.GetListData(model)).Results;
+
+                var isDataDiscout = listDiscount.Find(x=>x.Code == code);
+                if(isDataDiscout != null)
+                {
+                    if (isDataDiscout.StartDate <= DateTime.Now && isDataDiscout.EndDate >= DateTime.Now)
+                    {
+                        //foreach (var jitem in cartSession)
+                        //{
+                        //    jitem.DiscoutID = isDataDiscout.ID;
+                        //    jitem.Rate = isDataDiscout.Rate;
+                        //}
+                        //HttpContext.Session.Set("SessionCart", Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(cartSession)));
+                        return Json(new
+                        {
+                            status = 1,
+                            id = isDataDiscout.ID,
+                            rate = isDataDiscout.Rate
+                        });
+                    }
+                    return Json(new
+                    {
+                        status = 2
+                    });
+                }
+              
+                return Json(new
+                {
+                    status = 0
+                });
+            }
+            return Json(new
+            {
+                status = -1
             });
         }
     }
