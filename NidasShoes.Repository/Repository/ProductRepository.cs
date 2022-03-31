@@ -239,6 +239,16 @@ namespace NidasShoes.Repository.Repository
             var result = await _commonRepository.ListProcedureAsync<ProductDetailClientEntity>("NidasShoes_get_Client_Product_Detail", param);
             return result;
         }
+
+        public async Task<NidasShoesResultEntity<ProductEntity>> GetListProductClientBySearch(int productCategoryID, int sizeID, int colorID)
+        {
+            var param = new DynamicParameters();
+            param.Add("@ProductCategoryID", productCategoryID);
+            param.Add("@sizeID", sizeID);
+            param.Add("@colorID", colorID);
+            var result = await _commonRepository.ListProcedureAsync<ProductEntity>("NidasShoes_search_Client_Product_Detail", param);
+            return result;
+        }
         #endregion
     }
 }

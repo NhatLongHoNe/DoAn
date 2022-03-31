@@ -34,10 +34,12 @@ namespace NidasShoes.Repository.IRepository
         //client
         Task<NidasShoesResultEntity<ProductDetailClientEntity>> GetProductDetailClientByProductDetailId(int Id);
         Task<NidasShoesResultEntity<ProductEntity>> GetListDataProductByProductCategoryId(int productCategoryId, BaseParamEntity baseParam);
+        // hiển thị ra ngoài trang chủ
         Task<NidasShoesResultEntity<ProductEntity>> GetListDataClientProduct(BaseParamEntity baseParam);
         Task<NidasShoesResultEntity<ProductEntity>> GetListDataProductByParentID(int parentID, BaseParamEntity baseParam);
-
         Task<NidasShoesResultEntity<ProductDetailClientEntity>> GetProductDetailClient(int productID, int sizeID, int colorID);
+        // tìm kiếm sản phẩm 
+        Task<NidasShoesResultEntity<ProductEntity>> GetListProductClientBySearch(int productCategoryID, int sizeID, int colorID);
 
     }
 }

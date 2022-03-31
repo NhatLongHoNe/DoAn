@@ -11,14 +11,20 @@ namespace NidasShoes.Controllers
     {
         private readonly IProductService _productService;
         private readonly IProductReviewService _productReviewService;
+        private readonly IProductSizeService _sizeService;
+        private readonly IProductColorService _colorService;
 
-        public ProductController(ISlideService slideService
-            , IProductService productService
-            , IProductReviewService productReviewService 
+        public ProductController(
+             IProductService productService
+            , IProductReviewService productReviewService
+            , IProductColorService colorService
+            ,IProductSizeService sizeService
             )
         {
             _productService = productService;
             _productReviewService = productReviewService;
+            _colorService = colorService;
+            _sizeService = sizeService;
 
         }
         public async Task<IActionResult> Index(int? pageSize, int? pageNumber, string? search)
@@ -60,5 +66,37 @@ namespace NidasShoes.Controllers
             var product = JsonConvert.DeserializeObject<NidasShoesResultModel<ProductDetailClientModel>>(await _productService.GetProductDetailClient(ID, sizeID, colorID));
             return Json(product.Results.FirstOrDefault());
         }
+
+        public async Task<IActionResult> ProductSearchClient()
+        {
+            BaseParamModel baseParamModel = new BaseParamModel()
+            {
+                PageNumber = 1,
+                PageSize = 100000000,
+                Search = ""
+            };
+
+            ViewBag.ListColor = JsonConvert.DeserializeObject<NidasShoesResultModel<ColorModel>>(await _colorService.GetListData(baseParamModel));
+            ViewBag.ListSize = JsonConvert.DeserializeObject<NidasShoesResultModel<SizeModel>>(await _sizeService.GetListData(baseParamModel));
+            ViewBag.ListProductCategory = JsonConvert.DeserializeObject<NidasShoesResultModel<ProductCategoryModel>>(await _productService.GetListData(baseParamModel));
+
+
+            return View();
+        }
+
+        public async Task<IActionResult> ProductSearch(int productCategoryID, int sizeID, int colorID)
+        {
+            var dataJson = JsonConvert.DeserializeObject<NidasShoesResultModel<ProductModel>>(await _productService.GetListProductClientBySearch(productCategoryID,sizeID,colorID));
+
+
+            return Json(new
+            {
+                data = dataJson,
+                status = true
+            });
+
+        }
+
+
     }
 }

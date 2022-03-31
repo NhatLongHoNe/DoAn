@@ -141,6 +141,12 @@ namespace NidasShoes.Service.Service
             var res = await _productRepository.GetProductDetailClient(productID, sizeID, colorID);
             return JsonConvert.SerializeObject(res);
         }
+
+        public async Task<string> GetListProductClientBySearch(int productCategoryID, int sizeID, int colorID)
+        {
+            var res = await _productRepository.GetListProductClientBySearch(productCategoryID, sizeID, colorID);
+            return JsonConvert.SerializeObject(res);
+        }
         #endregion
     }
 }

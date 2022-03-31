@@ -38,7 +38,10 @@ namespace NidasShoes.Service.IService
         Task<string> GetListDataProductByParentID(int parentID, BaseParamModel baseParam);
         Task<string> GetProductDetailClient(int productID, int sizeID, int colorID);
 
-        
+        //product client
+        Task<string> GetListProductClientBySearch(int productCategoryID, int sizeID, int colorID);
+
+
 
     }
 }

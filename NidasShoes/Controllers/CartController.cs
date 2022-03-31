@@ -28,7 +28,6 @@ namespace NidasShoes.Controllers
 
         public IActionResult Index()
         {
-          
             return View();
         }
         [HttpPost]
@@ -118,7 +117,7 @@ namespace NidasShoes.Controllers
                 }
             }
             HttpContext.Session.Set("SessionCart", Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(cartSession)));
-
+            
             return Json(new
             {
                 status = true
