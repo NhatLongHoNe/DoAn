@@ -26,7 +26,6 @@ namespace WebApp.Controllers
         {
             return View();
         }
-
         [HttpPost]
         public async Task<IActionResult> Login(string username, string password)
         {
@@ -44,6 +43,11 @@ namespace WebApp.Controllers
                 return Json(false);
             HttpContext.Session.Set("User", Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(result.Results.FirstOrDefault())));
             return Json(true);
+        }
+        public async Task<IActionResult> LogOut()
+        {
+            HttpContext.Session.Remove("User");
+            return RedirectToAction("Index", "Authentication");
         }
     }
 }

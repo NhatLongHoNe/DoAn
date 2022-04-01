@@ -38,7 +38,8 @@ var receipt = {
             $(this).parent(".pd-item-child").html('');
             receipt.registerEvent();
         })
-        $(".btnSaveReceipt").click(function () {
+        $("#btnSaveReceipt").click(function (e) {
+            e.preventDefault();
             $(".select-data-product").select2().find(":selected").data("productid");
             let arr = [];
             // Khởi tạo
@@ -60,7 +61,6 @@ var receipt = {
                 item.Quantity = eval($(iteme).find(".txtQuantity").val());
                 item.ImportPrice = eval($(iteme).find(".txtImportPrice").val());
                 if (!item.ProductId || !item.SizeId || !item.ColorId || !item.Quantity || !item.ImportPrice) {
-                    toastr["error"]("Bạn không được để trống thông tin");
                     return 0;
                 }
                 arr.push(item);
@@ -68,8 +68,20 @@ var receipt = {
             });
             supply.SupplyId = eval($(".select-data-supply").select2().find(":selected").data("supplyid"));
             supply.Note = $("#txtNote").val();
-            console.log(arr, supply);
-            receipt.AddReceipt(arr,supply)
+            if (arr.length == 0) {
+                toastr["error"]("Bạn không được để trống thông tin sản phẩm");
+                return 0;
+            }
+            if (!supply.SupplyId || !supply.Note) {
+                toastr["error"]("Bạn không được để trống thông tin nhà cung cấp");
+                return 0;
+            }
+
+            if (arr.length > 0 && supply.SupplyId>0) {
+                receipt.AddReceipt(arr,supply)
+            }
+            arr = [];
+
         })
     },
     AddReceipt: function (arr,supply) {
@@ -86,7 +98,6 @@ var receipt = {
                     toastr["success"]("Thêm mới thành công");
                 } else {
                     toastr["success"]("Thêm mới thất bại");
-
                 }
             }
         });

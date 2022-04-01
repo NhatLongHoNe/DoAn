@@ -17,5 +17,6 @@ namespace NidasShoes.Service.IService
         Task<string> AddOrUpdateReceiptDetail(ReceiptDetailModel receiptModel);
         Task<string> GetByReceiptDetailId(int Id);
         Task<string> DeleteByReceiptDetailId(int Id);
+        Task<string> GetListDataReceiptDetailByReceiptId(int ReceiptId);
     }
 }

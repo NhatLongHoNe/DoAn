@@ -8,7 +8,14 @@
     var pageCount = Model.PageCount;
 
 }
-
+<style>
+    .table th, .table td {
+        padding: 4px 10px;
+        font-size: 0.85rem;
+        vertical-align: middle;
+        height: 2.5rem;
+    }
+</style>
 <div class="data-table">
     <table id="myTable" class="table table-striped table-bordered text-left table-hover" style="background:#fff;">
         <thead>
@@ -20,6 +27,7 @@
                 <th>Địa chỉ nhận</th>
                 <th>Thời gian đặt</th>
                 <th>Tình trạng đơn hàng</th>
+                <th>Thời gian cập nhật</th>
                 <th>Thanh toán</th>
                 <th>Nhân viên chăm sóc</th>
 
@@ -38,12 +46,13 @@
                     <td>@item.CustomerAddress</td>
                     <td>@item.CreatedDate.ToString("dd/MM/yyy")</td>
                     <td>@item.StatusName</td>
+                    <td>@item.ModifyDate.ToString("dd/MM/yyy")</td>
                     <td>@item.PaymentName</td>
                     <td>@item.EmployeeName</td>
                     <td style="width:80px;text-align:right">
                         <div class="d-flex justify-content-end w-100">
                             <a href="/Admin/Order/GetOrderDetail?orderId=@item.ID" class="btn-green btn-event btnDetail" data-id="@item.ID"><i class="fas fa-info-circle"></i> </a>
-                            <a href="/Admin/Order/GetOrderDetailPrint?orderId=@item.ID"  class="btn-blue btn-event btnPrint" data-id="@item.ID"><i class="fa fa-print"></i></a>
+                            <a href="/Admin/Order/GetOrderDetailPrint?orderId=@item.ID" class="btn-blue btn-event btnPrint" data-id="@item.ID"><i class="fa fa-print"></i></a>
                             @*<button class="btn-yellow btn-event btnEdit" data-id="@item.ID" onclick="GetFormAddOrEdit('/Admin/Supply/_AddOrEdit',@item.ID)"><i class="far fa-edit"></i> </button>*@
                             @*<button class="btn-red btn-event btnDelete" role="button" data-id="@item.ID" onclick="DeleteById('/Admin/Supply/DeleteById',@item.ID)"><i class="far fa-trash-alt"></i> </button>*@
                         </div>
@@ -51,17 +60,25 @@
                     <th>
 
                         <select class="form-control txtOrderStatus" id="orderStatusId" data-id="@item.ID">
-                            @foreach (var order in dataStatus.Results)
+                            @if (item.OrderStatusID == 6)
                             {
-                                @if (order.ID == item.OrderStatusID)
+                                 <option value="" data-id="" selected>Huỷ đơn hàng</option>
+                            }
+                            else
+                            {
+                                @foreach (var order in dataStatus.Results)
                                 {
-                                    <option value="@order.ID" data-id="@order.ID" selected>@order.Name</option>
-                                }
-                                else
-                                {
-                                    <option value="@order.ID" data-id="@order.ID">@order.Name</option>
+                                    @if (order.ID == item.OrderStatusID)
+                                    {
+                                        <option value="@order.ID" data-id="@order.ID" selected>@order.Name</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="@order.ID" data-id="@order.ID">@order.Name</option>
+                                    }
                                 }
                             }
+
                         </select>
                     </th>
                 </tr>

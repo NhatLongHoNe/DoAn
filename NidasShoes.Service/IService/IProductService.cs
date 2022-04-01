@@ -31,8 +31,9 @@ namespace NidasShoes.Service.IService
         Task<string> AddOrUpdateProductDetail(ProductDetailModel productDetail);
         Task<string> GetProductDetailById(int Id);
         Task<string> DeleteProductDetailById(int Id);
+        Task<string> UpdateQuantityProductDetail(int productDetailId, int quantity);
 
-
+        
         //product client
         Task<string> GetListDataClientProduct(BaseParamModel baseParam);
         Task<string> GetListDataProductByParentID(int parentID, BaseParamModel baseParam);

@@ -36,7 +36,7 @@ namespace NidasShoes.Controllers
             byte[] arrCart = new byte[0];
             var productDetail = JsonConvert.DeserializeObject<NidasShoesResultModel<ProductDetailClientModel>>(await _productService.GetProductDetailClientByProductDetailId(productDetailID)).Results.FirstOrDefault();
             var cart = new List<CartViewModel>();
-            if (productDetail.Quantity == 0)
+            if (productDetail.Quantity <= 0)
             {
                 return Json(new
                 {
@@ -173,7 +173,6 @@ namespace NidasShoes.Controllers
             {
                 return Redirect("/Cart");
             }
-            
         }
         [HttpPost]
         public async Task<IActionResult> SaveDiscoutSession(int discountId)
@@ -253,6 +252,12 @@ namespace NidasShoes.Controllers
             var res = JsonConvert.DeserializeObject<NidasShoesResultModel<OrderModel>>(await _orderService.AddOrUpdate(order));
             if (res.Results.Count() == 0)
             {
+                //update quantity product
+                foreach (var item in order.OrderDetails)
+                {
+                    await _productService.UpdateQuantityProductDetail(item.ProductDetailID, -item.Quantity);
+                }
+
                 //reset discout
                 var discountSession = new DiscountModel();
                 HttpContext.Session.Set("SessionDiscout", Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(discountSession)));

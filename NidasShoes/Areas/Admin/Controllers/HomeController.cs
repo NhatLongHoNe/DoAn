@@ -43,7 +43,7 @@ namespace WebApp.Areas.Admin.Controllers
             var dataRecipt = JsonConvert.DeserializeObject<NidasShoesResultModel<ReceiptDetailModel>>(await _receiptService.GetListDataReceiptDetail(baseParam)).Results;
 
             ViewBag.CountOrderNew = dataOrder.Where(x=>x.OrderStatusID==1).Count();
-            ViewBag.CountOrder = dataOrder.Count();
+            ViewBag.CountOrder = dataOrder.Where(x=>x.OrderStatusID!=6).Count();
             ViewBag.TotalOrderPrice = dataOrder.Where(x=>x.OrderStatusID!=1&& x.OrderStatusID != 6).Sum(x => x.TotalCost);
 
             ViewBag.TotalReciptPrice = dataRecipt.Sum(x => x.ImportPrice * x.ImportQuantity);

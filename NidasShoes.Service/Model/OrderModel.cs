@@ -25,6 +25,7 @@ namespace NidasShoes.Service.Model
         public string PaymentName { get; set; }
         public string EmployeeName { get; set; }
         public double TotalCost { get; set; }
+        public DateTime ModifyDate { get; set; }
 
 
     }

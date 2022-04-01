@@ -199,6 +199,16 @@ namespace NidasShoes.Repository.Repository
             res.PageNumber = baseParam.PageNumber;
             return res;
         }
+
+        public async Task<NidasShoesResultEntity<bool>> UpdateQuantityProductDetail(int productDetailId, int quantity)
+        {
+            var param = new DynamicParameters();
+            param.Add("@productDetailId", productDetailId);
+            param.Add("@quantity", quantity);
+            var result = await _commonRepository.ListProcedureAsync<bool>("NidasShoes_UPDATE_QUANTITY_PRODUCT", param);
+            return result;
+        }
+
         #endregion
 
         #region Product client
@@ -249,6 +259,7 @@ namespace NidasShoes.Repository.Repository
             var result = await _commonRepository.ListProcedureAsync<ProductEntity>("NidasShoes_search_Client_Product_Detail", param);
             return result;
         }
+
         #endregion
     }
 }

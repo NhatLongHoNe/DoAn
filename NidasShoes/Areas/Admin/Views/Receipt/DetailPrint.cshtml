@@ -1,0 +1,69 @@
+﻿@model NidasShoes.Service.Model.ViewModel.ReceiptDetailPrintToPfdViewModel
+@{
+     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmins.cshtml";
+}
+<style>
+    .main-footer{
+        display:none;
+    }
+    ol.breadcrumb.float-sm-right {
+    display: none;
+}
+</style>
+<div class="data-table">
+    <table id="infoReceipt" class="table table-stri ped table-bordered text-left table-hover" style="background:#fff;">
+        <thead>
+            <tr>
+                <th>Mã đơn nhập hàng</th>
+                <th>Người lập đơn</th>
+                <th>Ngày lập</th>
+                <th>Nhà cung cấp</th>
+                <th>Ghi chú</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.receiptModel.ID</td>
+                <td>@Model.receiptModel.UserName</td>
+                <td>@Model.receiptModel.CreatedDate.ToString("dd/MM/yyy")</td>
+                <td>@Model.receiptModel.SupplyName</td>
+                <td>@Model.receiptModel.Note</td>
+            </tr>
+        </tbody>
+        <tfoot>
+        </tfoot>
+    </table>
+</div>
+
+
+
+<div class="data-table">
+    <table id="myTable" class="table table-striped table-bordered text-left table-hover" style="background:#fff;">
+        <thead>
+            <tr>
+                <th>Tên sản phẩm</th>
+                <th>Mã màu</th>
+                <th>Mã size</th>
+                <th>Số lượng</th>
+                <th>Giá tiền nhập</th>
+                <th>Tổng</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.lstReceiptDetailModel)
+            {
+                <tr>
+                    <td>@item.ProductName</td>
+                    <td>@item.ColorName</td>
+                    <td>@item.SizeName</td>
+                    <td>@item.ImportQuantity</td>
+                    <td>@item.ImportPrice.ToString("0,000")</td>
+                    <td>@((item.ImportPrice*item.ImportQuantity).ToString("0,000"))</td>
+                </tr>
+            }
+        </tbody>
+
+        <tfoot>
+        </tfoot>
+    </table>
+</div>

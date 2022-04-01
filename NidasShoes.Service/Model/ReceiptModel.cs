@@ -11,5 +11,7 @@ namespace NidasShoes.Service.Model
         public int UserID { get; set; }
         public string Note { get; set; }
         public DateTime CreatedDate { get; set; }
+        public string SupplyName { get; set; }
+        public string UserName { get; set; }
     }
 }

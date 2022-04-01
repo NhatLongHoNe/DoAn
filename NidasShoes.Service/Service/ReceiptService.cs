@@ -68,5 +68,11 @@ namespace NidasShoes.Service.Service
             var res = await _receiptRepository.GetListDataReceiptDetail(baseEntity);
             return JsonConvert.SerializeObject(res);
         }
+
+        public async Task<string> GetListDataReceiptDetailByReceiptId(int ReceiptId)
+        {
+            var res = await _receiptRepository.GetListDataReceiptDetailByReceiptId(ReceiptId);
+            return JsonConvert.SerializeObject(res);
+        }
     }
 }

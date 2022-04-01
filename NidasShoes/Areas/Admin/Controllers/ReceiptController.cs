@@ -40,9 +40,8 @@ namespace NidasShoes.Areas.Admin.Controllers
         public async Task<PartialViewResult> GetListData(BaseParamModel baseParam)
         {
             var response = await _ReceiptService.GetListData(baseParam);
-    
+            
             var result = JsonConvert.DeserializeObject<NidasShoesResultModel<ReceiptModel>>(response);
-
             return PartialView(result);
         }
 
@@ -152,16 +151,28 @@ namespace NidasShoes.Areas.Admin.Controllers
             return Json(result.Results.First());
         }
         
-        public async Task<IActionResult> GetReceiptDetail(int orderId)
+        public async Task<IActionResult> Detail(int Id)
         {
-           
+            ViewBag.dataReceipt = JsonConvert.DeserializeObject<NidasShoesResultModel<ReceiptModel>>(await _ReceiptService.GetById(Id)).Results.FirstOrDefault();
+            ViewBag.dataReceiptDetail = JsonConvert.DeserializeObject<NidasShoesResultModel<ReceiptDetailModel>>(await _ReceiptService.GetListDataReceiptDetailByReceiptId(Id));
+
             return View();
         }
         
-        public async Task<IActionResult> GetReceiptDetailPrint(int orderId)
+        public async Task<IActionResult> DetailPrint(int Id)
         {
-       
-            return new ViewAsPdf();
+             var dataReceipt = JsonConvert.DeserializeObject<NidasShoesResultModel<ReceiptModel>>(await _ReceiptService.GetById(Id)).Results.FirstOrDefault();
+            var dataReceiptDetail = JsonConvert.DeserializeObject<NidasShoesResultModel<ReceiptDetailModel>>(await _ReceiptService.GetListDataReceiptDetailByReceiptId(Id)).Results;
+            
+            
+            var data = new ReceiptDetailPrintToPfdViewModel()
+            {
+                receiptModel = dataReceipt,
+                lstReceiptDetailModel = dataReceiptDetail
+            };
+
+
+            return new ViewAsPdf(data);
         }
      
     }

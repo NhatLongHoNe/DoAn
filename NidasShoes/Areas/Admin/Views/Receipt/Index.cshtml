@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "Kho hàng";
+    ViewBag.Title = "Trang danh sách đơn nhập kho";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmins.cshtml";
 }
 <div class="show-table">
@@ -13,7 +13,6 @@
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
                         <div class="modal-body">
-
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -29,7 +28,6 @@
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
                         <div class="modal-body">
-
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -57,37 +55,30 @@
                             <div class="search d-flex">
                                 <input type="text" placeholder="Nhập tiêu đề tìm kiếm -> Nhấn Enter" class="searchInput form-control" style="width:250px" title="Nhập tiêu đề tìm kiếm -> Nhấn Enter" onchange="Search(this)">
                                 <a href="/Admin/receipt/create" class="btn-green btn-tools text-nowrap btnAdd" >
-                                    <i class="fa fa-plus"></i> Thêm đơn nhập kho
+                                    <i class="fa fa-plus"></i> Thêm mới
                                 </a>
                             </div>
                         </div>
                         <div class="col-md-12 p-0">
                             <div class="table-responsive">
-
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-@*            <div class="col-md-4 p-2 add-form">
-                @await Html.PartialAsync("_AddOrEdit", new NidasShoes.Service.Model.ProductDetailModel()
-                                                               {
-                                                                   ID = 0,
-                                                                   ProductID =0,
-                                                                   SizeID =0,
-                                                                   ColorID =0,
-                                                                   Quantity =0,
-                                                                   Image = "",
-                                                                   ImportPrice =0,
-                                                                   ExportPrice =0
-                                                               })
+           @* <div class="col-md-4 p-2 add-form">
+                @await Html.PartialAsync("_AddOrEdit", new NidasShoes.Service.Model.SizeModel()
+                {
+                    ID = 0,
+                    Name = "",
+                })
             </div>*@
         </div>
     </div>
 </div>
 @section scripts{
     <script>
-        urlGetData = '/Admin/ProductDetail/GetListData';
+        urlGetData = '/Admin/Receipt/GetListData';
         GetDataToTable(urlGetData)
     </script>
 }

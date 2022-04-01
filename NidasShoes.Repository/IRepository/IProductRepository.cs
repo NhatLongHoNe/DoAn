@@ -30,6 +30,7 @@ namespace NidasShoes.Repository.IRepository
         Task<NidasShoesResultEntity<Boolean>> AddOrUpdateProductDetail(ProductDetailEntity productDetail);
         Task<NidasShoesResultEntity<ProductDetailEntity>> GetProductDetailById(int Id);
         Task<NidasShoesResultEntity<Boolean>> DeleteProductDetailById(int Id);
+        Task<NidasShoesResultEntity<Boolean>> UpdateQuantityProductDetail(int productDetailId,int quantity);
 
         //client
         Task<NidasShoesResultEntity<ProductDetailClientEntity>> GetProductDetailClientByProductDetailId(int Id);

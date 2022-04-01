@@ -18,5 +18,8 @@ namespace NidasShoes.Repository.IRepository
         Task<NidasShoesResultEntity<ReceiptDetailEntity>> GetReceiptDetailById(int Id);
         Task<NidasShoesResultEntity<Boolean>> DeleteByReceiptDetailId(int Id);
 
+
+        Task<NidasShoesResultEntity<ReceiptDetailEntity>> GetListDataReceiptDetailByReceiptId(int receiptId);
+
     }
 }

@@ -170,6 +170,15 @@ namespace NidasShoes.Areas.Admin.Controllers
                 var res = JsonConvert.DeserializeObject<NidasShoesResultModel<bool>>(await _OrderService.UpdateStatusOrder(OrderId, StatusId, json.Id));
                 if (res.Success)
                 {
+                    if(StatusId == 6)
+                    {
+                        var response = await _OrderService.GetListDataOrderDetailByOrderId(OrderId);
+                        var result = JsonConvert.DeserializeObject<NidasShoesResultModel<OrderDetailModel>>(response).Results;
+                        foreach (var item in result)
+                        {
+                            await _ProductService.UpdateQuantityProductDetail(item.ProductDetailID, item.Quantity);
+                        }
+                    }
                     return Json(new
                     {
                         status = true

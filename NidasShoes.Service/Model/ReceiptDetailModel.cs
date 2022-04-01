@@ -11,5 +11,9 @@ namespace NidasShoes.Service.Model
         public int ProductDetailID { get; set; }
         public int ImportQuantity { get; set; }
         public double ImportPrice { get; set; }
+
+        public string ProductName { get; set; }
+        public string ColorName { get; set; }
+        public string SizeName { get; set; }
     }
 }

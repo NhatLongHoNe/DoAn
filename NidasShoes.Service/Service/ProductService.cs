@@ -94,6 +94,11 @@ namespace NidasShoes.Service.Service
             var response = await _productRepository.GetListDataProductDetail(baseEntity);
             return JsonConvert.SerializeObject(response);
         }
+        public async Task<string> UpdateQuantityProductDetail(int productDetailId, int quantity)
+        {
+            var response = await _productRepository.UpdateQuantityProductDetail(productDetailId, quantity);
+            return JsonConvert.SerializeObject(response);
+        }
         #endregion
 
         #region product client
@@ -147,6 +152,7 @@ namespace NidasShoes.Service.Service
             var res = await _productRepository.GetListProductClientBySearch(productCategoryID, sizeID, colorID);
             return JsonConvert.SerializeObject(res);
         }
+
         #endregion
     }
 }

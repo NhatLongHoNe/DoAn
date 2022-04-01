@@ -100,5 +100,13 @@ namespace NidasShoes.Repository.Repository
             res.PageNumber = baseParam.PageNumber;
             return res;
         }
+
+        public async Task<NidasShoesResultEntity<ReceiptDetailEntity>> GetListDataReceiptDetailByReceiptId(int receiptId)
+        {
+            var param = new DynamicParameters();
+            param.Add("@Id", receiptId);
+            var result = await _commonRepository.ListProcedureAsync<ReceiptDetailEntity>("NidasShoes_get_ReceiptDetail_by_ReceiptId", param);
+            return result;
+        }
     }
 }

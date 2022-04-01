@@ -35,7 +35,7 @@
                 {
                     @Html.AntiForgeryToken()
 
-                    <a href="javascript:document.getElementById('logoutForm').submit()" class="right">
+                    <a href="/Admin/Authentication/logout" class="right">
                         <span class="right badge badge-danger">Đăng xuất</span>
                     </a>
                 }
@@ -120,10 +120,10 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/Admin/receipt/create" class="nav-link">
+                            <a href="/Admin/Receipt" class="nav-link">
                                 <i class="fas fa-bars nav-icon"></i>
                                 <p>
-                                    Nhập kho
+                                    Danh sách đơn nhập kho
                                 </p>
                             </a>
                         </li>
@@ -155,10 +155,9 @@
                                 </p>
                             </a>
                         </li>
-                        
+
                     </ul>
                 </li>
-                 
                 <li class="nav-item">
                     <a href="/Admin/User" class="nav-link">
                         <i class="fas fa-bars nav-icon"></i>
