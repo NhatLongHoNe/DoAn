@@ -210,44 +210,54 @@ var cart = {
             toastr["error"]("Bạn chưa xác nhận thông tin");
             return 0;
         }
-        
-        //
-        $.ajax({
-            url: '/Cart/CreateOrder',
-            type: 'POST',
-            dataType: 'json',
-            data: {
-                orderViewModel: JSON.stringify(order)
-            },
-            success: function (response) {
-                console.log(response);
-                if (response.status) {
-                    toastr["info"]("Chờ xử lý");
-                    cart.deleteAll();
-                    setTimeout(function () {
-                        window.location.href = "/cart/ordercomplete";
-                    }, 2000);
-                    //if (response.urlCheckout != undefined && response.urlCheckout != '') {
+        if (order.PaymentID == 2) {
+            $.ajax({
+                url: '/Cart/CreateOrderByMoMo',
+                type: 'POST',
+                dataType: 'json',
+                data: {
+                    orderViewModel: JSON.stringify(order)
+                },
+                success: function (response) {
+                    console.log(response);
+                    if (response.status) {
+                        toastr["info"]("Chờ xử lý");
+                        cart.deleteAll();
+                        setTimeout(function () {
+                            window.location.href = "/cart/ReturnUrl";
+                        }, 2000);
 
-                    //    window.location.href = response.urlCheckout;
-                    //}
-                    //else {
-                    //    console.log('create order ok');
-                    //    $('#divCheckout').hide();
-                    //    cart.deleteAll();
-                    //    setTimeout(function () {
-                    //        $('#cartContent').html('Cảm ơn bạn đã đặt hàng thành công. Chúng tôi sẽ liên hệ sớm nhất.');
-                    //    }, 2000);
-                    //}
-                }
-                else {
-                    toastr["error"]("Thanh toán thất bại");
+                    }
+                    else {
+                        toastr["error"]("Thanh toán thất bại");
 
-                    //$('#divMessage').show();
-                    //$('#divMessage').text(response.message);
+                    }
                 }
-            }
-        })
+            })
+        } if (order.PaymentID == 1) {
+            $.ajax({
+                url: '/Cart/CreateOrder',
+                type: 'POST',
+                dataType: 'json',
+                data: {
+                    orderViewModel: JSON.stringify(order)
+                },
+                success: function (response) {
+                    console.log(response);
+                    if (response.status) {
+                        toastr["info"]("Chờ xử lý");
+                        cart.deleteAll();
+                        setTimeout(function () {
+                            window.location.href = "/cart/ordercomplete";
+                        }, 2000);
+                    }
+                    else {
+                        toastr["error"]("Thanh toán thất bại");
+                    }
+                }
+            })
+
+        }
     },
     addItem: function (Id) {
         $.ajax({

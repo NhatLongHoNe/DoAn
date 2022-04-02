@@ -1,6 +1,9 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using MoMo;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using NidasShoes.Common;
 using NidasShoes.Service.IService;
 using NidasShoes.Service.Model;
@@ -9,6 +12,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Net;
 
 namespace NidasShoes.Controllers
 {
@@ -17,13 +21,18 @@ namespace NidasShoes.Controllers
         private readonly IProductService _productService;
         private readonly IOrderService _orderService;
         private readonly IDiscountService _discountService;
+        private readonly IConfiguration _configuration;
         public CartController(IProductService productService
            , IOrderService orderService
-            , IDiscountService discountService)
+            , IDiscountService discountService
+            , IConfiguration configuration
+
+            )
         {
             _productService = productService;
             _orderService = orderService;
             _discountService = discountService;
+            _configuration = configuration;
         }
 
         public IActionResult Index()
@@ -323,5 +332,90 @@ namespace NidasShoes.Controllers
                 status = -1
             });
         }
+        [HttpPost]
+        public async Task<IActionResult> CreateOrderByMoMo(string orderViewModel)
+        {
+            var order = JsonConvert.DeserializeObject<OrderModel>(orderViewModel);
+
+            string endpoint = _configuration.GetValue<String>("ENDPOINT");
+            string partnerCode = _configuration.GetValue<String>("PARTNER_CODE");
+            string accessKey = _configuration.GetValue<String>("ACCESS_KEY");
+            string serectkey = _configuration.GetValue<String>("SECRET_KEY");
+            string orderInfo = "DH"+DateTime.Now.ToString("yyyyMMddHHmmss");
+            string redirectUrl = "https://localhost:44368/Cart/ReturnUrl";
+            string ipnUrl = "";
+            string requestType = "captureWallet";
+
+            string returnUrl = "https://localhost:44368/Cart/ReturnUrl";
+            string notifyUrl = "https://localhost:44368/Cart/NotifyUrl";
+
+            string amount = order.TotalCost.ToString();
+            string orderId = Guid.NewGuid().ToString();
+            string requestId = Guid.NewGuid().ToString();
+            string extraData = "";
+
+            //Before sign HMAC SHA256 signature
+            string rawHash = 
+                "accessKey=" + accessKey +
+                "&partnerCode=" + partnerCode +
+                "&requestId=" + requestId +
+                "&amount=" + amount +
+                "&orderId=" + orderId +
+                "&orderInfo=" + orderInfo +
+                "&extraData=" + extraData +
+                "&extraData=" + extraData +
+                "&returnUrl=" + returnUrl +
+                "&notifyUrl=" + notifyUrl;
+
+            MoMoSecurity crypto = new MoMoSecurity();
+
+            //sign signature SHA256
+            string signature = crypto.signSHA256(rawHash, serectkey);
+
+            //build body json request
+            JObject message = new JObject
+            {
+                { "partnerCode", partnerCode },
+                { "accessKey", accessKey },
+                { "requestId", requestId },
+                { "amount", amount },
+                { "orderId", orderId },
+                { "orderInfo", orderInfo },
+                { "returnUrl",returnUrl },
+                { "notifyUrl",notifyUrl },
+                { "requestType", requestType },
+                { "signature", signature }
+
+                //{ "storeId", "MomoTestStore" },
+                //{ "redirectUrl", redirectUrl },
+                //{ "ipnUrl", ipnUrl },
+                //{ "lang", "en" },
+                //{ "extraData", extraData },
+                //{ "requestType", requestType },
+            };
+
+            string responseFromMomo = PaymentRequest.sendPaymentRequest(endpoint, message.ToString());
+
+            JObject jmessage = JObject.Parse(responseFromMomo);
+            return Redirect(jmessage.GetValue("payUrl").ToString());
+    
+        }
+
+        public async Task<IActionResult> ReturnUrl()
+        {
+            string param = Request.QueryString.ToString().Substring(0, Request.QueryString.ToString().IndexOf("signature") - 1);
+            param = WebUtility.UrlDecode(param);
+
+            return View();
+        }
+        public async Task<IActionResult> NotifyUrl()
+        {
+            string param = Request.QueryString.ToString().Substring(0, Request.QueryString.ToString().IndexOf("signature") - 1);
+            param = WebUtility.UrlDecode(param);
+
+            return View();
+        }
+        
     }
+
 }
