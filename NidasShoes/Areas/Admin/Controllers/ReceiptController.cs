@@ -108,7 +108,8 @@ namespace NidasShoes.Areas.Admin.Controllers
                                 ColorID = item.ColorID,
                                 SizeID = item.SizeID,
                                 Quantity = 0,
-                                Image = ""
+                                Image = "",
+                                LastUpdated = DateTime.Now
                             };
                             var resAddProductDetail = JsonConvert.DeserializeObject<NidasShoesResultModel<bool>>(await _ProductService.AddOrUpdateProductDetail(productDetail)).Results.FirstOrDefault();
                             if(resAddProductDetail == true)
