@@ -162,7 +162,9 @@ namespace NidasShoes.Repository.Repository
             param.Add("@ColorID", productDetailEntity.ColorID);
             param.Add("@Quantity", productDetailEntity.Quantity);
             param.Add("@Image", productDetailEntity.Image);
-            
+            param.Add("@ImportPrice", productDetailEntity.ImportPrice);
+            param.Add("@ExportPrice", productDetailEntity.ExportPrice);
+
             var result = await _commonRepository.ListProcedureAsync<bool>("NidasShoes_create_or_update_ProductDetail", param);
             return result;
         }

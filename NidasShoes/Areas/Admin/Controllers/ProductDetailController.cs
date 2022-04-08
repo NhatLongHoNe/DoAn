@@ -50,7 +50,9 @@ namespace WebApp.Areas.Admin.Controllers
                     SizeID = 0,
                     ColorID = 0,
                     Quantity = 0,
-                    Image = ""
+                    Image = "",
+                    ImportPrice=0,
+                    ExportPrice=0
                 });
             }
             else
@@ -62,8 +64,21 @@ namespace WebApp.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> AddOrUpdate(ProductDetailModel obj)
         {
+            var request = HttpContext.Request.Form;
+            var files = request.Files.ToList();
+            List<string> images = await UploadFile.UploadFiles(files, _hostingEnvironment, CurrentUser.UserId);
+            var data = request.Where(x => x.Key == "data").First().Value;
+            var productDetail = JsonConvert.DeserializeObject<ProductDetailModel>(data);
+            if (images.Count() > 0)
+            {
+                productDetail.Image = images.FirstOrDefault();
+            }
+            else if (productDetail.ID == 0)
+            {
+                productDetail.Image = "/Admin/Content/images/no-image-available-thumb(1349x760-crop).jpg";
+            }
 
-            var response = await _productService.AddOrUpdateProductDetail(obj);
+            var response = await _productService.AddOrUpdateProductDetail(productDetail);
             var result = JsonConvert.DeserializeObject<NidasShoesResultModel<bool>>(response);
             return Json(result.Results.FirstOrDefault());
         }

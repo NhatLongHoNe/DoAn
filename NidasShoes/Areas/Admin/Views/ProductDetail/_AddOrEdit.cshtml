@@ -8,19 +8,38 @@
             <input type="number" name="Id" class="form-control" id="Id" value="@Model.ID">
         </div>
         <div class="form-group mb-3">
-            <label class="font-weight-bold mb-1">Tên danh mục</label>
-            <input type="text" name="Name" class="form-control validation" id="name" value="">
+            <label class="font-weight-bold mb-1">Giá nhập</label>
+            <input type="text" name="ImportPrice" class="form-control validation" id="ImportPrice" value="@Model.ImportPrice">
             <div class="text-danger"></div>
         </div>
         <div class="form-group mb-3">
-            <label class="font-weight-bold mb-1">Mô tả</label>
-            <input type="text" name="Description" class="form-control validation" id="name" value="">
+            <label class="font-weight-bold mb-1">Giá bán</label>
+            <input type="text" name="ExportPrice" class="form-control validation" id="ExportPrice" value="@Model.ExportPrice">
+            <div class="text-danger"></div>
+        </div>
+          <div class="form-group mb-3">
+            <label class="font-weight-bold mb-1">Số Lượng</label>
+            <input type="text" name="Quantity" class="form-control validation" id="Quantity" value="@Model.Quantity">
+            <div class="text-danger"></div>
+        </div>
+          <div class="form-group mb-3">
+            <label class="font-weight-bold mb-1">Hình ảnh</label>
+            @if (String.IsNullOrEmpty(Model.Image))
+            {
+                    <img src="/Admin/Content/images/no-image-available-thumb(1349x760-crop).jpg" id="image" style="object-fit:contain;width:100%" alt="Alternate Text" onclick="OpenFile(this)" />
+            }
+            else
+            {
+                    <img src="@Model.Image" id="image" style="object-fit:contain;width:100%" alt="Alternate Text" onclick="OpenFile(this)" />
+            }
+            <input type="file" name="FileUpload" id="fileImage" class="form-control d-none" onchange="ChooseFile(this)">
+            <input type="text" name="Image" class="form-control d-none" value="@Model.Image">
             <div class="text-danger"></div>
         </div>
         <div class="row">
             <div class="col-md-12 text-right mr-0 pr-0 mt-1 mb-0 modal-footer">
                 <button type="button" class="btn btn btn-red btnCancel" onclick="RefreshForm()"><i class="fas fa-reply-all"></i> Nhập lại</button>
-                <button type="button" class="btn btn-green btnSave" data-id="0" onclick="AddOrUpdate('/Admin/ProductCategory/AddOrUpdate')"> <i class="far fa-save"></i> Ghi lại</button>
+                <button type="button" class="btn btn-green btnSave" data-id="@Model.ID" onclick="AddOrUpdateWithFile('/Admin/ProductDetail/AddOrUpdate')"> <i class="far fa-save"></i> Ghi lại</button>
             </div>
         </div>
     </form>
