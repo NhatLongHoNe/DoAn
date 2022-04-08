@@ -24,7 +24,8 @@ namespace NidasShoes.Repository.IRepository
         Task<NidasShoesResultEntity<OrderDetailEntity>> GetListDataOrderDetailByOrderId(int Id);
 
 
-        //
+        // Transaction
+        Task<NidasShoesResultEntity<TransactionEntity>> GetListDataTransaction();
 
 
     }

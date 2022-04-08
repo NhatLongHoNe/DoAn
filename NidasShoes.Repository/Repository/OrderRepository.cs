@@ -118,5 +118,11 @@ namespace NidasShoes.Repository.Repository
             var result = await _commonRepository.ListProcedureAsync<bool>("NidasShoes_Update_Status_Order_By_Id", param);
             return result;
         }
+
+        public async Task<NidasShoesResultEntity<TransactionEntity>> GetListDataTransaction()
+        {
+            var result = await _commonRepository.ListProcedureAsync<TransactionEntity>("NidasShoes_transaction_export");
+            return result;
+        }
     }
 }

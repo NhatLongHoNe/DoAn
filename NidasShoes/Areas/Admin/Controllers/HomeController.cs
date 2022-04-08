@@ -50,5 +50,12 @@ namespace WebApp.Areas.Admin.Controllers
 
             return View();
         }
+        [HttpGet]
+        public async Task<IActionResult> GetDataTransaction(int year)
+        {
+            var data = JsonConvert.DeserializeObject<NidasShoesResultModel<TransactionModel>>(await _orderService.GetListDataTransaction()).Results;
+            
+            return Json(data.Where(x => x.Year == year).ToList());
+        }
     }
 }

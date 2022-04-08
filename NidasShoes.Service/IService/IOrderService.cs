@@ -20,5 +20,9 @@ namespace NidasShoes.Service.IService
         Task<string> GetByCustomerId(int CustomerId);
         Task<string> UpdateStatusOrder(int OrderId, int StatusId, int EmployeeID);
 
+        Task<string> GetListDataTransaction();
+
+        
+
     }
 }

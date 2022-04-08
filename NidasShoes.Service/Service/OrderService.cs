@@ -67,5 +67,10 @@ namespace NidasShoes.Service.Service
             var res = await _orderRepository.UpdateStatusOrder(OrderId, StatusId, EmployeeID);
             return JsonConvert.SerializeObject(res);
         }
+        public async Task<string> GetListDataTransaction()
+        {
+            var res = await _orderRepository.GetListDataTransaction();
+            return JsonConvert.SerializeObject(res);
+        }
     }
 }
