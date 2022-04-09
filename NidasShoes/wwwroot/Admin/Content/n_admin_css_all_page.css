@@ -8,4 +8,8 @@
 .home-page .controller-fluid {
     max-width: 99%;
 }
+
+a.btn-green.btn-tools.text-nowrap.btnAdd {
+    line-height: 30px;
+}
 /*.home-page .*//**/

@@ -9,7 +9,11 @@
         user = JsonConvert.DeserializeObject<NidasShoes.Service.Model.UserModel>(session);
     }
 }
-
+<style>
+    #main-menu p {
+        font-size: 0.9rem;
+    }
+</style>
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
@@ -45,7 +49,7 @@
 
         <!-- Sidebar Menu -->
         <nav class="mt-2">
-            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <ul id="main-menu" class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <!-- Add icons to the links using the .nav-icon class
                 with font-awesome or any other icon font library -->
                 <li class="nav-item ">
@@ -60,26 +64,59 @@
                     <a href="" class="nav-link">
                         <i class="far fa-building nav-icon"></i>
                         <p>
-                            Danh mục sản phẩm
+                            Quản trị hệ thống
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-
                         <li class="nav-item">
-                            <a href="/Admin/Product" class="nav-link">
+                            <a href="/Admin/Shop" class="nav-link">
                                 <i class="fas fa-bars nav-icon"></i>
                                 <p>
-                                    Sản phẩm
+                                    Quản lý thông tin cửa hàng
                                 </p>
                             </a>
                         </li>
-
+                        <li class="nav-item">
+                            <a href="/Admin/Slide" class="nav-link">
+                                <i class="fas fa-bars nav-icon"></i>
+                                <p>
+                                    Quản lý slide
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item ">
+                    <a href="" class="nav-link">
+                        <i class="far fa-building nav-icon"></i>
+                        <p>
+                            Quản lý danh mục
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/Admin/User" class="nav-link">
+                                <i class="fas fa-bars nav-icon"></i>
+                                <p>
+                                    Quản lý người dùng
+                                </p>
+                            </a>
+                        </li>
                         <li class="nav-item">
                             <a href="/Admin/ProductCategory" class="nav-link">
                                 <i class="fas fa-bars nav-icon"></i>
                                 <p>
-                                    Quản lý loại sản phẩm
+                                    Quản lý danh mục sản phẩm
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/Admin/Product" class="nav-link">
+                                <i class="fas fa-bars nav-icon"></i>
+                                <p>
+                                    Quản lý sản phẩm
                                 </p>
                             </a>
                         </li>
@@ -99,31 +136,11 @@
                                 </p>
                             </a>
                         </li>
-                    </ul>
-                </li>
-                <li class="nav-item ">
-                    <a href="" class="nav-link">
-                        <i class="far fa-building nav-icon"></i>
-                        <p>
-                            Danh mục kho
-                            <i class="right fas fa-angle-left"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-
                         <li class="nav-item">
-                            <a href="/Admin/ProductDetail" class="nav-link">
+                            <a href="/Admin/Discount" class="nav-link">
                                 <i class="fas fa-bars nav-icon"></i>
                                 <p>
-                                    Kho hàng
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/Admin/Receipt" class="nav-link">
-                                <i class="fas fa-bars nav-icon"></i>
-                                <p>
-                                    Danh sách đơn nhập kho
+                                    Quản lý khuyến mãi
                                 </p>
                             </a>
                         </li>
@@ -131,7 +148,44 @@
                             <a href="/Admin/Supply" class="nav-link">
                                 <i class=" nav-icon far fa-building"></i>
                                 <p>
-                                    Nhà cung cấp
+                                    Quản lý danh mục nhà cung cấp
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/Admin/ProductDetail" class="nav-link">
+                                <i class="fas fa-bars nav-icon"></i>
+                                <p>
+                                    Quản lý chi tiết sản phẩm
+                                </p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li class="nav-item ">
+                    <a href="" class="nav-link">
+                        <i class="far fa-building nav-icon"></i>
+                        <p>
+                            Quản lý phiếu nhập kho
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/Admin/receipt/create" class="nav-link">
+                                <i class="fas fa-bars nav-icon"></i>
+                                <p>
+                                    Lập phiếu nhập kho
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/Admin/Receipt" class="nav-link">
+                                <i class="fas fa-bars nav-icon"></i>
+                                <p>
+                                    Danh sách phiếu nhập kho
                                 </p>
                             </a>
                         </li>
@@ -141,7 +195,7 @@
                     <a href="" class="nav-link">
                         <i class="far fa-building nav-icon"></i>
                         <p>
-                            Quản lý đơn hàng
+                            Quản lý đơn mua hàng
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
@@ -158,54 +212,35 @@
 
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a href="/Admin/User" class="nav-link">
-                        <i class="fas fa-bars nav-icon"></i>
+                <li class="nav-item ">
+                    <a href="" class="nav-link">
+                        <i class="far fa-building nav-icon"></i>
                         <p>
-                            User
+                            Liên hệ đóng góp
+                            <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/Admin/Feedback" class="nav-link">
+                                <i class="fas fa-bars nav-icon"></i>
+                                <p>
+                                    Danh sách phản hồi
+                                </p>
+                            </a>
+                        </li>
+
+                    </ul>
                 </li>
-                <li class="nav-item">
-                    <a href="/Admin/Discount" class="nav-link">
-                        <i class="fas fa-bars nav-icon"></i>
-                        <p>
-                            Mã giảm giá
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="/Admin/Slide" class="nav-link">
-                        <i class="fas fa-bars nav-icon"></i>
-                        <p>
-                            Slider
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="/Admin/Feedback" class="nav-link">
-                        <i class="fas fa-bars nav-icon"></i>
-                        <p>
-                            Feedback
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="/Admin/Shop" class="nav-link">
-                        <i class="fas fa-bars nav-icon"></i>
-                        <p>
-                            Thông tin Shop
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
+
+@* <li class="nav-item">
                     <a href="/Admin/masterdata" class="nav-link">
                         <i class="fas fa-bars nav-icon"></i>
                         <p>
                             Master data
                         </p>
                     </a>
-                </li>
+                </li>*@
 
             </ul>
         </nav>
