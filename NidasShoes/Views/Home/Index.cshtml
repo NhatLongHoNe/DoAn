@@ -13,24 +13,27 @@
         <ul class="slides">
             @foreach (var item in slides.Results)
             {
-                <li style="background-image: url(@item.Image);">
-                    <div class="overlay"></div>
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-sm-6 offset-sm-3 text-center slider-text">
-                                <div class="slider-text-inner">
-                                    <div class="desc">
-                                        @*<h1 class="head-1">Men's</h1>
-                                            <h2 class="head-2">Shoes</h2>*@
-                                        <h2 class="head-3">@item.Title</h2>
-                                        @*<p class="category"><span>New trending shoes</span></p>*@
-                                        <p><a href="@item.Link" class="btn btn-primary">Mua ngay</a></p>
+                @if (item.Status == true)
+                {
+                    <li style="background-image: url(@item.Image);">
+                        <div class="overlay"></div>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-sm-6 offset-sm-3 text-center slider-text">
+                                    <div class="slider-text-inner">
+                                        <div class="desc">
+                                            @*<h1 class="head-1">Men's</h1>
+                                                <h2 class="head-2">Shoes</h2>*@
+                                            <h2 class="head-3">@item.Title</h2>
+                                            @*<p class="category"><span>New trending shoes</span></p>*@
+                                            <p><a href="@item.Link" class="btn btn-primary">Mua ngay</a></p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </li>
+                    </li>
+                }
             }
         </ul>
     </div>
