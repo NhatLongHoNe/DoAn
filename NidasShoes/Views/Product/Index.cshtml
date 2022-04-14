@@ -55,7 +55,9 @@
         <div class="row row-pb-md">
             @foreach (var item in data)
             {
-                <div class="col-md-3 col-lg-3 mb-4 text-center">
+                @if (item.ExportPrice != 0)
+                {
+                 <div class="col-md-3 col-lg-3 mb-4 text-center">
                     <div class="product-entry border">
                         <a href="/Product/Detail?id=@item.ID" class="prod-img">
                             <img src="@item.Image" class="img-fluid" alt="@item.Name">
@@ -66,6 +68,7 @@
                         </div>
                     </div>
                 </div>
+                }
             }
         </div>
         <div class="row">

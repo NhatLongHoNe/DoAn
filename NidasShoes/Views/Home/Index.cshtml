@@ -81,17 +81,20 @@
         <div class="row row-pb-md">
             @foreach (var item in products.Results.Take(16))
             {
-                <div class="col-lg-3 mb-4 text-center">
-                    <div class="product-entry border">
-                        <a href="Product/Detail?id=@item.ID" class="prod-img">
-                            <img src="@item.Image" class="img-fluid" alt="@item.Title">
-                        </a>
-                        <div class="desc">
-                            <h2><a href="Product/Detail?id=@item.ID">@item.Name</a></h2>
-                            <span class="price">@item.ExportPrice.ToString(" 000,0") <sup>đ</sup></span>
+                @if (item.ExportPrice != 0)
+                {
+                    <div class="col-lg-3 mb-4 text-center">
+                        <div class="product-entry border">
+                            <a href="Product/Detail?id=@item.ID" class="prod-img">
+                                <img src="@item.Image" class="img-fluid" alt="@item.Title">
+                            </a>
+                            <div class="desc">
+                                <h2><a href="Product/Detail?id=@item.ID">@item.Name</a></h2>
+                                <span class="price">@item.ExportPrice.ToString(" 000,0") <sup>đ</sup></span>
+                            </div>
                         </div>
                     </div>
-                </div>
+                }
             }
         </div>
         <div class="row">

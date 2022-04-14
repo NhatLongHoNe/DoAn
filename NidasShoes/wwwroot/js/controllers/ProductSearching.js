@@ -66,12 +66,15 @@ var productSearching = {
                     var data = res.data.results;
                     console.log(data);
                     $.each(data, function (i, item) {
-                        html += Mustache.render(template, {
-                            Id: item.id,
-                            Name: item.name,
-                            Price: numeral(item.exportPrice).format('0,0'),
-                            Image: item.image
-                        });
+                        if (item.exportPrice!=0) {
+                            html += Mustache.render(template, {
+                                Id: item.id,
+                                Name: item.name,
+                                Price: numeral(item.exportPrice).format('0,0'),
+                                Image: item.image
+                            });
+                        }
+                        
                     });
 
                     $('#productSearchBody').html(html);
