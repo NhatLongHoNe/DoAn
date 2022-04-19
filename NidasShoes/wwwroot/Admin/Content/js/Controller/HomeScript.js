@@ -51,7 +51,7 @@ let home = {
                 response.forEach(obj => {
                     Object.entries(obj).forEach(([key, value]) => {
                         if (key == "month") {
-                            lab.push(value)
+                            lab.push("Tháng " + value)
                         }
                         if (key == "total") {
                             dat.push(value);

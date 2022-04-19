@@ -75,6 +75,10 @@ namespace NidasShoes.Areas.Admin.Controllers
                 var json = JsonConvert.DeserializeObject<UserModel>(Encoding.UTF8.GetString(arr));
 
                 var dataProduct = JsonConvert.DeserializeObject<List<ProductDetailModel>>(product);
+                if(dataProduct.Count() == 0)
+                {
+                    return Json(false);
+                }
                 var dataSupply = JsonConvert.DeserializeObject<ReceiptModel>(supply);
                 // lấy thằng customerid
                 dataSupply.UserID = json.Id;

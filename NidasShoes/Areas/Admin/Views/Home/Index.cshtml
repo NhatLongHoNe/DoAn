@@ -11,6 +11,7 @@
     var countOrder = ViewBag.CountOrder;
     var total = ViewBag.TotalOrderPrice;
     var totalImport = ViewBag.TotalReciptPrice;
+    var lstYear = ViewBag.LstYear;
 }
 <div class="home-page">
     <div class="controller-fluid">
@@ -26,7 +27,7 @@
               <div class="icon">
                 <i class="ion ion-bag"></i>
               </div>
-              <a href="#" class="small-box-footer">Xem chi tiết <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="/Admin/Order" class="small-box-footer">Xem chi tiết <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
             <div class="col-lg-3 col-6">
@@ -55,7 +56,7 @@
               <div class="icon">
                 <i class="ion ion-person-add"></i>
               </div>
-              <a href="#" class="small-box-footer">Xem chi tiết <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="/Admin/Order" class="small-box-footer">Xem chi tiết <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -70,7 +71,7 @@
               <div class="icon">
                 <i class="ion ion-pie-graph"></i>
               </div>
-              <a href="#" class="small-box-footer">Xem chi tiết <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="/Admin/Order" class="small-box-footer">Xem chi tiết <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
         </div>
@@ -79,8 +80,16 @@
         <div class="row">
             <div class="col-12">
                  <select id="btnSelectTransaction" class="form-control form-control-sm col-2">
-                  <option value="2021">2021</option>
-                  <option value="2022" selected>2022</option>
+                    @for (var i = 0; i < lstYear.Count; i++)
+                    {
+                        if(lstYear[i]== DateTime.Now.Year)
+                        {
+                            <option value="@lstYear[i]" selected>Năm @lstYear[i]</option>
+                        }else
+                        {
+                            <option value="@lstYear[i]">Năm @lstYear[i]</option>
+                        }
+                    }
                 </select>
                  <canvas id="myChart" class="chart-container" style="position: relative; height:40vh; width:80vw"></canvas>
             </div>

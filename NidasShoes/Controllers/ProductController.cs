@@ -31,7 +31,7 @@ namespace NidasShoes.Controllers
         {
             BaseParamModel baseParam = new BaseParamModel()
             {
-                PageSize = pageSize ?? 16,
+                PageSize = pageSize ?? 15,
                 PageNumber = pageNumber ?? 1,
                 Search = search ?? ""
             };

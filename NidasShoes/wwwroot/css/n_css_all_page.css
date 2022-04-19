@@ -24,3 +24,17 @@
     color: #88c8bc;
     font-weight: bold;
 }
+.product-entry {
+    display: block;
+    height: 100% !important;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    align-content: space-between;
+}
+.desc {
+    width: 100%;
+}
+.block-26 ul li span {
+    /*font-size: 0.65rem;*/
+}
