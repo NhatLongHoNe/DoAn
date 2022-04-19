@@ -1,77 +1,114 @@
 ﻿@model NidasShoes.Service.Model.ViewModel.OrderToPfdViewModel
 
 @{
-    ViewBag.Title = "DFD";
-    
+     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmins.cshtml";
 }
-<style>
-    body{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    .container{
-      display: flex;
-      width:600px;
-      justify-content: center;
-      align-items: center;
-      flex-direction:column;
-    }
 
-    .order, .semmary {
-      display: flex;
-      justify-content: space-between;
+<style>
+    ol.breadcrumb.float-sm-right {
+    display: none;
     }
-    .item{
-      display:flex;
+    .main-footer{
+        display:none;
     }
-    .item-name,.item-price{
-      padding: 0 15px;
+    .main-sidebar{
+        display:none;
     }
 </style>
-
-<div class="container" style="text-align:center">
-    <div class="title">
-        <h3>$$ Your Bill $$</h3>
-    </div>
-    <div class="order">
-        <h5>Mã đơn hàng : @Model.ID</h5>
-        <h5>Tên khách hàng: @Model.CustomerName</h5>
-        <h5>Số điện thoại: @Model.CustomerMobile</h5>
-        <h5>Email: @Model.CustomerEmail</h5>
-        <h5>Địa chỉ nhận: @Model.CustomerAddress</h5>
-        <h5>Hình thức thanh toán: @Model.PaymentName</h5>
-        <h5>Note: @Model.Note</h5>
-        <h5>Ngày tạo đơn hàng: @Model.CreatedDate.ToString("dd/MM/yyy")</h5>
-    </div>
-    <div class="summary">
-        <div class="summary-detail">
-            <h5>Chi tiết hoá đơn</h5>
-        </div>
-        <table  width="600">
-              @foreach (var item in Model.ProductDetails)
-            {
-            <tr style="">
-                <th width="50%" style="margin-right:40px; padding-right:10px" class="item-name">@item.Name</th>
-                <th width="10%" style="padding-right:10px" class="item-name">@item.NameSize</th>
-                <th width="10%" style="padding-right:10px" class="item-name">@item.NameColor</th>
-                <th width="10%" style="padding-right:10px" class="item-name">@item.Quantity</th>
-                <th width="10%" style="padding-right:10px" class="item-name">@item.ExportPrice.ToString("0,000")</th>
-                <th width="10%" style="padding-right:10px" class="item-name">@((item.ExportPrice*item.Quantity).ToString("0,000"))</th>
-            </tr>
-            }
-        </table>
-       
-    </div>
-    <div class="total">
-        <h3>Tổng tiền : @Model.TotalCost.ToString("0,000")</h3>
-    </div>
-     <div class="receipt">
-        @*<h5>Địa chỉ</h5>*@
-    </div>
-    <div class="receipt">
-        <h5>Thanks for visiting Nidas Shoes :D</h5>
-    </div>
+<div class="header-bill text-center ">
+    <h1>NIDADS SHOES</h1>
+<h3>SỐ 25 P. VŨ NGỌC PHAN, LÁNG HẠ, ĐỐNG ĐA, HÀ NỘI</h3>
 </div>
 
+<div class="data-table">
+    <table id="infoOrder" class="table table-striped table-bordered text-left table-hover" style="background:#fff;">
+        <thead>
+            <tr>
+                <th>Mã đơn hàng</th>
+                <th>Ngày tạo đơn hàng</th>
+                <th>Tên khách hàng</th>
+                <th>Số điện thoại</th>
+                <th>Email</th>
+                <th>Địa chỉ nhận</th>
+                <th>Hình thức thanh toán</th>
+                <th>Nhân viên chăm sóc</th>
+                <th>Note</th>
+                <th>Mã giảm giá</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+                <tr>
+                    <td>@Model.ID</td>
+                    <td>@Model.CreatedDate.ToString("dd/MM/yyy")</td>
+                    <td>@Model.CustomerName</td>
+                    <td>@Model.CustomerMobile</td>
+                    <td>@Model.CustomerEmail</td>
+                    <td>@Model.CustomerAddress</td>
+                    <td>@Model.PaymentName</td>
+                    <th>@Model.EmployeeName</th>
+                    <td>@Model.Note</td>
+                    <td>@Model.Discount.Code</td>
+                </tr>
+            
+        </tbody>
+
+        <tfoot>
+        </tfoot>
+    </table>
+</div>
+
+
+
+<div class="data-table">
+    <table id="myTable" class="table table-striped table-bordered text-left table-hover" style="background:#fff;">
+        <thead>
+            <tr>
+                <th>Ảnh</th>
+                <th>Tên sản phẩm</th>
+                <th>Size</th>
+                <th>Màu</th>
+                <th>Số lượng</th>
+                <th>Giá tiền</th>
+                <th>Tổng</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.ProductDetails)
+            {
+                <tr>
+                    <td><img src="@item.Image" style="width:80px;height:40px;"/></td>
+                    <td>@item.Name</td>
+                    <td>@item.NameSize</td>
+                    <td>@item.NameColor</td>
+                    <td>@item.Quantity</td>
+                    <td>@item.ExportPrice.ToString("0,000")</td>
+                    <td>@((item.ExportPrice*item.Quantity).ToString("0,000"))</td>
+                </tr>
+            }
+        </tbody>
+
+        <tfoot>
+             <tr>
+                 <td colspan="5"></td>
+                 <td colspan="2">Tổng tiền: @Model.Cost.ToString("0,000")</td>
+              </tr>
+               <tr>
+                 <td colspan="5"></td>
+                 <td colspan="2">Chiết khấu: @Model.Discount.Rate %</td>
+              </tr>
+               <tr>
+                 <td colspan="5"></td>
+                 <td colspan="2"><h4 class="text-bold">Tổng tiền sau chiết khấu: @Model.TotalCost.ToString("0,000")</h4></td>
+              </tr>
+        </tfoot>
+    </table>
+</div>
+<div>
+
+</div>
+
+<div class="footer-bill text-center ">
+   <h3> Chúc quý khách vui vẻ hẹn gặp lại</h3>
+</div>

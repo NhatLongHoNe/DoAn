@@ -177,7 +177,9 @@ var cart = {
             Note: $('#txtMessage').val(),
             PaymentID: $('input[name="paymentMethod"]:checked').val(),
             OrderStatusID: 1,
-            ToTalCost: $('#txtTotalCost').val()
+            ToTalCost: $('#txtTotalCost').val(),
+            DiscountId: $('#txtDiscountId').val()
+
             //BankCode: $('input[groupname="bankcode"]:checked').prop('id'),
         }
         // điều kiện nếu thanh toán kiểu khác

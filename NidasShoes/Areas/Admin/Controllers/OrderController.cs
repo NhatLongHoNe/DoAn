@@ -9,18 +9,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WebApp.Common;
 
 namespace NidasShoes.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class OrderController : Controller
+    public class OrderController : BaseController
     {
         IOrderService _OrderService;
         IProductService _ProductService;
-        public OrderController(IOrderService OrderService , IProductService productService)
+        IDiscountService _DiscountService;
+        public OrderController(IOrderService OrderService , IProductService productService, IDiscountService discountService)
         {
             _OrderService = OrderService;
             _ProductService = productService;
+            _DiscountService = discountService;
         }
         public IActionResult Index()
         {
@@ -100,8 +103,15 @@ namespace NidasShoes.Areas.Admin.Controllers
 
             var order = JsonConvert.DeserializeObject<NidasShoesResultModel<OrderModel>>(await _OrderService.GetById(orderId)).Results.First();
 
+            if(order != null)
+            {
+                if (order.DiscountID > 0)
+                {
+                    var discount = JsonConvert.DeserializeObject<NidasShoesResultModel<DiscountModel>>(await _DiscountService.GetById(order.DiscountID)).Results.First();
+                    ViewBag.discout = discount;
+                }
+            }
             ViewBag.Order = order;
-
             ViewBag.ListProductDetail = listDataDetail;
             ViewBag.Cost = cost;
             ViewBag.OrderDetail = result;
@@ -131,10 +141,15 @@ namespace NidasShoes.Areas.Admin.Controllers
 
             var order = JsonConvert.DeserializeObject<NidasShoesResultModel<OrderModel>>(await _OrderService.GetById(orderId)).Results.First();
 
-            //ViewBag.Order = order;
+            var discount = new DiscountModel();
+            if (order != null)
+            {
+                if (order.DiscountID > 0)
+                {
+                    discount = JsonConvert.DeserializeObject<NidasShoesResultModel<DiscountModel>>(await _DiscountService.GetById(order.DiscountID)).Results.First();
+                }
+            }
 
-            //ViewBag.Cost = cost;
-            //ViewBag.OrderDetail = result;
             OrderToPfdViewModel model = new OrderToPfdViewModel()
             {
                 ID = order.ID,
@@ -154,8 +169,10 @@ namespace NidasShoes.Areas.Admin.Controllers
                 StatusName = order.StatusName,
                 PaymentName = order.PaymentName,
                 EmployeeName = order.EmployeeName,
-                TotalCost = cost,
-                ProductDetails = listDataDetail            
+                TotalCost = order.TotalCost,
+                Cost = cost,
+                ProductDetails = listDataDetail,
+                Discount = discount
             };
             return new ViewAsPdf(model);
         }

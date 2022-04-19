@@ -41,6 +41,10 @@ namespace WebApp.Controllers
             var result = JsonConvert.DeserializeObject<NidasShoesResultModel<UserModel>>(response);
             if (result.Results.Count() == 0)
                 return Json(false);
+            if(result.Results.FirstOrDefault().RuleID == 4)
+            {
+                return Json(false);
+            };
             HttpContext.Session.Set("User", Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(result.Results.FirstOrDefault())));
             return Json(true);
         }

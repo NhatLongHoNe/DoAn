@@ -8,7 +8,11 @@
     var order = (OrderModel)ViewBag.Order;
     var orderDetail = ViewBag.OrderDetail;
     var cost = ViewBag.Cost;
-
+    var discount = new DiscountModel();
+    if(ViewBag.discout != null)
+    {
+        discount = (DiscountModel)ViewBag.discout;
+    }
 
 }
 <div class="data-table">
@@ -25,6 +29,7 @@
                 <th>Hình thức thanh toán</th>
                 <th>Nhân viên chăm sóc</th>
                 <th>Note</th>
+                <th>Mã giảm giá</th>
             </tr>
         </thead>
         <tbody>
@@ -40,6 +45,7 @@
                     <td>@order.PaymentName</td>
                     <th>@order.EmployeeName</th>
                     <td>@order.Note</td>
+                    <td>@discount.Code</td>
                 </tr>
             
         </tbody>
@@ -84,6 +90,14 @@
              <tr>
                  <td colspan="5"></td>
                  <td colspan="2">Tổng tiền: @cost.ToString("0,000")</td>
+              </tr>
+               <tr>
+                 <td colspan="5"></td>
+                 <td colspan="2">Chiết khấu: @discount.Rate %</td>
+              </tr>
+               <tr>
+                 <td colspan="5"></td>
+                 <td colspan="2">Tổng tiền sau chiết khấu: @order.TotalCost.ToString("0,000")</td>
               </tr>
         </tfoot>
     </table>

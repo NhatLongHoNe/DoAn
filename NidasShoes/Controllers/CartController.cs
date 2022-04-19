@@ -303,12 +303,6 @@ namespace NidasShoes.Controllers
                 {
                     if (isDataDiscout.StartDate <= DateTime.Now && isDataDiscout.EndDate >= DateTime.Now)
                     {
-                        //foreach (var jitem in cartSession)
-                        //{
-                        //    jitem.DiscoutID = isDataDiscout.ID;
-                        //    jitem.Rate = isDataDiscout.Rate;
-                        //}
-                        //HttpContext.Session.Set("SessionCart", Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(cartSession)));
                         return Json(new
                         {
                             status = 1,

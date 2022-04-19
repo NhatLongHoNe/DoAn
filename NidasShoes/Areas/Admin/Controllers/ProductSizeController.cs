@@ -12,7 +12,7 @@ using WebApp.Common;
 namespace NidasShoes.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class ProductSizeController : Controller
+    public class ProductSizeController : BaseController
     {
         IProductSizeService _productSizeService;
         IHostingEnvironment _hostingEnvironment;

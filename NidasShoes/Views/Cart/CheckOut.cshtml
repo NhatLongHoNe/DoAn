@@ -114,13 +114,13 @@
                                     </ul>
                                 </li>
                                 @if(discount.Rate !=0){
-                                    <li class="d-flex"><span>Giảm</span> <span class="asdg">@(discount.Rate)%</span></li>
+                                    <li class="d-flex"><span>Giảm</span>  <span  class="asdg">@(discount.Rate)%</span></li>
                                 }else{
                                      <li class="d-flex"><span>Giảm</span> <span class="asdg">0</span></li>
                                 }
                                 <li class="d-flex"><span>Tổng tiền</span> <span class="lblTotalOrder">@(totalPrice.ToString("0,000"))</span></li>
-                               
                             </ul>
+                            <input type="text" class="d-none" value="@discount.ID" id="txtDiscountId" />
                         </div>
                     </div>
 
@@ -153,7 +153,7 @@
                             <div class="form-group">
                                 <div class="col-md-12">
                                     <div class="checkbox">
-                                        <label><input id="agreeCheckCard" type="checkbox" value="Tôi đã đọc và chấp nhận các điều khoản và điều kiện">Xác nhận các thông tin trên đều là chính xác</label>
+                                        <label><input id="agreeCheckCard" type="checkbox" value="Tôi đã đọc và chấp nhận các điều khoản và điều kiện">&nbsp&nbsp Xác nhận các thông tin trên đều là chính xác</label>
                                     </div>
                                 </div>
                             </div>

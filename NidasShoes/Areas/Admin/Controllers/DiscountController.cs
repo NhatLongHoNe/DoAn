@@ -6,11 +6,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebApp.Common;
 
 namespace WebApp.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class DiscountController : Controller
+    public class DiscountController : BaseController
     {
         IDiscountService _discountService;
         public DiscountController(IDiscountService discountService)

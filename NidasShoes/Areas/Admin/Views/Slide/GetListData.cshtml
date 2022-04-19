@@ -14,7 +14,7 @@
                 <th>Thứ tự</th>
                 <th>Link</th>
                 <th>Tiêu đề</th>
-                <th>Status</th>
+                <th>Trạng thái</th>
                 <th style="text-align:right">Tác vụ</th>
             </tr>
         </thead>
@@ -26,7 +26,7 @@
                 <td>@item.DisplayOrder</td>
                 <td>@item.Link</td>
                 <td>@item.Title</td>
-                <td>@(item.Status==true?"Active":"Disable")</td>
+                <td>@(item.Status==true?"Hiển thị":"Lưu tạm")</td>
 
                 <td style="width:80px;text-align:right">
                     <div class="d-flex justify-content-end w-100">

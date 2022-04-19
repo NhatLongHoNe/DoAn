@@ -13,11 +13,14 @@ namespace NidasShoes.Controllers
     {
         private readonly IProductService _productService;
         private readonly IOrderService _orderService;
+        private readonly IDiscountService _discountService;
         public OrderController(IProductService productService
-           , IOrderService orderService)
+           , IOrderService orderService
+            ,IDiscountService discountService)
         {
             _productService = productService;
             _orderService = orderService;
+            _discountService = discountService;
         }
         //public IActionResult Index()
         //{
@@ -61,8 +64,15 @@ namespace NidasShoes.Controllers
 
             var order = JsonConvert.DeserializeObject<NidasShoesResultModel<OrderModel>>(await _orderService.GetById(orderId)).Results.First();
 
+            if (order != null)
+            {
+                if (order.DiscountID > 0)
+                {
+                    var discount = JsonConvert.DeserializeObject<NidasShoesResultModel<DiscountModel>>(await _discountService.GetById(order.DiscountID)).Results.First();
+                    ViewBag.discout = discount;
+                }
+            }
             ViewBag.Order = order;
-
             ViewBag.ListProductDetail = listDataDetail;
             ViewBag.Cost = cost;
             ViewBag.OrderDetail = result;

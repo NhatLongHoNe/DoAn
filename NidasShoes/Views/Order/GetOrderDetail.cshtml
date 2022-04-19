@@ -8,7 +8,11 @@
     var order = (OrderModel)ViewBag.Order;
     var orderDetail = ViewBag.OrderDetail;
     var cost = ViewBag.Cost;
-
+    var discount = new DiscountModel();
+    if (ViewBag.discout != null)
+    {
+        discount = (DiscountModel)ViewBag.discout;
+    }
 
 }
 <style>
@@ -36,7 +40,6 @@
                     </tr>
                 </thead>
                 <tbody>
-
                     <tr>
                         <td>@order.ID</td>
                         <td>@order.CreatedDate.ToString("dd/MM/yyy")</td>
@@ -65,7 +68,6 @@
                         <th>Số lượng</th>
                         <th>Giá tiền</th>
                         <th>Tổng</th>
-
                     </tr>
                 </thead>
                 <tbody>
@@ -84,10 +86,18 @@
                 </tbody>
 
                 <tfoot>
-                 @*   <tr>
-                        <td colspan=""></td>
-                        <td colspan="">Tổng tiền: @cost.ToString("0,000")</td>
-                    </tr>*@
+                    <tr>
+                        <td colspan="5"></td>
+                        <td colspan="2">Tổng tiền: @cost.ToString("0,000")</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5"></td>
+                        <td colspan="2">Chiết khấu: @discount.Rate %</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5"></td>
+                        <td colspan="2">Tổng tiền sau chiết khấu: @order.TotalCost.ToString("0,000")</td>
+                    </tr>
                 </tfoot>
             </table>
         </div>

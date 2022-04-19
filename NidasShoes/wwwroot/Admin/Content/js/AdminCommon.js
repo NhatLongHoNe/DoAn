@@ -177,8 +177,6 @@ function AddOrUpdate(url) {
 
 function AddOrUpdateWithFile(url) {
     if (ValidationInput()) {  // kiểm tra dữ liệu đầu vào
-        // read data in form
-        debugger
         let formArray = $('form.form-input').serializeArray();
         var object = {};
         jQuery.map(formArray, function (n, i) {
