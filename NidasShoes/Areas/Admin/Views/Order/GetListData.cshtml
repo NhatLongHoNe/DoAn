@@ -60,9 +60,58 @@
                     <th>
 
                         <select class="form-control txtOrderStatus" id="orderStatusId" data-id="@item.ID">
-                            @if (item.OrderStatusID == 6)
+
+
+                            @switch (item.OrderStatusID)
                             {
-                                 <option value="" data-id="" selected>Huỷ đơn hàng</option>
+                                case 1:
+                                case 7:
+                                    @foreach (var order in dataStatus.Results)
+                                    {
+                                        @if (order.ID == item.OrderStatusID)
+                                        {
+                                            <option value="@order.ID" data-id="@order.ID" selected>@order.Name</option>
+                                        }
+                                        else
+                                        {
+                                            <option value="@order.ID" data-id="@order.ID">@order.Name</option>
+                                        }
+                                    }
+                                    break;
+                                case 2:
+                                case 3:
+                                case 4:
+                                
+                                    @foreach (var order in dataStatus.Results)
+                                    {
+                                        @if (order.ID > 1 && order.ID <7)
+                                        {
+                                            @if (order.ID == item.OrderStatusID)
+                                            {
+                                                <option value="@order.ID" data-id="@order.ID" selected>@order.Name</option>
+                                            }
+                                            else
+                                            {
+                                                <option value="@order.ID" data-id="@order.ID">@order.Name</option>
+                                            }
+                                        }
+                                    }
+                                    break;
+                                case 5:
+                                    <option value="" data-id="" selected>Đã giao hàng</option>
+                                    break;
+                                case 6:
+                                    <option value="" data-id="" selected>Huỷ đơn hàng</option>
+                                    break;
+
+                                default:
+                                    
+                                    break;
+                            }
+
+                            @*@if (item.OrderStatusID == 6)
+                            {
+                                
                             }
                             else
                             {
@@ -77,7 +126,7 @@
                                         <option value="@order.ID" data-id="@order.ID">@order.Name</option>
                                     }
                                 }
-                            }
+                            }*@
 
                         </select>
                     </th>
