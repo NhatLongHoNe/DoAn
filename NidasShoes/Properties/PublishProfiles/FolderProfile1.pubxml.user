@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>E:\public\nidas</_PublishTargetUrl>
+    <History>True|2022-04-24T07:04:20.6507821Z;False|2022-04-24T14:02:10.3846782+07:00;True|2022-04-24T12:08:34.2989274+07:00;False|2022-04-24T12:06:12.7522613+07:00;False|2022-04-24T12:05:49.1255590+07:00;True|2022-04-24T01:00:24.5742512+07:00;False|2022-04-24T00:56:55.8275560+07:00;True|2022-04-24T00:30:12.7330356+07:00;</History>
+  </PropertyGroup>
+</Project>

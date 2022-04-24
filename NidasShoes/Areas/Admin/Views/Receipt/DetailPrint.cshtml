@@ -3,13 +3,21 @@
      Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmins.cshtml";
 }
 <style>
+     ol.breadcrumb.float-sm-right {
+    display: none;
+    }
     .main-footer{
         display:none;
     }
-    ol.breadcrumb.float-sm-right {
-    display: none;
-}
+    .main-sidebar{
+        display:none;
+    }
 </style>
+<div class="header-bill text-center ">
+    <h1>NIDADS SHOES</h1>
+    <h3>Hóa Đơn phiếu nhập kho</h3>
+</div>
+
 <div class="data-table">
     <table id="infoReceipt" class="table table-stri ped table-bordered text-left table-hover" style="background:#fff;">
         <thead>
@@ -66,4 +74,16 @@
         <tfoot>
         </tfoot>
     </table>
+</div>
+<div class="sign-bill text-right">
+   <p>Hà nội, Ngày...,Tháng...,Năm 20...</p>
+   <h4 class="text-bold"> Người lập phiếu</h4>
+   <br />
+   <br />
+   <br />
+   <br />
+</div>
+
+<div class="footer-bill text-center ">
+   @*<h3> Chúc quý khách vui vẻ hẹn gặp lại</h3>*@
 </div>

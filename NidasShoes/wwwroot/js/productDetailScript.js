@@ -45,7 +45,12 @@ function GetProductDetailBy() {
                 console.log("data.productDetailID", data.productDetailID);
                 if (data.productDetailID != null) {
                     $('#btnAddToCart').attr("data-id", data.productDetailID);
-                } 
+                }
+                if (data.quantity != null) {
+                    $('#txtQuantityProduct').text("Số lượng: " + data.quantity);
+                    $('#txtQuantityProduct').attr("data-id", data.quantity);
+
+                }
             } else {
                 $('#btnAddToCart').attr("data-id", 0);
             }
